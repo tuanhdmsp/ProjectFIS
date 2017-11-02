@@ -3,19 +3,13 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-<form method="post" action="Login">
-    <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
-    <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="">
-    <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="0">
-    
-    <h1 align=center><font color="#336699">Welcome to FPT</font></h1>
-
-    <input type="email" name="email"/>
-    <input type="button" name="checkEmail" onclick="sendEmail()" value="Send Email"/>
-    <input type="text" name="code" disabled/>
-    <input type="button" name="loginWifi" onclick="checkCode()" value="Login to Our Wifi" disabled=""/>
-    
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to FPT Information System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/SplashPage/css/style.css" rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
     <script>
         function sendEmail() {
             var inputValue = $('[name=email]')[0].value;
@@ -36,7 +30,7 @@
                         } else {
                             console.log("Invalid email");
                         }
-                        
+
                     },
                     "error": function(error) {
                         console.log(error);
@@ -124,7 +118,26 @@
             document.forms[0].action = args.switch_url;
 
         }
-
     </script>
-</form>
+</head>
+<body>
+<h1>Welcome!<span>FPT Information System</span><br/>
+    <span style="font-size: 60%">Register to access free Wi-Fi</span></h1>
+<div class="login-box">
+    <form method="post" action="Login">
+        <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
+        <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="">
+        <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="0">
 
+        <input type="text" name="email" placeholder="Email">
+        <input type="password" name="code" placeholder="Code" disabled="">
+        <br/><br/>
+        <div class="btn">
+            <input type="submit" name="checkEmail" onclick="sendEmail()" value="Send Email">
+            <input type="submit" name="loginWifi" onclick="checkCode()" value="Access Wifi" disabled="">
+        </div>
+        <div class="clear"></div>
+    </form>		
+</div>		
+</body>
+</html>
