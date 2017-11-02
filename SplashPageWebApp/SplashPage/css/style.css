@@ -94,7 +94,7 @@ input[type="password"]{
 	  margin: 9% auto;
 	  width: 69%;
 	}
-input[type="submit"] {
+input[type="button"] {
 	background: none;
 	outline: none;
 	border: none;
@@ -104,7 +104,7 @@ input[type="submit"] {
 	cursor: pointer;
 	border: 2px solid rgba(0, 0, 0, 0);
 }
-input[type="submit"]:hover {
+input[type="button"]:hover {
   color: #999;
   border: 2px solid#fff;
   	transition: 0.8s all;
@@ -310,7 +310,7 @@ input[type="submit"]:hover {
 	  float: none;
 	  margin-bottom: 1em;
 	}
-	input[type="submit"] {
+	input[type="button"] {
 	  font-size: 14px;
  	}
  	h1 {
