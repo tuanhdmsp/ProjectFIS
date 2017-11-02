@@ -1,6 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "Index";
+    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -124,7 +125,7 @@
 <h1>Welcome!<span>FPT Information System</span><br/>
     <span style="font-size: 60%">Register to access free Wi-Fi</span></h1>
 <div class="login-box">
-    <form method="post" action="Login">
+    <form method="post" action='@Url.Action("Index", "Login")'>
         <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
         <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="">
         <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="0">
@@ -133,8 +134,8 @@
         <input type="password" name="code" placeholder="Code" disabled="">
         <br/><br/>
         <div class="btn">
-            <input type="submit" name="checkEmail" onclick="sendEmail()" value="Send Email">
-            <input type="submit" name="loginWifi" onclick="checkCode()" value="Access Wifi" disabled="">
+            <input type="button" name="checkEmail" onclick="sendEmail()" value="Send Email">
+            <input type="button" name="loginWifi" onclick="checkCode()" value="Access Wifi" disabled="">
         </div>
         <div class="clear"></div>
     </form>		
