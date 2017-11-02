@@ -11,6 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/SplashPage/css/style.css" rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
     <script>
         function sendEmail() {
             var inputValue = $('[name=email]')[0].value;
