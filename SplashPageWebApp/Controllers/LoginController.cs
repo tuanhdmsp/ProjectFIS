@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using ConsoleApp1;
 using SplashPageWebApp.Models;
+using SplashPageWebApp.Services;
 
 namespace SplashPageWebApp.Controllers
 {
@@ -28,7 +29,7 @@ namespace SplashPageWebApp.Controllers
 
                 var newCode = entities.GeneratedCodes.Add(new GeneratedCode()
                 {
-                    code = GenerateCode.GeneratedCode(),
+                    code = GeneratePasswordWifi.Generate(6),
                     email = email,
                 });
                 entities.SaveChanges();

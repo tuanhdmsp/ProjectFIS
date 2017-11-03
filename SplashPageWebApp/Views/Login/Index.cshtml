@@ -55,7 +55,7 @@
                     },
                     "success": function(data) {
                         if (data.success == true) {
-                            //submitAction();
+                            submitAction();
                             console.log("Redirect");
                         } else {
                             console.log("Wrong code");
@@ -74,9 +74,8 @@
             var equalIndex = link.indexOf(searchString);
             var redirectUrl = "";
 
-            if (document.forms[0].action == "") {
+            //if (document.forms[0].action == "") {
                 //var url = window.location.href;
-
                 var args = new Object();
                 var query = location.search.substring(1);
                 var pairs = query.split("&");
@@ -87,8 +86,8 @@
                     var value = pairs[i].substring(pos + 1);
                     args[argname] = unescape(value);
                 }
-                //document.forms[0].action = args.switch_url;
-            }
+                document.forms[0].action = args.switch_url;
+            //}
             if (equalIndex >= 0) {
                 equalIndex += searchString.length;
                 redirectUrl = "";
@@ -124,11 +123,12 @@
         }
     </script>
 </head>
-<body>
+<body onload="loadAction();">
 <h1>Welcome!<span>FPT Information System</span><br/>
     <span style="font-size: 60%">Register to access free Wi-Fi</span></h1>
 <div class="login-box">
     <form method="post" action='@Url.Action("Index", "Login")'>
+        
         <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
         <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="">
         <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="0">

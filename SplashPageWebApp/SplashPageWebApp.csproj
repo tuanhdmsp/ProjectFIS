@@ -153,6 +153,7 @@
     <Compile Include="Services\GenerateCode.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Services\GeneratePasswordWifi.cs" />
     <Compile Include="Services\SendEmail.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
