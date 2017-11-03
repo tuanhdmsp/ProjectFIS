@@ -74,7 +74,7 @@
             var equalIndex = link.indexOf(searchString);
             var redirectUrl = "";
 
-            if (document.forms[0].action == "") {
+            //if (document.forms[0].action == "") {
                 //var url = window.location.href;
 
                 var args = new Object();
@@ -87,8 +87,8 @@
                     var value = pairs[i].substring(pos + 1);
                     args[argname] = unescape(value);
                 }
-                //document.forms[0].action = args.switch_url;
-            }
+                document.forms[0].action = args.switch_url;
+            //}
             if (equalIndex >= 0) {
                 equalIndex += searchString.length;
                 redirectUrl = "";
