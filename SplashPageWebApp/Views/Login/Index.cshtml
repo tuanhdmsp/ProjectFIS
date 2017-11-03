@@ -126,7 +126,8 @@
 </head>
 <body onload="loadAction();">
 <h1>Welcome!<span>FPT Information System</span><br/>
-    <span style="font-size: 60%">Register to access free Wi-Fi</span></h1>
+    <span style="font-size: 40%">We provide free registration service to our hotspot.</span><br/>
+    <span style="font-size: 40%">Enter the email to get code from administrator, then click "Access Wi-Fi" button to access free wifi</span></h1>
 <div class="login-box">
     <form method="post" action='@Url.Action("Index", "Login")'>
         
@@ -139,7 +140,7 @@
         <br/><br/>
         <div class="btn">
             <input type="button" name="checkEmail" onclick="sendEmail()" value="Send Email">
-            <input type="button" name="loginWifi" onclick="checkCode()" value="Access Wifi" disabled="">
+            <input type="button" name="loginWifi" onclick="checkCode()" value="Access Wi-Fi" disabled="">
         </div>
         <div class="clear"></div>
     </form>		

@@ -33,7 +33,7 @@ namespace SplashPageWebApp.Controllers
                     email = email,
                 });
                 entities.SaveChanges();
-                SendEmail.SendEmailTo("freewifi.fis@gmail.com","Test Wifi",email, newCode.code);
+                SendEmail.SendEmailTo("freewifi.fis@gmail.com","FPT Wi-Fi Hotspot",email, newCode.code);
                 success = true;
             }
             return Json(new
