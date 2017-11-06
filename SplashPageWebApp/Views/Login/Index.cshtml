@@ -23,6 +23,7 @@
                     "dataType": "json",
                     "url": '@Url.Action("CheckEmail")',
                     "data": {
+                        "__RequestVerificationToken": $('#__AjaxAntiForgeryForm input[name=__RequestVerificationToken]').val(),
                         "email": inputValue,
                     },
                     "success": function (data) {
@@ -32,7 +33,10 @@
                             $('[name=email]').attr("disabled", "disabled");
                             $('[name=checkEmail]').attr("disabled", "disabled");
                         } else {
-                            console.log("Invalid email");
+                            var label = $('label[for=email]');
+                            if (!label.hasClass('hidden')) {
+                                label.addClass('hidden');
+                            }
                         }
 
                     },
@@ -56,9 +60,11 @@
                     "success": function(data) {
                         if (data.success == true) {
                             submitAction();
-                            console.log("Redirect");
                         } else {
-                            console.log("Wrong code");
+                            var label = $('label[for=code]');
+                            if (!label.hasClass('hidden')) {
+                                label.addClass('hidden');
+                            }
                         }
                     },
                     "error": function(error) {
@@ -68,47 +74,63 @@
             }
         };
 
-        function submitAction() {
+        $('[name=email]').on('focus',
+            function(e) {
+                var label = $('label[for=email]');
+                if (!label.hasClass('hidden')) {
+                    label.addClass('hidden');
+                }
+            });
+
+        $('[name=code]').on('focus',
+            function (e) {
+                var label = $('label[for=code]');
+                if (!label.hasClass('hidden')) {
+                    label.addClass('hidden');
+                }
+            });
+
+        $('#login-from').on('submit',
+            function (e) {
+                var inputValue = $('[name=code]')[0].value;
+                $.ajax({
+                    url: '@Url.Action("CheckCode")',
+                    method: "POST",
+                    data: {
+                        "__RequestVerificationToken": $('#__AjaxAntiForgeryForm input[name=__RequestVerificationToken]').val(),
+                        "inpCode": inputValue,
+                    },
+                    type: "json",
+                    success: function(data) {
+                        if (data.success == false) {
+                            var label = $('label[for=code]');
+                            if (label.hasClass('hidden')) {
+                                label.removeClass('hidden');
+                            }
+                            e.preventDefault();
+                        } else {
+                            createSubmitForm();
+                        }
+                    },
+                    error: function (error) {
+                        $('[name=code]').attr('disabled');
+                        $('[name=loginWifi]').attr('disabled');
+                        $('[name=email]').removeAttr("disabled", "disabled");
+                        $('[name=checkEmail]').removeAttr("disabled", "disabled");
+                        alert("Something wrong happened!Please try again!");
+                        e.preventDefault();
+                    }
+                });
+            });
+
+
+
+        function createSubmitForm() {
             var link = document.location.href;
             var searchString = "redirect=";
             var equalIndex = link.indexOf(searchString);
             var redirectUrl = "";
-
-            //if (document.forms[0].action == "") {
-                //var url = window.location.href;
-
-                var args = new Object();
-                var query = location.search.substring(1);
-                var pairs = query.split("&");
-                for (var i = 0; i < pairs.length; i++) {
-                    var pos = pairs[i].indexOf('=');
-                    if (pos == -1) continue;
-                    var argname = pairs[i].substring(0, pos);
-                    var value = pairs[i].substring(pos + 1);
-                    args[argname] = unescape(value);
-                }
-                document.forms[0].action = args.switch_url;
-            //}
-            if (equalIndex >= 0) {
-                equalIndex += searchString.length;
-                redirectUrl = "";
-                redirectUrl += link.substring(equalIndex);
-            }
-            if (redirectUrl.length > 255)
-                redirectUrl = redirectUrl.substring(0, 255);
-            document.forms[0].redirect_url.value = redirectUrl;
-            document.forms[0].buttonClicked.value = 4;
-            document.forms[0].submit();
-        }
-
-        function reject() {
-            alert("You will not be able to access the system!");
-        }
-
-
-        function loadAction() {
-            //var url = window.location.href;
-
+            
             var args = new Object();
             var query = location.search.substring(1);
             var pairs = query.split("&");
@@ -121,7 +143,40 @@
             }
             document.forms[0].action = args.switch_url;
 
+            if (equalIndex >= 0) {
+                equalIndex += searchString.length;
+                redirectUrl = "";
+                redirectUrl += link.substring(equalIndex);
+            }
+            if (redirectUrl.length > 255)
+                redirectUrl = redirectUrl.substring(0, 255);
+            document.forms[0].redirect_url.value = redirectUrl;
+
+            document.forms[0].buttonClicked.value = 4;
+            document.forms[0].err_flag.value = 0;
+            
         }
+
+        //function reject() {
+        //    alert("You will not be able to access the system!");
+        //}
+        
+        //function loadAction() {
+        //    //var url = window.location.href;
+
+        //    var args = new Object();
+        //    var query = location.search.substring(1);
+        //    var pairs = query.split("&");
+        //    for (var i = 0; i < pairs.length; i++) {
+        //        var pos = pairs[i].indexOf('=');
+        //        if (pos == -1) continue;
+        //        var argname = pairs[i].substring(0, pos);
+        //        var value = pairs[i].substring(pos + 1);
+        //        args[argname] = unescape(value);
+        //    }
+        //    document.forms[0].action = args.switch_url;
+
+        //}
     </script>
 </head>
 <body onload="loadAction();">
@@ -129,18 +184,22 @@
     <span style="font-size: 40%">We provide free registration service to our hotspot.</span><br/>
     <span style="font-size: 40%">Enter the email to get code from administrator, then click "Access Wi-Fi" button to access free wifi</span></h1>
 <div class="login-box">
-    <form method="post" action='@Url.Action("Index", "Login")'>
-        
+
+    <form method="post" action='@Url.Action("Index", "Login")' id="login-form">
+        @Html.AntiForgeryToken();
+
         <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
         <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="">
-        <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="0">
+        <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="">
 
-        <input type="text" name="email" placeholder="Email">
-        <input type="password" name="code" placeholder="Code" disabled="">
+        <input type="text" name="email" id="email" placeholder="Email"><label class="hidden" style="color: red" for="email">Please enter another email!</label>
+        <input type="password" name="code" placeholder="Code" disabled=""><label class="hidden" style="color: red" name="code">Wrong code! Please try another one!</label>
         <br/><br/>
         <div class="btn">
             <input type="button" name="checkEmail" onclick="sendEmail()" value="Send Email">
-            <input type="button" name="loginWifi" onclick="checkCode()" value="Access Wi-Fi" disabled="">
+            
+            <input type="submit" name="loginWifi" value="Access Wifi" disabled="">
+
         </div>
         <div class="clear"></div>
     </form>		
