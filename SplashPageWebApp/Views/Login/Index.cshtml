@@ -139,25 +139,27 @@
     </div>
 
     <div class="main-content-agile">
+        
         <div class="sub-main-w3">
             <div class="wthree-pro">
-                <h2>Free Wi-Fi Hotspot</h2>
+                <h2>Free Wi-Fi Hotspot</h2><br/>
+                <span id="message" class="error" style="margin-bottom: 10px; visibility: hidden">Error</span>
             </div>
 
             <form method="post" action='@Url.Action("Index", "Login")' id="login-form">
-                @Html.AntiForgeryToken();
+                @Html.AntiForgeryToken()
                 <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
                 <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="">
                 <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="">
 
                 <div class="pom-agile">
                     <input placeholder="E-mail" name="email" id="email" class="user" type="email" required="" onfocus="clickEmail()">
-                    <span class="icon1"><i class="fa fa-user" aria-hidden="true"></i></span>
+                    <span class="icon1"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                 </div>
 
                 <div class="pom-agile">
                     <input placeholder="Code" name="code" id="code" class="pass" disabled="" type="text" required="" onfocus="clickCode()">
-                    <span class="icon2"><i class="fa fa-unlock" aria-hidden="true"></i></span>
+                    <span class="icon2"><i class="fa fa-key" aria-hidden="true"></i></span>
                 </div>
 
                 <div class="sub-w3l">
@@ -165,8 +167,8 @@
                         <input type="button" name="checkEmail" onclick="sendEmail()" value="Send">
                         <input type="button" name="loginWifi" onclick="sendCode()" disabled="" value="Login">
                     </div>
-
                 </div>
+
             </form>
         </div>
     </div>
