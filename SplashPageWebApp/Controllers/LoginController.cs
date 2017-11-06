@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
 using ConsoleApp1;
@@ -19,6 +20,7 @@ namespace SplashPageWebApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult CheckEmail(String email)
         {
             var success = false;
@@ -41,6 +43,7 @@ namespace SplashPageWebApp.Controllers
             }, JsonRequestBehavior.AllowGet);
         }
 
+        [ValidateAntiForgeryToken]
         [HttpPost]
         public ActionResult CheckCode(String inpCode)
         {
@@ -59,5 +62,19 @@ namespace SplashPageWebApp.Controllers
                 success
             }, JsonRequestBehavior.AllowGet);
         }
+
+        //[ValidateAntiForgeryToken]
+        //[HttpPost]
+        //public ActionResult Login(LoginViewModel model, string switch_url)
+        //{
+        //    return Redirect
+        //}
     }
+
+    //public class LoginViewModel
+    //{
+    //    public int buttonClicked { get; set; }
+    //    public string redirect_url { get; set; }
+    //    public int err_flag { get; set; }
+    //}
 }
