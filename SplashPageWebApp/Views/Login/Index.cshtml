@@ -179,12 +179,15 @@
         //}
     </script>
 </head>
-<body>
+<body onload="loadAction();">
 <h1>Welcome!<span>FPT Information System</span><br/>
-    <span style="font-size: 60%">Register to access free Wi-Fi</span></h1>
+    <span style="font-size: 40%">We provide free registration service to our hotspot.</span><br/>
+    <span style="font-size: 40%">Enter the email to get code from administrator, then click "Access Wi-Fi" button to access free wifi</span></h1>
 <div class="login-box">
+
     <form method="post" action='@Url.Action("Index", "Login")' id="login-form">
         @Html.AntiForgeryToken();
+
         <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
         <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="">
         <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="">
@@ -194,7 +197,9 @@
         <br/><br/>
         <div class="btn">
             <input type="button" name="checkEmail" onclick="sendEmail()" value="Send Email">
+            
             <input type="submit" name="loginWifi" value="Access Wifi" disabled="">
+
         </div>
         <div class="clear"></div>
     </form>		

@@ -19,8 +19,8 @@ namespace ConsoleApp1
             var fromAddress = new MailAddress(fromEmail, sender);
             var toAddress = new MailAddress(toEmail);
             const string appPassword = "zehcrryaxdsvvcpj";
-            const string subject = "Code from our love";
-            string body = "Your code to access free wifi: " + code;
+            const string subject = "Free Code To Access Wi-Fi";
+            string body = "Please send this code to the customer: " + code;
 
             var smtp = new SmtpClient
             {
