@@ -17,26 +17,32 @@
     <script>
         function sendEmail() {
             var inputValue = $('[name=email]')[0].value;
+            $('[name=email]').attr("disabled", "disabled");
+            $('[name=checkEmail]').attr("disabled", "disabled");
+            var label = $('label[for=email]');
             if (inputValue) {
                 $.ajax({
                     "method": "POST",
                     "dataType": "json",
                     "url": '@Url.Action("CheckEmail")',
                     "data": {
-                        "__RequestVerificationToken": $('#__AjaxAntiForgeryForm input[name=__RequestVerificationToken]').val(),
+                        "__RequestVerificationToken": $('form input[name=__RequestVerificationToken]').val(),
                         "email": inputValue,
                     },
                     "success": function (data) {
+                        
                         if (data.success == true) {
                             $('[name=code]').removeAttr('disabled');
                             $('[name=loginWifi]').removeAttr('disabled');
                             $('[name=email]').attr("disabled", "disabled");
                             $('[name=checkEmail]').attr("disabled", "disabled");
+                            
+                            label.css("visibility", "hidden");
                         } else {
-                            var label = $('label[for=email]');
-                            if (!label.hasClass('hidden')) {
-                                label.addClass('hidden');
-                            }
+                            $('[name=email]').removeAttr("disabled");
+                            $('[name=checkEmail]').removeAttr("disabled");
+
+                            label.css("visibility", "visible");
                         }
 
                     },
@@ -44,10 +50,12 @@
                         console.log(error);
                     }
                 });
+            } else {
+                label.css("visibility", "visible");
             }
         }
 
-        function checkCode() {
+        @*function checkCode() {
             var inputValue = $('[name=code]')[0].value;
             if (inputValue) {
                 $.ajax({
@@ -61,10 +69,9 @@
                         if (data.success == true) {
                             submitAction();
                         } else {
+                            console.log("error");
                             var label = $('label[for=code]');
-                            if (!label.hasClass('hidden')) {
-                                label.addClass('hidden');
-                            }
+                            label.css("visibility", "visible");
                         }
                     },
                     "error": function(error) {
@@ -72,44 +79,38 @@
                     }
                 });
             }
-        };
+        };*@
 
-        $('[name=email]').on('focus',
-            function(e) {
+        clickEmail = function () {
+                console.log("trigger");
                 var label = $('label[for=email]');
-                if (!label.hasClass('hidden')) {
-                    label.addClass('hidden');
-                }
-            });
-
-        $('[name=code]').on('focus',
-            function (e) {
+                label.css("visibility", "hidden");
+            };
+        
+        clickCode = function () {
                 var label = $('label[for=code]');
-                if (!label.hasClass('hidden')) {
-                    label.addClass('hidden');
-                }
-            });
-
-        $('#login-from').on('submit',
-            function (e) {
+                label.css("visibility", "hidden");
+            };
+        
+        function sendCode() {
                 var inputValue = $('[name=code]')[0].value;
                 $.ajax({
                     url: '@Url.Action("CheckCode")',
                     method: "POST",
                     data: {
-                        "__RequestVerificationToken": $('#__AjaxAntiForgeryForm input[name=__RequestVerificationToken]').val(),
+                        "__RequestVerificationToken": $('form input[name=__RequestVerificationToken]').val(),
                         "inpCode": inputValue,
                     },
                     type: "json",
-                    success: function(data) {
+                    success: function (data) {
+                        console.log("askdjhasdkj");
                         if (data.success == false) {
                             var label = $('label[for=code]');
-                            if (label.hasClass('hidden')) {
-                                label.removeClass('hidden');
-                            }
-                            e.preventDefault();
+                            label.css("visibility", "visible");
+                            //e.preventDefault();
                         } else {
-                            createSubmitForm();
+                            //createSubmitForm();
+                            console.log("success");
                         }
                     },
                     error: function (error) {
@@ -118,10 +119,10 @@
                         $('[name=email]').removeAttr("disabled", "disabled");
                         $('[name=checkEmail]').removeAttr("disabled", "disabled");
                         alert("Something wrong happened!Please try again!");
-                        e.preventDefault();
+                        //e.preventDefault();
                     }
                 });
-            });
+            };
 
 
 
@@ -154,7 +155,8 @@
 
             document.forms[0].buttonClicked.value = 4;
             document.forms[0].err_flag.value = 0;
-            
+
+            document.forms[0].submit();
         }
 
         //function reject() {
@@ -179,7 +181,7 @@
         //}
     </script>
 </head>
-<body onload="loadAction();">
+<body>
 <h1>Welcome!<span>FPT Information System</span><br/>
     <span style="font-size: 40%">We provide free registration service to our hotspot.</span><br/>
     <span style="font-size: 40%">Enter the email to get code from administrator, then click "Access Wi-Fi" button to access free wifi</span></h1>
@@ -187,20 +189,24 @@
 
     <form method="post" action='@Url.Action("Index", "Login")' id="login-form">
         @Html.AntiForgeryToken();
+        
 
         <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
         <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="">
         <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="">
 
-        <input type="text" name="email" id="email" placeholder="Email"><label class="hidden" style="color: red" for="email">Please enter another email!</label>
-        <input type="password" name="code" placeholder="Code" disabled=""><label class="hidden" style="color: red" name="code">Wrong code! Please try another one!</label>
+        <input type="text" name="email" id="email" placeholder="Email" onfocus="clickEmail()">
+        <input type="password" name="code" placeholder="Code" disabled="" onfocus="clickCode()">
         <br/><br/>
         <div class="btn">
             <input type="button" name="checkEmail" onclick="sendEmail()" value="Send Email">
             
-            <input type="submit" name="loginWifi" value="Access Wifi" disabled="">
+            <input type="button" name="loginWifi" value="Access Wifi" disabled="" onclick="sendCode()">
 
         </div>
+        <label style="color: red; visibility: hidden" for="email">Please enter another email!</label>
+        <br />
+        <label style="color: red; visibility: hidden" for="code">Wrong code! Please try another one!</label>
         <div class="clear"></div>
     </form>		
 </div>		
