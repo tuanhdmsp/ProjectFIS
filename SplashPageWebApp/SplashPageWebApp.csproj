@@ -182,6 +182,13 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="FISProject\css\font-awesome.css" />
+    <Content Include="FISProject\css\style.css" />
+    <Content Include="FISProject\fonts\fontawesome-webfont.svg" />
+    <Content Include="FISProject\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="FISProject\images\1.jpg" />
+    <Content Include="FISProject\index.html" />
+    <Content Include="FISProject\w3layouts-License.txt" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -207,6 +214,15 @@
     <Content Include="Models\testwifi.edmx.diagram">
       <DependentUpon>testwifi.edmx</DependentUpon>
     </Content>
+    <Content Include="FISProject\fonts\fontawesome-webfont.eot" />
+    <Content Include="FISProject\fonts\fontawesome-webfont.ttf" />
+    <Content Include="FISProject\fonts\fontawesome-webfont.woff" />
+    <Content Include="FISProject\fonts\fontawesome-webfont.woff2" />
+    <Content Include="FISProject\fonts\FontAwesome.otf" />
+    <Content Include="FISProject\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="FISProject\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="FISProject\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="FISProject\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\fis-hcm - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

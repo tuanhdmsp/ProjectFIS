@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
     Layout = null;
 }
@@ -7,10 +6,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome to FPT Information System</title>
+    <title>Online Login Form Responsive Widget Template :: w3layouts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/SplashPage/css/style.css" rel='stylesheet' type='text/css' />
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Online Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+    <link rel="stylesheet" href="/FISProject/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/FISProject/css/font-awesome.css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&amp;subset=latin-ext" rel="stylesheet">
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
@@ -29,14 +32,14 @@
                         "__RequestVerificationToken": $('form input[name=__RequestVerificationToken]').val(),
                         "email": inputValue,
                     },
-                    "success": function (data) {
-                        
+                    "success": function(data) {
+
                         if (data.success == true) {
                             $('[name=code]').removeAttr('disabled');
                             $('[name=loginWifi]').removeAttr('disabled');
                             $('[name=email]').attr("disabled", "disabled");
                             $('[name=checkEmail]').attr("disabled", "disabled");
-                            
+
                             label.css("visibility", "hidden");
                         } else {
                             $('[name=email]').removeAttr("disabled");
@@ -55,83 +58,51 @@
             }
         }
 
-        @*function checkCode() {
-            var inputValue = $('[name=code]')[0].value;
-            if (inputValue) {
-                $.ajax({
-                    "method": "POST",
-                    "dataType": "json",
-                    "url": '@Url.Action("CheckCode")',
-                    "data": {
-                        "inpCode": inputValue,
-                    },
-                    "success": function(data) {
-                        if (data.success == true) {
-                            submitAction();
-                        } else {
-                            console.log("error");
-                            var label = $('label[for=code]');
-                            label.css("visibility", "visible");
-                        }
-                    },
-                    "error": function(error) {
-                        console.log(error);
-                    }
-                });
-            }
-        };*@
+        clickEmail = function() {
+            console.log("trigger");
+            var label = $('label[for=email]');
+            label.css("visibility", "hidden");
+        };
 
-        clickEmail = function () {
-                console.log("trigger");
-                var label = $('label[for=email]');
-                label.css("visibility", "hidden");
-            };
-        
-        clickCode = function () {
-                var label = $('label[for=code]');
-                label.css("visibility", "hidden");
-            };
-        
+        clickCode = function() {
+            var label = $('label[for=code]');
+            label.css("visibility", "hidden");
+        };
+
         function sendCode() {
-                var inputValue = $('[name=code]')[0].value;
-                $.ajax({
-                    url: '@Url.Action("CheckCode")',
-                    method: "POST",
-                    data: {
-                        "__RequestVerificationToken": $('form input[name=__RequestVerificationToken]').val(),
-                        "inpCode": inputValue,
-                    },
-                    type: "json",
-                    success: function (data) {
-                        console.log("askdjhasdkj");
-                        if (data.success == false) {
-                            var label = $('label[for=code]');
-                            label.css("visibility", "visible");
-                            //e.preventDefault();
-                        } else {
-                            //createSubmitForm();
-                            console.log("success");
-                        }
-                    },
-                    error: function (error) {
-                        $('[name=code]').attr('disabled');
-                        $('[name=loginWifi]').attr('disabled');
-                        $('[name=email]').removeAttr("disabled", "disabled");
-                        $('[name=checkEmail]').removeAttr("disabled", "disabled");
-                        alert("Something wrong happened!Please try again!");
-                        //e.preventDefault();
+            var inputValue = $('[name=code]')[0].value;
+            $.ajax({
+                url: '@Url.Action("CheckCode")',
+                method: "POST",
+                data: {
+                    "__RequestVerificationToken": $('form input[name=__RequestVerificationToken]').val(),
+                    "inpCode": inputValue,
+                },
+                type: "json",
+                success: function(data) {
+                    console.log("askdjhasdkj");
+                    if (data.success == false) {
+                        var label = $('label[for=code]');
+                        label.css("visibility", "visible");
+                    } else {
+                        createSubmitForm();
                     }
-                });
-            };
-
-
+                },
+                error: function(error) {
+                    $('[name=code]').attr('disabled');
+                    $('[name=loginWifi]').attr('disabled');
+                    $('[name=email]').removeAttr("disabled", "disabled");
+                    $('[name=checkEmail]').removeAttr("disabled", "disabled");
+                }
+            });
+        };
 
         function createSubmitForm() {
             var link = document.location.href;
             var searchString = "redirect=";
             var equalIndex = link.indexOf(searchString);
             var redirectUrl = "";
-            
+
             var args = new Object();
             var query = location.search.substring(1);
             var pairs = query.split("&");
@@ -158,57 +129,47 @@
 
             document.forms[0].submit();
         }
-
-        //function reject() {
-        //    alert("You will not be able to access the system!");
-        //}
-        
-        //function loadAction() {
-        //    //var url = window.location.href;
-
-        //    var args = new Object();
-        //    var query = location.search.substring(1);
-        //    var pairs = query.split("&");
-        //    for (var i = 0; i < pairs.length; i++) {
-        //        var pos = pairs[i].indexOf('=');
-        //        if (pos == -1) continue;
-        //        var argname = pairs[i].substring(0, pos);
-        //        var value = pairs[i].substring(pos + 1);
-        //        args[argname] = unescape(value);
-        //    }
-        //    document.forms[0].action = args.switch_url;
-
-        //}
     </script>
 </head>
 <body>
-<h1>Welcome!<span>FPT Information System</span><br/>
-    <span style="font-size: 40%">We provide free registration service to our hotspot.</span><br/>
-    <span style="font-size: 40%">Enter the email to get code from administrator, then click "Access Wi-Fi" button to access free wifi</span></h1>
-<div class="login-box">
+<div class="center-container">
 
-    <form method="post" action='@Url.Action("Index", "Login")' id="login-form">
-        @Html.AntiForgeryToken();
-        
+    <div class="header-w3l">
+        <h1>FPT Information System</h1>
+    </div>
 
-        <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
-        <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="">
-        <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="">
+    <div class="main-content-agile">
+        <div class="sub-main-w3">
+            <div class="wthree-pro">
+                <h2>Free Wi-Fi Hotspot</h2>
+            </div>
 
-        <input type="text" name="email" id="email" placeholder="Email" onfocus="clickEmail()">
-        <input type="password" name="code" placeholder="Code" disabled="" onfocus="clickCode()">
-        <br/><br/>
-        <div class="btn">
-            <input type="button" name="checkEmail" onclick="sendEmail()" value="Send Email">
-            
-            <input type="button" name="loginWifi" value="Access Wifi" disabled="" onclick="sendCode()">
+            <form method="post" action='@Url.Action("Index", "Login")' id="login-form">
+                @Html.AntiForgeryToken();
+                <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
+                <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="">
+                <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="">
 
+                <div class="pom-agile">
+                    <input placeholder="E-mail" name="email" id="email" class="user" type="email" required="" onfocus="clickEmail()">
+                    <span class="icon1"><i class="fa fa-user" aria-hidden="true"></i></span>
+                </div>
+
+                <div class="pom-agile">
+                    <input placeholder="Code" name="code" id="code" class="pass" disabled="" type="text" required="" onfocus="clickCode()">
+                    <span class="icon2"><i class="fa fa-unlock" aria-hidden="true"></i></span>
+                </div>
+
+                <div class="sub-w3l">
+                    <div class="right-w3l">
+                        <input type="button" name="checkEmail" onclick="sendEmail()" value="Send">
+                        <input type="button" name="loginWifi" onclick="sendCode()" disabled="" value="Login">
+                    </div>
+
+                </div>
+            </form>
         </div>
-        <label style="color: red; visibility: hidden" for="email">Please enter another email!</label>
-        <br />
-        <label style="color: red; visibility: hidden" for="code">Wrong code! Please try another one!</label>
-        <div class="clear"></div>
-    </form>		
-</div>		
+    </div>
+</div>
 </body>
 </html>
