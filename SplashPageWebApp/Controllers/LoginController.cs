@@ -20,6 +20,11 @@ namespace SplashPageWebApp.Controllers
             return View();
         }
 
+        public ActionResult ConnectedError()
+        {
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult CheckEmail(String email)

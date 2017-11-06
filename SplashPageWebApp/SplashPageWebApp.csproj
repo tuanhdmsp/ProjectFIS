@@ -180,13 +180,12 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="FISProject\css\connectederror.css" />
     <Content Include="FISProject\css\font-awesome.css" />
     <Content Include="FISProject\css\style.css" />
     <Content Include="FISProject\fonts\fontawesome-webfont.svg" />
     <Content Include="FISProject\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="FISProject\images\1.jpg" />
-    <Content Include="FISProject\index.html" />
-    <Content Include="FISProject\w3layouts-License.txt" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -251,6 +250,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Login\ConnectedError.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
