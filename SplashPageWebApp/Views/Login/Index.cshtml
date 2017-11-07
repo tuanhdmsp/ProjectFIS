@@ -18,12 +18,15 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     <script>
+        var codeId = -1;
+
         function sendEmail() {
             var inputValue = $('[name=email]')[0].value;
-            $('[name=email]').attr("disabled", "disabled");
-            $('[name=checkEmail]').attr("disabled", "disabled");
+            
             var label = $('label[for=email]');
             if (inputValue) {
+                $('[name=email]').attr("disabled", "disabled");
+                $('[name=checkEmail]').attr("disabled", "disabled");
                 $.ajax({
                     "method": "POST",
                     "dataType": "json",
@@ -39,7 +42,7 @@
                             $('[name=loginWifi]').removeAttr('disabled');
                             $('[name=email]').attr("disabled", "disabled");
                             $('[name=checkEmail]').attr("disabled", "disabled");
-
+                            codeId = data.id;
                             label.css("visibility", "hidden");
                         } else {
                             $('[name=email]').removeAttr("disabled");
@@ -70,31 +73,34 @@
         };
 
         function sendCode() {
-            var inputValue = $('[name=code]')[0].value;
-            $.ajax({
-                url: '@Url.Action("CheckCode")',
-                method: "POST",
-                data: {
-                    "__RequestVerificationToken": $('form input[name=__RequestVerificationToken]').val(),
-                    "inpCode": inputValue,
-                },
-                type: "json",
-                success: function(data) {
-                    console.log("askdjhasdkj");
-                    if (data.success == false) {
-                        var label = $('label[for=code]');
-                        label.css("visibility", "visible");
-                    } else {
-                        createSubmitForm();
+            if (codeId != -1) {
+                var inputValue = $('[name=code]')[0].value;
+                $.ajax({
+                    url: '@Url.Action("CheckCode")',
+                    method: "POST",
+                    data: {
+                        "__RequestVerificationToken": $('form input[name=__RequestVerificationToken]').val(),
+                        "inpCode": inputValue,
+                        "email": $('[name=email]')[0].value,
+                    },
+                    type: "json",
+                    success: function(data) {
+                        console.log("askdjhasdkj");
+                        if (data.success == false) {
+                            var label = $('label[for=code]');
+                            label.css("visibility", "visible");
+                        } else {
+                            createSubmitForm();
+                        }
+                    },
+                    error: function(error) {
+                        $('[name=code]').attr('disabled');
+                        $('[name=loginWifi]').attr('disabled');
+                        $('[name=email]').removeAttr("disabled", "disabled");
+                        $('[name=checkEmail]').removeAttr("disabled", "disabled");
                     }
-                },
-                error: function(error) {
-                    $('[name=code]').attr('disabled');
-                    $('[name=loginWifi]').attr('disabled');
-                    $('[name=email]').removeAttr("disabled", "disabled");
-                    $('[name=checkEmail]').removeAttr("disabled", "disabled");
-                }
-            });
+                });
+            }
         };
 
         function createSubmitForm() {

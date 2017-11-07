@@ -17,5 +17,7 @@ namespace SplashPageWebApp.Models
         public int id { get; set; }
         public string code { get; set; }
         public string email { get; set; }
+        public Nullable<System.DateTime> datetime { get; set; }
+        public Nullable<bool> isUsed { get; set; }
     }
 }

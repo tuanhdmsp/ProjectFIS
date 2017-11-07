@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net.Http;
 using System.Web;
@@ -17,6 +18,16 @@ namespace SplashPageWebApp.Controllers
         // GET: Login
         public ActionResult Index()
         {
+            if (RouteData.Values.ContainsKey("switch_url"))
+            {
+                if (RouteData.Values["switch_url"].ToString().Equals("https://1.1.1.1"))
+                {
+                    if (RouteData.Values.ContainsKey("redirect"))
+                    {
+                        return View();
+                    }
+                }
+            }
             return View();
         }
 
@@ -25,6 +36,8 @@ namespace SplashPageWebApp.Controllers
         public ActionResult CheckEmail(String email)
         {
             var success = false;
+            var message = "";
+            var id = -1;
             if (email.Contains("@gmail.com"))
             {
                 //send code to email
@@ -34,13 +47,20 @@ namespace SplashPageWebApp.Controllers
                     code = GeneratePasswordWifi.Generate(6),
                     email = email,
                 });
-                entities.SaveChanges();
-                SendEmail.SendEmailTo("freewifi.fis@gmail.com","FPT Wi-Fi Hotspot",email, newCode.code);
+                entities.SaveChangesAsync().Wait();
+                SendEmail.SendEmailTo("freewifi.fis@gmail.com", "FPT Wi-Fi Hotspot", email, newCode.code);
                 success = true;
+                id = Int32.Parse((newCode.datetime != null ? newCode.datetime.Value.ToString("MMddyyyyHHmmss") : "0") + newCode.id.ToString());
+            }
+            else
+            {
+                message = "Invalid email! Please enter another one";
             }
             return Json(new
             {
                 success,
+                message,
+                id,
             }, JsonRequestBehavior.AllowGet);
         }
 
