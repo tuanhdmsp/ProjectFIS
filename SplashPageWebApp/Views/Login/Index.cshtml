@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Online Login Form Responsive Widget Template :: w3layouts</title>
+    <title>FPT Information System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Online Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
@@ -156,18 +156,23 @@
                 @Html.AntiForgeryToken()
                 <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
                 <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="">
-                <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="">
+                <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="">                           
 
                 <div class="pom-agile">
                     <input placeholder="E-mail" name="email" id="email" class="user" type="email" required="" onfocus="clickEmail()">
                     <span class="icon1"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                 </div>
+                
+                <div class="pom-agile">
+                    <input placeholder="Fullname" name="name" id="name" class="pass" disabled="" type="text" required="">
+                    <span class="icon2"><i class="fa fa-user" aria-hidden="true"></i></span>
+                </div>
 
                 <div class="pom-agile">
                     <input placeholder="Code" name="code" id="code" class="pass" disabled="" type="text" required="" onfocus="clickCode()">
                     <span class="icon2"><i class="fa fa-key" aria-hidden="true"></i></span>
-                </div>
-
+                </div>           
+                
                 <div class="sub-w3l">
                     <div class="right-w3l">
                         <input type="button" name="checkEmail" onclick="sendEmail()" value="Send">

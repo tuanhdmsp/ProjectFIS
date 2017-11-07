@@ -5,7 +5,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
-using ConsoleApp1;
 using SplashPageWebApp.Models;
 using SplashPageWebApp.Services;
 
@@ -31,6 +30,21 @@ namespace SplashPageWebApp.Controllers
             return View();
         }
 
+        public ActionResult ConnectedError()
+        {
+            return View();
+        }
+
+        public ActionResult AdminPage()
+        {
+            return View();
+        }
+
+        public ActionResult AdminLogin()
+        {
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult CheckEmail(String email)
@@ -48,7 +62,7 @@ namespace SplashPageWebApp.Controllers
                     email = email,
                 });
                 entities.SaveChangesAsync().Wait();
-                SendEmail.SendEmailTo("freewifi.fis@gmail.com", "FPT Wi-Fi Hotspot", email, newCode.code);
+                SendEmailWithTemplate.SendTo("freewifi.fis@gmail.com","FPT Wi-Fi Hotspot",email, newCode.code);
                 success = true;
                 id = Int32.Parse((newCode.datetime != null ? newCode.datetime.Value.ToString("MMddyyyyHHmmss") : "0") + newCode.id.ToString());
             }

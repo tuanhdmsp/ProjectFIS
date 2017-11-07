@@ -1,0 +1,135 @@
+﻿
+@{
+    ViewBag.Title = "AdminPage";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<head>
+    <title>User Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link rel="stylesheet" href="/Administrator/css/bootstrap.min.css">
+    <link href="/Administrator/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="/Administrator/css/style-responsive.css" rel="stylesheet" />
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/Administrator/css/font.css" type="text/css" />
+    <link href="/Administrator/css/font-awesome.css" rel="stylesheet">
+    <script src="/Administrator/js/jquery2.0.3.min.js"></script>
+</head>
+<body>
+    <section id="container">
+        <header class="header fixed-top clearfix">
+            <!--logo start-->
+            <div class="brand">
+                <a class="logo">
+                    Administrator
+                </a>
+            </div>
+            <!--logo end-->
+            <div class="top-nav clearfix">
+                <!--search & user info start-->
+                <ul class="nav pull-right top-menu">
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img alt="" src="../../Administrator/images/2.png">
+                            <span class="username">Hoang Tuan</span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <li><a href="/Administrator/AdminLogin.html"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+            </div>
+        </header>
+        <section id="main-content">
+            <section class="wrapper">
+                <div class="table-agile-info">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            User Management
+                        </div>
+                        <div class="row w3-res-tb">
+                            <div class="col-sm-5 m-b-xs">
+                                <select class="input-sm form-control w-sm inline v-middle">
+                                    <option value="0">Bulk action</option>
+                                    <option value="1">Delete selected</option>
+                                </select>
+                                <button class="btn btn-sm btn-default">Apply</button>
+                            </div>
+                            <div class="col-sm-4">
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <input type="text" class="input-sm form-control" placeholder="Search">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-sm btn-default" type="button">Search!</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped b-t b-light">
+                                <thead>
+                                    <tr>
+                                        <th style="width:20px;">
+                                            <label class="i-checks m-b-none">
+                                                <input type="checkbox"><i></i>
+                                            </label>
+                                        </th>
+                                        <th>Email</th>
+                                        <th>Code</th>
+                                        <th>Time</th>
+                                        <th>Used</th>
+                                        <th style="width:30px;"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+                                        <td>tuanhd.msp@outlook.com</td>
+                                        <td><span class="text-ellipsis"></span></td>
+                                        <td><span class="text-ellipsis"></span></td>
+                                        <td><span class="text-ellipsis"></span></td>
+                                        <td>
+                                            <a href="" class="active" ui-toggle-class="">
+                                                <i class="fa fa-times text-danger "></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <footer class="panel-footer">
+                            <div class="row">
+                                <div class="col-sm-7 text-right text-center-xs">
+                                    <ul class="pagination pagination-sm m-t-none m-b-none">
+                                        <li><a href=""><i class="fa fa-chevron-left"></i></a></li>
+                                        <li><a href="">1</a></li>
+                                        <li><a href="">2</a></li>
+                                        <li><a href="">3</a></li>
+                                        <li><a href="">4</a></li>
+                                        <li><a href=""><i class="fa fa-chevron-right"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+    <script src="/Administrator/js/bootstrap.js"></script>
+    <script src="/Administrator/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="/Administrator/js/scripts.js"></script>
+    <script src="/Administrator/js/jquery.slimscroll.js"></script>
+    <script src="/Administrator/js/jquery.nicescroll.js"></script>
+    <script src="/Administrator/js/jquery.scrollTo.js"></script>
+</body>
+</html>
+
+
