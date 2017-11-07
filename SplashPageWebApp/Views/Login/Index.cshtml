@@ -86,6 +86,7 @@
                         label.css("visibility", "visible");
                     } else {
                         createSubmitForm();
+                        console.log("success");
                     }
                 },
                 error: function(error) {
@@ -150,18 +151,23 @@
                 @Html.AntiForgeryToken()
                 <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
                 <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="">
-                <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="">
+                <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="">                           
 
                 <div class="pom-agile">
                     <input placeholder="E-mail" name="email" id="email" class="user" type="email" required="" onfocus="clickEmail()">
                     <span class="icon1"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                 </div>
+                
+                <div class="pom-agile">
+                    <input placeholder="Fullname" name="name" id="name" class="pass" disabled="" type="text" required="">
+                    <span class="icon2"><i class="fa fa-user" aria-hidden="true"></i></span>
+                </div>
 
                 <div class="pom-agile">
                     <input placeholder="Code" name="code" id="code" class="pass" disabled="" type="text" required="" onfocus="clickCode()">
                     <span class="icon2"><i class="fa fa-key" aria-hidden="true"></i></span>
-                </div>
-
+                </div>           
+                
                 <div class="sub-w3l">
                     <div class="right-w3l">
                         <input type="button" name="checkEmail" onclick="sendEmail()" value="Send">

@@ -104,7 +104,7 @@ body {
 input.pass {
     margin-top: .7em;
 }
-span.icon1, span.icon2 {
+span.icon1, span.icon2, span.icon3 {
     color: #ea2858;
     font-size: 1.1em;
     position: absolute;
@@ -116,6 +116,7 @@ span.icon1 {
 span.icon2 {
     top: 34%;
 }
+
 .sub-main-w3 input[type="button"] {
     color: white;
     background: #ea2858;

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
-using ConsoleApp1;
 using SplashPageWebApp.Models;
 using SplashPageWebApp.Services;
 
@@ -40,7 +39,7 @@ namespace SplashPageWebApp.Controllers
                     email = email,
                 });
                 entities.SaveChanges();
-                SendEmail.SendEmailTo("freewifi.fis@gmail.com","FPT Wi-Fi Hotspot",email, newCode.code);
+                SendEmailWithTemplate.SendTo("freewifi.fis@gmail.com","FPT Wi-Fi Hotspot",email, newCode.code);
                 success = true;
             }
             return Json(new

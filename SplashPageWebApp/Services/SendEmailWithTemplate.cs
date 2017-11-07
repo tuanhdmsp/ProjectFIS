@@ -1,26 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
+using System.Web;
+using System.Web.Hosting;
 
-namespace ConsoleApp1
+namespace SplashPageWebApp.Services
 {
-    public class SendEmail
+    public class SendEmailWithTemplate
     {
-        public static string splitEmail(string email)
+        public static void SendTo(string fromEmail, string sender, string toEmail, string code)
         {
-            MailAddress emailAddress = new MailAddress(email);
-            return emailAddress.User;
+            string body = CreateEmailBody(code);
+            SendEmailTo(fromEmail, sender, toEmail, body);
         }
 
-        public static void SendEmailTo(string fromEmail, string sender, string toEmail, string code)
+        public static string CreateEmailBody(string code)
+        {
+            string body;
+            using (StreamReader reader = new StreamReader(HostingEnvironment.MapPath("/EmailTemplate/index.html") ?? throw new InvalidOperationException()))
+            {
+                body = reader.ReadToEnd();
+            }
+            body = body.Replace("{Code}", code);
+            return body;
+        }
+
+        public static void SendEmailTo(string fromEmail, string sender, string toEmail, string bodyTemplate)
         {
             var fromAddress = new MailAddress(fromEmail, sender);
             var toAddress = new MailAddress(toEmail);
             const string appPassword = "zehcrryaxdsvvcpj";
             const string subject = "Free Code To Access Wi-Fi";
-            string body = "Please send this code to the customer: " + code;
+            string body = bodyTemplate;
 
             var smtp = new SmtpClient
             {
@@ -42,4 +58,5 @@ namespace ConsoleApp1
             smtp.Send(message);
         }
     }
+    
 }
