@@ -22,7 +22,7 @@ namespace SplashPageWebApp.Services
         public static string CreateEmailBody(string code)
         {
             string body;
-            using (StreamReader reader = new StreamReader(HostingEnvironment.MapPath("/EmailTemplate/index.html") ?? throw new InvalidOperationException()))
+            using (StreamReader reader = new StreamReader(HostingEnvironment.MapPath("/EmailTemplate/EmailTemplate.html") ?? throw new InvalidOperationException()))
             {
                 body = reader.ReadToEnd();
             }

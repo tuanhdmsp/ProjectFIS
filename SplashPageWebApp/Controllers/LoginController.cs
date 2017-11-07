@@ -24,6 +24,16 @@ namespace SplashPageWebApp.Controllers
             return View();
         }
 
+        public ActionResult AdminPage()
+        {
+            return View();
+        }
+
+        public ActionResult AdminLogin()
+        {
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult CheckEmail(String email)
