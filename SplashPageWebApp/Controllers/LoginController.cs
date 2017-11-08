@@ -88,9 +88,9 @@ namespace SplashPageWebApp.Controllers
                     code = GeneratePasswordWifi.Generate(6),
                     email = email,
                     fullname = !String.IsNullOrEmpty(guestName) ? guestName : email.Substring(0, email.IndexOf("@")),
+                    datetime = DateTime.Now,
+                    expiredTime = DateTime.Now.AddHours(4),
                     isUsed = false,
-                    datetime = null,
-                    expiredTime = null
                 });
                 try
                 {
@@ -102,7 +102,7 @@ namespace SplashPageWebApp.Controllers
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex);
+                    Console.WriteLine(ex.StackTrace);
                     message = "Something went wrong!";
                 }
             }
@@ -148,7 +148,7 @@ namespace SplashPageWebApp.Controllers
             //    }
             //}
 
-            var code = codes.SingleOrDefault(c => c.code.Equals(inpCode) && !(c.isUsed??true));
+            var code = codes.SingleOrDefault(c => c.code.Equals(inpCode) && !(c.isUsed??true) && (DateTime.Compare(c.expiredTime, DateTime.Now) > 0));
             if (code != null)
             {
                 success = true;
