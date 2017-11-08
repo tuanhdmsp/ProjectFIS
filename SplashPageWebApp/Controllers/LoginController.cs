@@ -20,7 +20,7 @@ namespace SplashPageWebApp.Controllers
         {
             if (RouteData.Values.ContainsKey("switch_url"))
             {
-                if (RouteData.Values["switch_url"].ToString().Equals("https://1.1.1.1"))
+                if (RouteData.Values["switch_url"].ToString().Equals("https://1.1.1.1/login.html"))
                 {
                     if (RouteData.Values.ContainsKey("redirect"))
                     {
