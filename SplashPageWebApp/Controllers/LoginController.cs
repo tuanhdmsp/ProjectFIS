@@ -88,6 +88,8 @@ namespace SplashPageWebApp.Controllers
                     email = email,
                     fullname = !String.IsNullOrEmpty(guestName) ? guestName : email.Substring(0, email.IndexOf("@")),
                     isUsed = false,
+                    datetime = null,
+                    expiredTime = null
                 });
                 try
                 {
@@ -130,8 +132,7 @@ namespace SplashPageWebApp.Controllers
                 var uniCode = filterCodes.SingleOrDefault(c =>
                 {
                     if (codeId
-                        .Equals(HashingHandler
-                        .SHA256Hashing((c.datetime?.ToString("MMddyyyyHHmmss") ?? "0") +
+                        .Equals(HashingHandler.SHA256Hashing((c.datetime?.ToString("MMddyyyyHHmmss") ?? "0") +
                                                              c.id.ToString()))) return true;
                     return false;
                 });
