@@ -19,24 +19,41 @@ namespace SplashPageWebApp.Controllers
         // GET: Login
         public ActionResult Index()
         {
-            if (RouteData.Values.ContainsKey("switch_url"))
+            var paramCollection = HttpContext.Request.Params;
+            var keys = paramCollection.AllKeys;
+            if (keys.Contains("switch_url"))
             {
-                ViewBag.switch_url_has = true;
-                ViewBag.switch_url_value = RouteData.Values["switch_url"].ToString();
-                if (RouteData.Values["switch_url"].ToString().Equals("https://1.1.1.1/login.html"))
+                var switch_url_values = paramCollection.GetValues("switch_url");
+                if (switch_url_values.Length == 1)
                 {
-                    if (RouteData.Values.ContainsKey("redirect"))
+                    if (switch_url_values[0].Equals("https://1.1.1.1/login.html"))
                     {
-                        ViewBag.redirect_has = true;
-                        ViewBag.redirect_value = RouteData.Values["redirect"].ToString();
-                        if ((RouteData.Values["redirect"]) != null)
+                        if (keys.Contains("redirect"))
                         {
-                            return View();
+                            var redirect_values = paramCollection.GetValues("redirect");
+                            if (redirect_values.Length == 1)
+                            {
+                                return View();
+                            }
                         }
                     }
                 }
             }
-            return View();
+            
+            //var tokens = HttpContext.Request.Params.AllKeys;
+            //Console.WriteLine(tokens);
+            //foreach (var token in tokens.AllKeys)
+            //{
+            //    var values = tokens.GetValues(token);
+            //    Console.WriteLine(token.ToString());
+            //    foreach (var value in values)
+            //    {
+            //        Console.WriteLine(value);
+            //    }
+            //    Console.WriteLine();
+            //}
+            //return View();
+            return RedirectToAction("ConnectedError");
         }
 
         public ActionResult ConnectedError()
