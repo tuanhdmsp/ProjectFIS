@@ -2,6 +2,7 @@
 using System.CodeDom;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Web;
@@ -77,7 +78,7 @@ namespace SplashPageWebApp.Controllers
         {
             var success = false;
             var message = "";
-            var id = "";
+            var id = -1;
             if (email.Contains("@gmail.com"))
             {
                 //send code to email
@@ -96,7 +97,8 @@ namespace SplashPageWebApp.Controllers
                     entities.SaveChangesAsync().Wait();
                     SendEmailWithTemplate.SendTo("freewifi.fis@gmail.com", "FPT Wi-Fi Hotspot", email, newCode.code);
                     success = true;
-                    id = HashingHandler.SHA256Hashing((newCode.datetime?.ToString("MMddyyyyHHmmss") ?? "0") + newCode.id);
+                    id = newCode.id;
+                    //id = HashingHandler.SHA256Hashing((newCode.datetime?.ToString("MMddyyyyHHmmss") ?? "0") + newCode.id);
                 }
                 catch (Exception ex)
                 {
@@ -124,25 +126,34 @@ namespace SplashPageWebApp.Controllers
             var message = "The code is unavailable";
             
             var codes = entities.GeneratedCodes;
-            var filterCodes = codes.Where(c => c.email == email && (c.isUsed ?? false) && DateTime.Compare(c.expiredTime.Value, DateTime.Now) <= 0)
-                .OrderByDescending(c => c.datetime).AsEnumerable();
+            
+            //var filterCodes = codes.Where(c => c.email == email && (c.isUsed ?? false) && DateTime.Compare(c.expiredTime.Value, DateTime.Now) <= 0)
+            //    .OrderByDescending(c => c.datetime).AsEnumerable();
 
-            if (filterCodes.Any())
+            //if (filterCodes.Any())
+            //{
+            //    var uniCode = filterCodes.SingleOrDefault(c =>
+            //    {
+            //        if (codeId.Equals(HashingHandler.SHA256Hashing((c.datetime?.ToString("MMddyyyyHHmmss") ?? "0") + c.id.ToString()))) return true;
+            //        return false;
+            //    });
+
+            //    var uniCode = filterCodes.SingleOrDefault();
+
+            //    if (uniCode != null)
+            //    {
+            //        uniCode.isUsed = true;
+            //        entities.SaveChangesAsync();
+            //        success = true;
+            //    }
+            //}
+
+            var code = codes.Where(c => c.code.Equals(inpCode) && !(c.isUsed??true)).SingleOrDefault();
+            if (code != null)
             {
-                var uniCode = filterCodes.SingleOrDefault(c =>
-                {
-                    if (codeId
-                        .Equals(HashingHandler.SHA256Hashing((c.datetime?.ToString("MMddyyyyHHmmss") ?? "0") +
-                                                             c.id.ToString()))) return true;
-                    return false;
-                });
-
-                if (uniCode != null)
-                {
-                    uniCode.isUsed = true;
-                    entities.SaveChangesAsync();
-                    success = true;
-                }
+                success = true;
+                code.isUsed = true;
+                entities.SaveChangesAsync();
             }
             return Json(new
             {
