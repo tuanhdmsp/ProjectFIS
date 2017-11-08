@@ -14,6 +14,8 @@
           <Property Name="email" Type="varchar" MaxLength="50" />
           <Property Name="datetime" Type="datetime" />
           <Property Name="isUsed" Type="bit" />
+          <Property Name="fullname" Type="nvarchar" MaxLength="50" />
+          <Property Name="expiredTime" Type="datetime" />
         </EntityType>
         <EntityContainer Name="testwifiModelStoreContainer">
           <EntitySet Name="GeneratedCode" EntityType="Self.GeneratedCode" Schema="dbo" store:Type="Tables" />
@@ -31,6 +33,8 @@
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="datetime" Type="DateTime" Precision="3" />
           <Property Name="isUsed" Type="Boolean" />
+          <Property Name="fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="expiredTime" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityContainer Name="testwifiEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="GeneratedCodes" EntityType="Self.GeneratedCode" />
@@ -44,6 +48,8 @@
           <EntitySetMapping Name="GeneratedCodes">
             <EntityTypeMapping TypeName="testwifiModel.GeneratedCode">
               <MappingFragment StoreEntitySet="GeneratedCode">
+                <ScalarProperty Name="expiredTime" ColumnName="expiredTime" />
+                <ScalarProperty Name="fullname" ColumnName="fullname" />
                 <ScalarProperty Name="isUsed" ColumnName="isUsed" />
                 <ScalarProperty Name="datetime" ColumnName="datetime" />
                 <ScalarProperty Name="id" ColumnName="id" />

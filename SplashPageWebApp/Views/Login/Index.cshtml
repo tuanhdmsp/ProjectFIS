@@ -34,6 +34,7 @@
                     "data": {
                         "__RequestVerificationToken": $('form input[name=__RequestVerificationToken]').val(),
                         "email": inputValue,
+                        "guestName": $('#name')[0].val(),
                     },
                     "success": function(data) {
 
@@ -47,12 +48,14 @@
                         } else {
                             $('[name=email]').removeAttr("disabled");
                             $('[name=checkEmail]').removeAttr("disabled");
-
+                            $('#message').css("visibility", "visible");
+                            $('#message').text(data.message);
                             label.css("visibility", "visible");
                         }
 
                     },
                     "error": function(error) {
+                        alert("Something went wrong! Please try again!");
                         console.log(error);
                     }
                 });
@@ -61,16 +64,9 @@
             }
         }
 
-        clickEmail = function() {
-            console.log("trigger");
-            var label = $('label[for=email]');
-            label.css("visibility", "hidden");
-        };
-
-        clickCode = function() {
-            var label = $('label[for=code]');
-            label.css("visibility", "hidden");
-        };
+        clearMessage = function () {
+            $('#message').css("visibility","hidden");
+        }
 
         function sendCode() {
             if (codeId != -1) {
@@ -82,6 +78,7 @@
                         "__RequestVerificationToken": $('form input[name=__RequestVerificationToken]').val(),
                         "inpCode": inputValue,
                         "email": $('[name=email]')[0].value,
+                        "codeId": codeId
                     },
                     type: "json",
                     success: function(data) {
@@ -89,11 +86,14 @@
                         if (data.success == false) {
                             var label = $('label[for=code]');
                             label.css("visibility", "visible");
+                            $('#message').css("visibility", "visible");
+                            $('#message').text(data.message);
                         } else {
                             createSubmitForm();
                         }
                     },
-                    error: function(error) {
+                    error: function (error) {
+
                         $('[name=code]').attr('disabled');
                         $('[name=loginWifi]').attr('disabled');
                         $('[name=email]').removeAttr("disabled", "disabled");
@@ -159,7 +159,7 @@
                 <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="">                           
 
                 <div class="pom-agile">
-                    <input placeholder="E-mail" name="email" id="email" class="user" type="email" required="" onfocus="clickEmail()">
+                    <input placeholder="E-mail" name="email" id="email" class="user" type="email" required="" onfocus="clearMessage()">
                     <span class="icon1"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                 </div>
                 
@@ -169,7 +169,7 @@
                 </div>
 
                 <div class="pom-agile">
-                    <input placeholder="Code" name="code" id="code" class="pass" disabled="" type="text" required="" onfocus="clickCode()">
+                    <input placeholder="Code" name="code" id="code" class="pass" disabled="" type="text" required="" onfocus="clearMessage()">
                     <span class="icon2"><i class="fa fa-key" aria-hidden="true"></i></span>
                 </div>           
                 

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.Ajax.Utilities;
 using SplashPageWebApp.Models;
 using SplashPageWebApp.Services;
 
@@ -23,11 +24,14 @@ namespace SplashPageWebApp.Controllers
                 {
                     if (RouteData.Values.ContainsKey("redirect"))
                     {
-                        return View();
+                        if ((RouteData.Values["redirect"]) != null)
+                        {
+                            return View();
+                        }
                     }
                 }
             }
-            return View();
+            return RedirectToAction("ConnectedError");
         }
 
         public ActionResult ConnectedError()
@@ -47,11 +51,11 @@ namespace SplashPageWebApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CheckEmail(String email)
+        public ActionResult CheckEmail(String email, String guestName)
         {
             var success = false;
             var message = "";
-            var id = -1;
+            var id = "";
             if (email.Contains("@gmail.com"))
             {
                 //send code to email
@@ -60,11 +64,13 @@ namespace SplashPageWebApp.Controllers
                 {
                     code = GeneratePasswordWifi.Generate(6),
                     email = email,
+                    fullname = guestName,
+                    isUsed = false,
                 });
                 entities.SaveChangesAsync().Wait();
                 SendEmailWithTemplate.SendTo("freewifi.fis@gmail.com","FPT Wi-Fi Hotspot",email, newCode.code);
                 success = true;
-                id = Int32.Parse((newCode.datetime != null ? newCode.datetime.Value.ToString("MMddyyyyHHmmss") : "0") + newCode.id.ToString());
+                id = HashingHandler.SHA256Hashing((newCode.datetime?.ToString("MMddyyyyHHmmss") ?? "0") + newCode.id);
             }
             else
             {
@@ -80,21 +86,36 @@ namespace SplashPageWebApp.Controllers
 
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public ActionResult CheckCode(String inpCode)
+        public ActionResult CheckCode(String inpCode, string email, string codeId)
         {
             var success = false;
-
+            var message = "The code is unavailable";
+            
             var codes = entities.GeneratedCodes;
-            var code = codes.AsEnumerable().Last().code;
+            var filterCodes = codes.Where(c => c.email == email && (c.isUsed ?? false) && DateTime.Compare(c.expiredTime.Value, DateTime.Now) <= 0)
+                .OrderByDescending(c => c.datetime).AsEnumerable();
 
-            if (inpCode.Equals(code))
+            if (filterCodes.Any())
             {
-                success = true;
-            }
+                var uniCode = filterCodes.SingleOrDefault(c =>
+                {
+                    if (HashingHandler.SHA256Hashing(codeId)
+                        .Equals(HashingHandler.SHA256Hashing((c.datetime?.ToString("MMddyyyyHHmmss") ?? "0") +
+                                                             c.id.ToString()))) return true;
+                    return false;
+                });
 
+                if (uniCode != null)
+                {
+                    uniCode.isUsed = true;
+                    entities.SaveChangesAsync();
+                    success = true;
+                }
+            }
             return Json(new
             {
-                success
+                success,
+                message,
             }, JsonRequestBehavior.AllowGet);
         }
 

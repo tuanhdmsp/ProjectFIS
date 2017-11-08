@@ -19,5 +19,7 @@ namespace SplashPageWebApp.Models
         public string email { get; set; }
         public Nullable<System.DateTime> datetime { get; set; }
         public Nullable<bool> isUsed { get; set; }
+        public string fullname { get; set; }
+        public Nullable<System.DateTime> expiredTime { get; set; }
     }
 }
