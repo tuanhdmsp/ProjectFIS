@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -20,10 +21,14 @@ namespace SplashPageWebApp.Controllers
         {
             if (RouteData.Values.ContainsKey("switch_url"))
             {
+                ViewBag.switch_url_has = true;
+                ViewBag.switch_url_value = RouteData.Values["switch_url"].ToString();
                 if (RouteData.Values["switch_url"].ToString().Equals("https://1.1.1.1/login.html"))
                 {
                     if (RouteData.Values.ContainsKey("redirect"))
                     {
+                        ViewBag.redirect_has = true;
+                        ViewBag.redirect_value = RouteData.Values["redirect"].ToString();
                         if ((RouteData.Values["redirect"]) != null)
                         {
                             return View();
@@ -31,7 +36,7 @@ namespace SplashPageWebApp.Controllers
                     }
                 }
             }
-            return RedirectToAction("ConnectedError");
+            return View();
         }
 
         public ActionResult ConnectedError()
@@ -64,13 +69,21 @@ namespace SplashPageWebApp.Controllers
                 {
                     code = GeneratePasswordWifi.Generate(6),
                     email = email,
-                    fullname = guestName,
+                    fullname = !String.IsNullOrEmpty(guestName) ? guestName : email.Substring(0, email.IndexOf("@")),
                     isUsed = false,
                 });
-                entities.SaveChangesAsync().Wait();
-                SendEmailWithTemplate.SendTo("freewifi.fis@gmail.com","FPT Wi-Fi Hotspot",email, newCode.code);
-                success = true;
-                id = HashingHandler.SHA256Hashing((newCode.datetime?.ToString("MMddyyyyHHmmss") ?? "0") + newCode.id);
+                try
+                {
+                    entities.SaveChangesAsync().Wait();
+                    SendEmailWithTemplate.SendTo("freewifi.fis@gmail.com", "FPT Wi-Fi Hotspot", email, newCode.code);
+                    success = true;
+                    id = HashingHandler.SHA256Hashing((newCode.datetime?.ToString("MMddyyyyHHmmss") ?? "0") + newCode.id);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                    message = "Something went wrong!";
+                }
             }
             else
             {

@@ -18,6 +18,21 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     <script>
+        $(document).ready(function() {
+            if (@ViewBag.switch_url_has) {
+                console.log("Has switch_url");
+                if (@ViewBag.switch_url_value) {
+                    console.log(@ViewBag.switch_url_value);
+                    if (@ViewBag.redirect_has) {
+                        console.log("Has redirect url");
+                        if (@ViewBag.redirect_value) {
+                            console.log(@ViewBag.redirect_value);
+                        }
+                    }
+                }
+            }
+        });
+        
         var codeId = -1;
 
         function sendEmail() {
