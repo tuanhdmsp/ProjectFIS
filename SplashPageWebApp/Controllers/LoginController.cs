@@ -129,8 +129,9 @@ namespace SplashPageWebApp.Controllers
             {
                 var uniCode = filterCodes.SingleOrDefault(c =>
                 {
-                    if (HashingHandler.SHA256Hashing(codeId)
-                        .Equals(HashingHandler.SHA256Hashing((c.datetime?.ToString("MMddyyyyHHmmss") ?? "0") +
+                    if (codeId
+                        .Equals(HashingHandler
+                        .SHA256Hashing((c.datetime?.ToString("MMddyyyyHHmmss") ?? "0") +
                                                              c.id.ToString()))) return true;
                     return false;
                 });

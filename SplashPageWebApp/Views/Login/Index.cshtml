@@ -26,6 +26,7 @@
             if (inputValue) {
                 $('[name=email]').attr("disabled", "disabled");
                 $('[name=checkEmail]').attr("disabled", "disabled");
+                $('[name=name]').attr("disabled", "disabled");
                 $.ajax({
                     "method": "POST",
                     "dataType": "json",
@@ -33,7 +34,7 @@
                     "data": {
                         "__RequestVerificationToken": $('form input[name=__RequestVerificationToken]').val(),
                         "email": inputValue,
-                        "guestName": $('#name')[0].val(),
+                        "guestName": $('[name=name]')[0].value,
                     },
                     "success": function(data) {
 
@@ -47,13 +48,17 @@
                         } else {
                             $('[name=email]').removeAttr("disabled");
                             $('[name=checkEmail]').removeAttr("disabled");
+                            $('[name=name]').removeAttr("disabled");
                             $('#message').css("visibility", "visible");
                             $('#message').text(data.message);
                             label.css("visibility", "visible");
                         }
 
                     },
-                    "error": function(error) {
+                    "error": function (error) {
+                        $('[name=email]').removeAttr("disabled");
+                        $('[name=checkEmail]').removeAttr("disabled");
+                        $('[name=name]').removeAttr("disabled");
                         alert("Something went wrong! Please try again!");
                         console.log(error);
                     }
@@ -163,7 +168,7 @@
                 </div>
                 
                 <div class="pom-agile">
-                    <input placeholder="Fullname" name="name" id="name" class="pass" disabled="" type="text" required="">
+                    <input placeholder="Fullname" name="name" id="name" class="pass" type="text" required="">
                     <span class="icon2"><i class="fa fa-user" aria-hidden="true"></i></span>
                 </div>
 
