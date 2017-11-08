@@ -24,15 +24,15 @@ namespace SplashPageWebApp.Controllers
             var keys = paramCollection.AllKeys;
             if (keys.Contains("switch_url"))
             {
-                var switch_url_values = paramCollection.GetValues("switch_url");
-                if (switch_url_values.Length == 1)
+                var switchUrlValues = paramCollection.GetValues("switch_url");
+                if (switchUrlValues != null && switchUrlValues.Length == 1)
                 {
-                    if (switch_url_values[0].Equals("https://1.1.1.1/login.html"))
+                    if (switchUrlValues[0].Equals("https://1.1.1.1/login.html"))
                     {
                         if (keys.Contains("redirect"))
                         {
-                            var redirect_values = paramCollection.GetValues("redirect");
-                            if (redirect_values.Length == 1)
+                            var redirectValues = paramCollection.GetValues("redirect");
+                            if (redirectValues != null && redirectValues.Length == 1)
                             {
                                 return View();
                             }
@@ -148,7 +148,7 @@ namespace SplashPageWebApp.Controllers
             //    }
             //}
 
-            var code = codes.Where(c => c.code.Equals(inpCode) && !(c.isUsed??true)).SingleOrDefault();
+            var code = codes.SingleOrDefault(c => c.code.Equals(inpCode) && !(c.isUsed??true));
             if (code != null)
             {
                 success = true;
