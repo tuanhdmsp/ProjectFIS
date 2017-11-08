@@ -12,10 +12,10 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="code" Type="varchar" MaxLength="50" />
           <Property Name="email" Type="varchar" MaxLength="50" />
-          <Property Name="datetime" Type="datetime" />
+          <Property Name="datetime" Type="datetime" Nullable="false" />
           <Property Name="isUsed" Type="bit" />
           <Property Name="fullname" Type="nvarchar" MaxLength="50" />
-          <Property Name="expiredTime" Type="datetime" />
+          <Property Name="expiredTime" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityContainer Name="testwifiModelStoreContainer">
           <EntitySet Name="GeneratedCode" EntityType="Self.GeneratedCode" Schema="dbo" store:Type="Tables" />
@@ -31,10 +31,10 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="datetime" Type="DateTime" Precision="3" />
+          <Property Name="datetime" Type="DateTime" Precision="3" Nullable="false" />
           <Property Name="isUsed" Type="Boolean" />
           <Property Name="fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="expiredTime" Type="DateTime" Precision="3" />
+          <Property Name="expiredTime" Type="DateTime" Precision="3" Nullable="false" />
         </EntityType>
         <EntityContainer Name="testwifiEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="GeneratedCodes" EntityType="Self.GeneratedCode" />
