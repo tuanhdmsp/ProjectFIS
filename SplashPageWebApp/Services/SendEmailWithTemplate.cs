@@ -26,7 +26,7 @@ namespace SplashPageWebApp.Services
             {
                 body = reader.ReadToEnd();
             }
-            body = body.Replace("{Code}", code);
+            body = body.Replace("{Code}", code.Normalize());
             return body;
         }
 
