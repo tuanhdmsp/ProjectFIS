@@ -8,9 +8,9 @@
 <head>
     <title>FPT Information System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Online Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
-    <link rel="stylesheet" href="/FISProject/css/style.css" type="text/css" media="all" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="Online Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"/>
+    <link rel="stylesheet" href="/FISProject/css/style.css" type="text/css" media="all"/>
     <link rel="stylesheet" href="/FISProject/css/font-awesome.css">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&amp;subset=latin-ext" rel="stylesheet">
@@ -19,6 +19,7 @@
     @Scripts.Render("~/bundles/bootstrap")
     <script>
         var codeId = -1;
+
         function sendEmail() {
             var inputValue = $('[name=email]')[0].value;
 
@@ -55,7 +56,7 @@
                         }
 
                     },
-                    "error": function (error) {
+                    "error": function(error) {
                         $('[name=email]').removeAttr("disabled");
                         $('[name=checkEmail]').removeAttr("disabled");
                         $('[name=name]').removeAttr("disabled");
@@ -68,9 +69,9 @@
             }
         }
 
-        clearMessage = function () {
-            $('#message').css("visibility","hidden");
-        }
+        clearMessage = function() {
+            $('#message').css("visibility", "hidden");
+        };
 
         function sendCode() {
             if (codeId != -1) {
@@ -96,7 +97,7 @@
                             createSubmitForm();
                         }
                     },
-                    error: function (error) {
+                    error: function(error) {
 
                         $('[name=code]').attr('disabled');
                         $('[name=loginWifi]').attr('disabled');
@@ -149,7 +150,7 @@
     </div>
 
     <div class="main-content-agile">
-        
+
         <div class="sub-main-w3">
             <div class="wthree-pro">
                 <h2>Free Wi-Fi Hotspot</h2><br/>
@@ -160,23 +161,29 @@
                 @Html.AntiForgeryToken()
                 <input TYPE="hidden" NAME="buttonClicked" SIZE="16" MAXLENGTH="15" value="0">
                 <input TYPE="hidden" NAME="redirect_url" SIZE="255" MAXLENGTH="255" VALUE="">
-                <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="">                           
+                <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="">
 
                 <div class="pom-agile">
                     <input placeholder="E-mail" name="email" id="email" class="user" type="email" required="" onfocus="clearMessage()">
-                    <span class="icon1"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                    <span class="icon1">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
                 </div>
-                
+
                 <div class="pom-agile">
                     <input placeholder="Fullname" name="name" id="name" class="pass" type="text" required="">
-                    <span class="icon2"><i class="fa fa-user" aria-hidden="true"></i></span>
+                    <span class="icon2">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
                 </div>
 
                 <div class="pom-agile">
                     <input placeholder="Code" name="code" id="code" class="pass" disabled="" type="text" required="" onfocus="clearMessage()">
-                    <span class="icon2"><i class="fa fa-key" aria-hidden="true"></i></span>
-                </div>           
-                
+                    <span class="icon2">
+                        <i class="fa fa-key" aria-hidden="true"></i>
+                    </span>
+                </div>
+
                 <div class="sub-w3l">
                     <div class="right-w3l">
                         <input type="button" name="checkEmail" onclick="sendEmail()" value="Send">

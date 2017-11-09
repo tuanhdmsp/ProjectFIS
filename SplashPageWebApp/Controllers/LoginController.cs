@@ -1,21 +1,14 @@
 ﻿using System;
-using System.CodeDom;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Globalization;
 using System.Linq;
-using System.Net.Http;
-using System.Web;
 using System.Web.Mvc;
-using Microsoft.Ajax.Utilities;
+using ServicesFIS;
 using SplashPageWebApp.Models;
-using SplashPageWebApp.Services;
 
 namespace SplashPageWebApp.Controllers
 {
     public class LoginController : Controller
     {
-        testwifiEntities entities = new testwifiEntities();
+        private readonly testwifiEntities entities = new testwifiEntities();
 
         // GET: Login
         public ActionResult Index()
@@ -26,21 +19,15 @@ namespace SplashPageWebApp.Controllers
             {
                 var switchUrlValues = paramCollection.GetValues("switch_url");
                 if (switchUrlValues != null && switchUrlValues.Length == 1)
-                {
                     if (switchUrlValues[0].Equals("https://1.1.1.1/login.html"))
-                    {
                         if (keys.Contains("redirect"))
                         {
                             var redirectValues = paramCollection.GetValues("redirect");
                             if (redirectValues != null && redirectValues.Length == 1)
-                            {
                                 return View();
-                            }
                         }
-                    }
-                }
             }
-            
+
             //var tokens = HttpContext.Request.Params.AllKeys;
             //Console.WriteLine(tokens);
             //foreach (var token in tokens.AllKeys)
@@ -74,7 +61,7 @@ namespace SplashPageWebApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CheckEmail(String email, String guestName)
+        public ActionResult CheckEmail(string email, string guestName)
         {
             var success = false;
             var message = "";
@@ -83,14 +70,14 @@ namespace SplashPageWebApp.Controllers
             {
                 //send code to email
 
-                var newCode = entities.GeneratedCodes.Add(new GeneratedCode()
+                var newCode = entities.GeneratedCodes.Add(new GeneratedCode
                 {
                     code = GeneratePasswordWifi.Generate(6),
                     email = email,
-                    fullname = !String.IsNullOrEmpty(guestName) ? guestName : email.Substring(0, email.IndexOf("@")),
+                    fullname = !string.IsNullOrEmpty(guestName) ? guestName : email.Substring(0, email.IndexOf("@")),
                     datetime = DateTime.Now,
                     expiredTime = DateTime.Now.AddHours(4),
-                    isUsed = false,
+                    isUsed = false
                 });
                 try
                 {
@@ -114,19 +101,19 @@ namespace SplashPageWebApp.Controllers
             {
                 success,
                 message,
-                id,
+                id
             }, JsonRequestBehavior.AllowGet);
         }
 
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public ActionResult CheckCode(String inpCode, string email, string codeId)
+        public ActionResult CheckCode(string inpCode, string email, string codeId)
         {
             var success = false;
             var message = "The code is unavailable";
-            
+
             var codes = entities.GeneratedCodes;
-            
+
             //var filterCodes = codes.Where(c => c.email == email && (c.isUsed ?? false) && DateTime.Compare(c.expiredTime.Value, DateTime.Now) <= 0)
             //    .OrderByDescending(c => c.datetime).AsEnumerable();
 
@@ -148,7 +135,8 @@ namespace SplashPageWebApp.Controllers
             //    }
             //}
 
-            var code = codes.SingleOrDefault(c => c.code.Equals(inpCode) && !(c.isUsed??true) && (DateTime.Compare(c.expiredTime, DateTime.Now) > 0));
+            var code = codes.SingleOrDefault(c =>
+                c.code.Equals(inpCode) && !(c.isUsed ?? true) && DateTime.Compare(c.expiredTime, DateTime.Now) > 0);
             if (code != null)
             {
                 success = true;
@@ -158,7 +146,7 @@ namespace SplashPageWebApp.Controllers
             return Json(new
             {
                 success,
-                message,
+                message
             }, JsonRequestBehavior.AllowGet);
         }
 
