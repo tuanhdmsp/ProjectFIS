@@ -7,7 +7,7 @@
         y = 0,
         N = function() {
             var e = document.getElementsByTagName("script"), e = e[e.length - 1].src.split("?")[0];
-            return 0 < e.split("/").length ? e.split("/").slice(0, -1).join("/") + "/" : ""
+            return 0 < e.split("/").length ? e.split("/").slice(0, -1).join("/") + "/" : "";
         }(),
         H = ["ms", "moz", "webkit", "o"],
         v = window.requestAnimationFrame || !1,
@@ -16,7 +16,7 @@
         for (var O in H) {
             var F = H[O];
             v || (v = window[F + "RequestAnimationFrame"]);
-            w || (w = window[F + "CancelAnimationFrame"] || window[F + "CancelRequestAnimationFrame"])
+            w || (w = window[F + "CancelAnimationFrame"] || window[F + "CancelRequestAnimationFrame"]);
         }
     var A = window.MutationObserver ||
             window.WebKitMutationObserver ||
@@ -116,7 +116,7 @@
                 if ("undefined" !=
                     typeof e.style[k[l]]) {
                     c.trstyle = k[l];
-                    break
+                    break;
                 }
             c.hastransform = !1 != c.trstyle;
             c.hastransform &&
@@ -139,7 +139,7 @@
                     c.transitionstyle = k[l];
                     c.prefixstyle = q[l];
                     c.transitionend = t[l];
-                    break
+                    break;
                 }
             c.ischrome26 && (c.prefixstyle = q[1]);
             c.hastransition = c.transitionstyle;
@@ -149,15 +149,15 @@
                 for (l = 0; l < k.length; l++)
                     if (q = k[l], e.style.cursor = q, e.style.cursor == q) {
                         k = q;
-                        break a
+                        break a;
                     }
-                k = "url(http://www.google.com/intl/en_ALL/mapfiles/openhand.cur),n-resize"
+                k = "url(http://www.google.com/intl/en_ALL/mapfiles/openhand.cur),n-resize";
             }
             c.cursorgrabvalue = k;
             c.hasmousecapture = "setCapture" in e;
             c.hasMutationObserver = !1 !== A;
             return G =
-                c
+                c;
         },
         Q = function(h, c) {
             function k() {
@@ -166,9 +166,9 @@
                 for (; 0 < d.length && 9 != d[0].nodeType;) {
                     var c = d.css("zIndex");
                     if (!isNaN(c) && 0 != c) return parseInt(c);
-                    d = d.parent()
+                    d = d.parent();
                 }
-                return!1
+                return!1;
             }
 
             function l(d, c, f) {
@@ -181,7 +181,7 @@
                         ? b.win.outerHeight() - b.win.innerHeight()
                         : b.win.outerWidth() - b.win.innerWidth()
                         : 1, b.isie8 && d && (d += 1), f ? d : 0)
-                    : d
+                    : d;
             }
 
             function q(d, c, f, g) {
@@ -198,18 +198,18 @@
                             deltaZ: 0,
                             preventDefault: function() {
                                 b.preventDefault ? b.preventDefault() : b.returnValue = !1;
-                                return!1
+                                return!1;
                             },
                             stopImmediatePropagation: function() {
-                                b.stopImmediatePropagation ? b.stopImmediatePropagation() : b.cancelBubble = !0
+                                b.stopImmediatePropagation ? b.stopImmediatePropagation() : b.cancelBubble = !0;
                             }
                         };
                         "mousewheel" == c
                             ? (g.deltaY = -0.025 * b.wheelDelta, b.wheelDeltaX && (g.deltaX = -0.025 * b.wheelDeltaX))
                             : g.deltaY = b.detail;
-                        return f.call(d, g)
+                        return f.call(d, g);
                     },
-                    g)
+                    g);
             }
 
             function t(d, c, f) {
@@ -226,13 +226,13 @@
                     function() {
                         var d = b.lastdeltax;
                         b.lastdeltax = 0;
-                        b.rail.drag || b.doScrollLeftBy(d)
+                        b.rail.drag || b.doScrollLeftBy(d);
                     },
                     120));
                 if (e) {
                     if (b.opt.nativeparentscrolling && f && !b.ispage && !b.zoomactive)
                         if (0 > e) {
-                            if (b.getScrollTop() >= b.page.maxh) return!0
+                            if (b.getScrollTop() >= b.page.maxh) return!0;
                         } else if (0 >= b.getScrollTop()) return!0;
                     b.scrollmom && b.scrollmom.stop();
                     b.lastdeltay += e;
@@ -240,12 +240,12 @@
                         function() {
                             var d = b.lastdeltay;
                             b.lastdeltay = 0;
-                            b.rail.drag || b.doScrollBy(d)
+                            b.rail.drag || b.doScrollBy(d);
                         },
-                        120)
+                        120);
                 }
                 d.stopImmediatePropagation();
-                return d.preventDefault()
+                return d.preventDefault();
             }
 
             var b = this;
@@ -309,13 +309,13 @@
                         last: k + f,
                         tt: setTimeout(function() {
                                 b.delaylist[d].tt = 0;
-                                c.call()
+                                c.call();
                             },
                             f)
                     };
                 else if (!e || !e.tt)
                     b.delaylist[d] = { last: k, tt: 0 }, setTimeout(function() { c.call() },
-                        0)
+                        0);
             };
             this.debounced = function(d, c, f) {
                 var g = b.delaylist[d];
@@ -325,9 +325,9 @@
                     setTimeout(function() {
                             var c = b.delaylist[d];
                             b.delaylist[d] = !1;
-                            c.call()
+                            c.call();
                         },
-                        f)
+                        f);
             };
             this.synched = function(d, c) {
                 b.synclist[d] = c;
@@ -338,17 +338,17 @@
                         for (d in b.synclist) {
                             var c = b.synclist[d];
                             c && c.call(b);
-                            b.synclist[d] = !1
+                            b.synclist[d] = !1;
                         }
-                    }), b.onsync = !0)
+                    }), b.onsync = !0);
                 })();
-                return d
+                return d;
             };
             this.unsynched = function(d) { b.synclist[d] && (b.synclist[d] = !1) };
             this.css = function(d, c) {
                 for (var f in c)
                     b.saved.css.push([d, f, d.css(f)]), d.css(f,
-                        c[f])
+                        c[f]);
             };
             this.scrollTop = function(d) { return"undefined" == typeof d ? b.getScrollTop() : b.setScrollTop(d) };
             this.scrollLeft = function(d) { return"undefined" == typeof d ? b.getScrollLeft() : b.setScrollLeft(d) };
@@ -361,7 +361,7 @@
                 this.p3 = k || 0;
                 this.p4 = l || 1;
                 this.ts = (new Date).getTime();
-                this.df = this.ed - this.st
+                this.df = this.ed - this.st;
             };
             BezierClass.prototype = {
                 B2: function(b) { return 3 * b * b * (1 - b) },
@@ -369,7 +369,7 @@
                 B4: function(b) { return(1 - b) * (1 - b) * (1 - b) },
                 getNow: function() {
                     var b = 1 - ((new Date).getTime() - this.ts) / this.spd, c = this.B2(b) + this.B3(b) + this.B4(b);
-                    return 0 > b ? this.ed : this.st + Math.round(this.df * c)
+                    return 0 > b ? this.ed : this.st + Math.round(this.df * c);
                 },
                 update: function(b, c) {
                     this.st = this.getNow();
@@ -377,7 +377,7 @@
                     this.spd = c;
                     this.ts = (new Date).getTime();
                     this.df = this.ed - this.st;
-                    return this
+                    return this;
                 }
             };
             if (this.ishwscroll) {
@@ -390,33 +390,33 @@
                         d.substr(0,
                             6)
                         ? d.replace(/^.*\((.*)\)$/g, "$1").replace(/px/g, "").split(/, +/)
-                        : !1
+                        : !1;
                 };
                 this.getScrollTop = function(d) {
                     if (!d) {
                         if (d = s()) return 16 == d.length ? -d[13] : -d[5];
-                        if (b.timerscroll && b.timerscroll.bz) return b.timerscroll.bz.getNow()
+                        if (b.timerscroll && b.timerscroll.bz) return b.timerscroll.bz.getNow();
                     }
-                    return b.doc.translate.y
+                    return b.doc.translate.y;
                 };
                 this.getScrollLeft = function(d) {
                     if (!d) {
                         if (d = s()) return 16 == d.length ? -d[12] : -d[4];
-                        if (b.timerscroll && b.timerscroll.bh) return b.timerscroll.bh.getNow()
+                        if (b.timerscroll && b.timerscroll.bh) return b.timerscroll.bh.getNow();
                     }
-                    return b.doc.translate.x
+                    return b.doc.translate.x;
                 };
                 this.notifyScrollEvent = document.createEvent
                     ? function(b) {
                         var c = document.createEvent("UIEvents");
                         c.initUIEvent("scroll", !1, !0, window, 1);
-                        b.dispatchEvent(c)
+                        b.dispatchEvent(c);
                     }
                     : document.fireEvent
                     ? function(b) {
                         var c = document.createEventObject();
                         b.fireEvent("onscroll");
-                        c.cancelBubble = !0
+                        c.cancelBubble = !0;
                     }
                     : function(b, c) {};
                 g.hastranslate3d && b.opt.enabletranslate3d
@@ -424,38 +424,38 @@
                         b.doc.translate.y = d;
                         b.doc.translate.ty = -1 * d + "px";
                         b.doc.css(g.trstyle, "translate3d(" + b.doc.translate.tx + "," + b.doc.translate.ty + ",0px)");
-                        c || b.notifyScrollEvent(b.win[0])
+                        c || b.notifyScrollEvent(b.win[0]);
                     }, this.setScrollLeft = function(d, c) {
                         b.doc.translate.x = d;
                         b.doc.translate.tx = -1 *
                             d +
                             "px";
                         b.doc.css(g.trstyle, "translate3d(" + b.doc.translate.tx + "," + b.doc.translate.ty + ",0px)");
-                        c || b.notifyScrollEvent(b.win[0])
+                        c || b.notifyScrollEvent(b.win[0]);
                     })
                     : (this.setScrollTop = function(d, c) {
                         b.doc.translate.y = d;
                         b.doc.translate.ty = -1 * d + "px";
                         b.doc.css(g.trstyle, "translate(" + b.doc.translate.tx + "," + b.doc.translate.ty + ")");
-                        c || b.notifyScrollEvent(b.win[0])
+                        c || b.notifyScrollEvent(b.win[0]);
                     }, this.setScrollLeft = function(d, c) {
                         b.doc.translate.x = d;
                         b.doc.translate.tx = -1 * d + "px";
                         b.doc.css(g.trstyle, "translate(" + b.doc.translate.tx + "," + b.doc.translate.ty + ")");
-                        c || b.notifyScrollEvent(b.win[0])
-                    })
+                        c || b.notifyScrollEvent(b.win[0]);
+                    });
             } else
                 this.getScrollTop =
                     function() { return b.docscroll.scrollTop() }, this.setScrollTop =
                     function(d) { return b.docscroll.scrollTop(d) }, this.getScrollLeft =
                     function() { return b.docscroll.scrollLeft() }, this.setScrollLeft = function(d) {
-                    return b.docscroll.scrollLeft(d)
+                    return b.docscroll.scrollLeft(d);
                 };
             this.getTarget = function(b) { return!b ? !1 : b.target ? b.target : b.srcElement ? b.srcElement : !1 };
             this.hasParent = function(b, c) {
                 if (!b) return!1;
                 for (var f = b.target || b.srcElement || b || !1; f && f.id != c;) f = f.parentNode || !1;
-                return!1 !== f
+                return!1 !== f;
             };
             var u = { thin: 1, medium: 3, thick: 5 };
             this.getOffset = function() {
@@ -466,7 +466,7 @@
                     };
                 if (!b.viewport) return b.win.offset();
                 var d = b.win.offset(), c = b.viewport.offset();
-                return{ top: d.top - c.top + b.viewport.scrollTop(), left: d.left - c.left + b.viewport.scrollLeft() }
+                return{ top: d.top - c.top + b.viewport.scrollTop(), left: d.left - c.left + b.viewport.scrollLeft() };
             };
             this.updateScrollBar = function(d) {
                 if (b.ishwscroll)
@@ -494,7 +494,7 @@
                             top: d,
                             left: g,
                             width: b.railh.width
-                        }))
+                        }));
                 }
             };
             this.doRailClick = function(d, c, f) {
@@ -507,7 +507,7 @@
                         : (d.pageY - b.rail.offset().top - b.cursorheight / 2) * b.scrollratio.y, c(g))
                     : (c = f ? b.doScrollLeftBy : b.doScrollBy, g = f ? b.scroll.x : b.scroll.y, d =
                         f ? d.pageX - b.railh.offset().left : d.pageY - b.rail.offset().top, f =
-                        f ? b.view.w : b.view.h, g >= d ? c(f) : c(-f)))
+                        f ? b.view.w : b.view.h, g >= d ? c(f) : c(-f)));
             };
             b.hasanimationframe = v;
             b.hascancelanimationframe = w;
@@ -587,7 +587,7 @@
                             (b.ongesturezoom = function(d) {
                                 1.5 < d.scale && b.doZoomIn(d);
                                 0.8 > d.scale && b.doZoomOut(d);
-                                return b.cancelEvent(d)
+                                return b.cancelEvent(d);
                             }, b.bind(b.win, "gestureend", b.ongesturezoom)));
                     b.railh = !1;
                     if (b.opt.horizrailenabled) {
@@ -617,7 +617,7 @@
                         m.scrollable = !0;
                         m.align = "top" == b.opt.railvalign ? 0 : 1;
                         b.railh = m;
-                        b.railh.drag = !1
+                        b.railh.drag = !1;
                     }
                     b.ispage
                         ? (f.css({ position: "fixed", top: "0px", height: "100%" }),
@@ -695,9 +695,9 @@
                                                     b.mangotouch.dry = 0;
                                                     b.mangotouch.drx = 0;
                                                     b.mangotouch.tm = 0;
-                                                    b.scrollmom.doMomentum(30)
+                                                    b.scrollmom.doMomentum(30);
                                                 },
-                                                100)))
+                                                100)));
                                 }
                             }, f = b.getScrollTop(),
                             m = b.getScrollLeft(), b.mangotouch =
@@ -716,7 +716,7 @@
                                             if (0 < f.length && f[0].me == b.me) break;
                                             if (0 < f.length) return!1;
                                             if ("DIV" == c.nodeName && c.id == b.id) break;
-                                            c = c.parentNode ? c.parentNode : !1
+                                            c = c.parentNode ? c.parentNode : !1;
                                         }
                                     b.cancelScroll();
                                     if ((c = b.getTarget(d)) && /INPUT/i.test(c.nodeName) && /range/i.test(c.type))
@@ -760,7 +760,7 @@
                                             ? "h"
                                             : !1
                                             : !1;
-                                        b.rail.drag.ck || (b.rail.drag.dl = "f")
+                                        b.rail.drag.ck || (b.rail.drag.dl = "f");
                                     }
                                     b.opt.touchbehavior &&
                                         (b.isiframe && g.isie) &&
@@ -774,7 +774,7 @@
                                                 ? b.cancelEvent(d)
                                                 : b.stopPropagation(d);
                                         /SUBMIT|CANCEL|BUTTON/i.test(e(c).attr("type")) &&
-                                            (pc = { tg: c, click: !1 }, b.preventclick = pc)
+                                            (pc = { tg: c, click: !1 }, b.preventclick = pc);
                                     }
                                 }
                             };
@@ -787,7 +787,7 @@
                                         (b.hasmoving = !1, b.lastmouseup =
                                             !0, b.hideCursor(), g.hasmousecapture && document.releaseCapture(), !g
                                             .cantouch)
-                                    )) return b.cancelEvent(d)
+                                    )) return b.cancelEvent(d);
                             };
                             var t = b.opt.touchbehavior && b.isiframe && !g.hasmousecapture;
                             b.ontouchmove = function(d, c) {
@@ -808,12 +808,12 @@
                                         var f = d;
                                         d = { original: d.original ? d.original : d };
                                         d.clientX = f.screenX;
-                                        d.clientY = f.screenY
+                                        d.clientY = f.screenY;
                                     }
                                     f = ofy = 0;
                                     if (t && !c) {
                                         var n = b.win.position(), f = -n.left;
-                                        ofy = -n.top
+                                        ofy = -n.top;
                                     }
                                     var k = d.clientY + ofy,
                                         n = k - b.rail.drag.y,
@@ -834,7 +834,7 @@
                                             ? 0 > m
                                             ? m = Math.round(m / 2)
                                             : m > b.page.maxw && (m = b.page.maxw + Math.round((m - b.page.maxw) / 2))
-                                            : (0 > m && (l = m = 0), m > b.page.maxw && (m = b.page.maxw, l = 0))
+                                            : (0 > m && (l = m = 0), m > b.page.maxw && (m = b.page.maxw, l = 0));
                                     }
                                     f = !1;
                                     if (b.rail.drag.dl)
@@ -847,11 +847,11 @@
                                             if (n > x && h <= 0.3 * n)
                                                 return b.rail.drag =
                                                     !1, !0;
-                                            h > x && (b.rail.drag.dl = "f", e("body").scrollTop(e("body").scrollTop()))
+                                            h > x && (b.rail.drag.dl = "f", e("body").scrollTop(e("body").scrollTop()));
                                         } else if ("h" == b.rail.drag.ck) {
                                             if (h > x && n <= 0.3 * h) return b.rail.drag = !1, !0;
                                             n > x &&
-                                                (b.rail.drag.dl = "f", e("body").scrollLeft(e("body").scrollLeft()))
+                                                (b.rail.drag.dl = "f", e("body").scrollLeft(e("body").scrollLeft()));
                                         }
                                     }
                                     b.synched("touchmove",
@@ -862,12 +862,12 @@
                                                     b.rail.scrollable && b.setScrollTop(r), b.scrollmom.update(l, k),
                                                     b.railh && b.railh.scrollable
                                                         ? (b.setScrollLeft(m), b.showCursor(r, m))
-                                                        : b.showCursor(r), g.isie10 && document.selection.clear())
+                                                        : b.showCursor(r), g.isie10 && document.selection.clear());
                                         });
                                     g.ischrome && b.istouchcapable && (f = !1);
-                                    if (f) return b.cancelEvent(d)
+                                    if (f) return b.cancelEvent(d);
                                 }
-                            }
+                            };
                         }
                         b.onmousedown = function(d, c) {
                             if (!(b.rail.drag && 1 != b.rail.drag.pt)) {
@@ -881,7 +881,7 @@
                                     !g.hasmousecapture &&
                                     (b.saved.csspointerevents =
                                         b.doc.css("pointer-events"), b.css(b.doc, { "pointer-events": "none" }));
-                                return b.cancelEvent(d)
+                                return b.cancelEvent(d);
                             }
                         };
                         b.onmouseup = function(d) {
@@ -889,7 +889,7 @@
                             (g.hasmousecapture && document.releaseCapture(), b.isiframe &&
                                 !g.hasmousecapture &&
                                 b.doc.css("pointer-events", b.saved.csspointerevents), 1 == b.rail.drag.pt))
-                                return b.rail.drag = !1, b.cancelEvent(d)
+                                return b.rail.drag = !1, b.cancelEvent(d);
                         };
                         b.onmousemove = function(d) {
                             if (b.rail.drag && 1 == b.rail.drag.pt) {
@@ -899,7 +899,7 @@
                                     b.scroll.x = b.rail.drag.sx + (d.clientX - b.rail.drag.x);
                                     0 > b.scroll.x && (b.scroll.x = 0);
                                     var c = b.scrollvaluemaxw;
-                                    b.scroll.x > c && (b.scroll.x = c)
+                                    b.scroll.x > c && (b.scroll.x = c);
                                 } else
                                     b.scroll.y = b.rail.drag.sy +
                                         (d.clientY - b.rail.drag.y), 0 > b.scroll.y && (b.scroll.y = 0), c =
@@ -912,21 +912,21 @@
                                                 ? b.doScrollLeft(Math.round(b.scroll.x * b.scrollratio.x),
                                                     b.opt.cursordragspeed)
                                                 : b.doScrollTop(Math.round(b.scroll.y * b.scrollratio.y),
-                                                    b.opt.cursordragspeed))
+                                                    b.opt.cursordragspeed));
                                     });
-                                return b.cancelEvent(d)
+                                return b.cancelEvent(d);
                             }
                         };
                         if (g.cantouch || b.opt.touchbehavior)
                             b.onpreventclick = function(d) {
                                     if (b.preventclick)
                                         return b.preventclick.tg.onclick = b.preventclick.click,
-                                            b.preventclick = !1, b.cancelEvent(d)
+                                            b.preventclick = !1, b.cancelEvent(d);
                                 }, b.bind(b.win, "mousedown", b.ontouchstart), b.onclick =
                                     g.isios
                                     ? !1
                                     : function(d) {
-                                        return b.lastmouseup ? (b.lastmouseup = !1, b.cancelEvent(d)) : !0
+                                        return b.lastmouseup ? (b.lastmouseup = !1, b.cancelEvent(d)) : !0;
                                     },
                                 b.opt.grabcursorenabled &&
                                     g.cursorgrabvalue &&
@@ -940,13 +940,13 @@
                                         d = d.pageY - b.selectiondrag.top;
                                         0 < d && d < c && (d = 0);
                                         d >= c && (d -= c);
-                                        b.selectiondrag.df = d
+                                        b.selectiondrag.df = d;
                                     }
                                     0 != b.selectiondrag.df &&
                                     (b.doScrollBy(2 *
                                         -Math.floor(b.selectiondrag.df / 6)), b.debounced("doselectionscroll",
                                         function() { p() },
-                                        50))
+                                        50));
                                 }
                             };
                             b.hasTextSelected = "getSelection" in document
@@ -961,8 +961,8 @@
                                     b.hasTextSelected() &&
                                     b.debounced("selectionscroll",
                                         function() { p(d) },
-                                        250)
-                            }
+                                        250);
+                            };
                         }
                         g.hasmstouch &&
                         (b.css(b.rail, { "-ms-touch-action": "none" }), b.css(b.cursor, { "-ms-touch-action": "none" }),
@@ -989,7 +989,7 @@
                                 if (!(b.rail.drag && 2 == b.rail.drag.pt))
                                     return b.rail.drag = !1, b.hasmoving =
                                         !1, b.hideCursor(), g.hasmousecapture && document.releaseCapture(), b
-                                        .cancelEvent(d)
+                                        .cancelEvent(d);
                             }));
                         if (b.opt.cursordragontouch || !g.cantouch && !b.opt.touchbehavior)
                             b.rail.css({ cursor: "default" }),
@@ -997,12 +997,12 @@
                                     "mouseenter",
                                     function() {
                                         b.canshowonmouseevent && b.showCursor();
-                                        b.rail.active = !0
+                                        b.rail.active = !0;
                                     }), b.jqbind(b.rail,
                                     "mouseleave",
                                     function() {
                                         b.rail.active = !1;
-                                        b.rail.drag || b.hideCursor()
+                                        b.rail.drag || b.hideCursor();
                                     }), b.opt.sensitiverail &&
                                 (b.bind(b.rail, "click", function(d) { b.doRailClick(d, !1, !1) }), b.bind(b.rail,
                                     "dblclick",
@@ -1015,12 +1015,12 @@
                                     "mouseenter",
                                     function() {
                                         b.canshowonmouseevent && b.showCursor();
-                                        b.rail.active = !0
+                                        b.rail.active = !0;
                                     }), b.jqbind(b.railh,
                                     "mouseleave",
                                     function() {
                                         b.rail.active = !1;
-                                        b.rail.drag || b.hideCursor()
+                                        b.rail.drag || b.hideCursor();
                                     }), b.opt.sensitiverail &&
                                 (b.bind(b.railh, "click", function(d) { b.doRailClick(d, !1, !0) }), b.bind(b.railh,
                                     "dblclick",
@@ -1045,13 +1045,13 @@
                                         "mouseenter",
                                         function() {
                                             b.canshowonmouseevent && b.showCursor();
-                                            b.rail.active = !0
+                                            b.rail.active = !0;
                                         }),
                                     b.jqbind(b.zoom,
                                         "mouseleave",
                                         function() {
                                             b.rail.active = !1;
-                                            b.rail.drag || b.hideCursor()
+                                            b.rail.drag || b.hideCursor();
                                         })))
                             : (b.bind(g.hasmousecapture ? b.win : document, "mouseup", b.ontouchend),
                                 b.bind(document, "mousemove", b.ontouchmove),
@@ -1073,26 +1073,26 @@
                                 function(d) {
                                     z = b.getTarget(d).id || !0;
                                     b.hasfocus = !0;
-                                    b.canshowonmouseevent && b.noticeCursor()
+                                    b.canshowonmouseevent && b.noticeCursor();
                                 }), b.jqbind(b.win,
                                 "blur",
                                 function(d) {
                                     z = !1;
-                                    b.hasfocus = !1
+                                    b.hasfocus = !1;
                                 }), b.jqbind(b.win,
                                 "mouseenter",
                                 function(d) {
                                     E =
                                         b.getTarget(d).id || !0;
                                     b.hasmousefocus = !0;
-                                    b.canshowonmouseevent && b.noticeCursor()
+                                    b.canshowonmouseevent && b.noticeCursor();
                                 }), b.jqbind(b.win,
                                 "mouseleave",
                                 function() {
                                     E = !1;
                                     b.hasmousefocus = !1;
-                                    b.rail.drag || b.hideCursor()
-                                }))
+                                    b.rail.drag || b.hideCursor();
+                                }));
                     }
                     b.onkeypress = function(d) {
                         if (b.locked && 0 == b.page.maxh) return!0;
@@ -1148,9 +1148,9 @@
                                 b.opt.spacebarenabled && (n ? b.doScrollBy(b.view.h) : b.doScrollBy(-b.view.h), g = !0);
                                 break;
                             case 27:
-                                b.zoomactive && (b.doZoom(), g = !0)
+                                b.zoomactive && (b.doZoom(), g = !0);
                             }
-                            if (g) return b.cancelEvent(d)
+                            if (g) return b.cancelEvent(d);
                         }
                     };
                     b.opt.enablekeyboard &&
@@ -1163,7 +1163,7 @@
                         !b.haswrapper) {
                         var s = b.win.attr("style"), f = parseFloat(b.win.css("width")) + 1;
                         b.win.css("width", f);
-                        b.synched("chromefix", function() { b.win.attr("style", s) })
+                        b.synched("chromefix", function() { b.win.attr("style", s) });
                     }
                     b.onAttributeChange = function(d) { b.lazyResize(250) };
                     !b.ispage &&
@@ -1177,8 +1177,8 @@
                                         if (0 < d.removedNodes.length)
                                             for (var c in d.removedNodes)
                                                 if (d.removedNodes[c] ==
-                                                    b.win[0]) return b.remove()
-                                    })
+                                                    b.win[0]) return b.remove();
+                                    });
                                 }), b.observerremover.observe(b.win[0].parentNode,
                                 { childList: !0, characterData: !1, attributes: !1, subtree: !1 }))
                             : (b.bind(b.win,
@@ -1190,15 +1190,15 @@
                     !b.ispage && b.opt.boxzoom && b.bind(window, "resize", b.resizeZoom);
                     b.istextarea && b.bind(b.win, "mouseup", b.lazyResize);
                     b.checkrtlmode = !0;
-                    b.lazyResize(30)
+                    b.lazyResize(30);
                 }
                 if ("IFRAME" == this.doc[0].nodeName) {
                     var K = function(d) {
                         b.iframexd = !1;
                         try {
-                            var c = "contentDocument" in this ? this.contentDocument : this.contentWindow.document
+                            var c = "contentDocument" in this ? this.contentDocument : this.contentWindow.document;
                         } catch (f) {
-                            b.iframexd = !0, c = !1
+                            b.iframexd = !0, c = !1;
                         }
                         if (b.iframexd)
                             return"console" in window && console.log("NiceScroll error: policy restriced iframe"), !0;
@@ -1214,7 +1214,7 @@
                                 return{
                                     w: Math.max(b.iframe.html.scrollWidth, b.iframe.body.scrollWidth),
                                     h: Math.max(b.iframe.html.scrollHeight, b.iframe.body.scrollHeight)
-                                }
+                                };
                             }, b.docscroll = e(b.iframe.body));
                         !g.isios &&
                             (b.opt.iframeautoresize && !b.isiframe) &&
@@ -1243,12 +1243,12 @@
                         (b.opt.dblclickzoom &&
                             b.bind(c,
                                 "dblclick",
-                                b.doZoom), b.ongesturezoom && b.bind(c, "gestureend", b.ongesturezoom))
+                                b.doZoom), b.ongesturezoom && b.bind(c, "gestureend", b.ongesturezoom));
                     };
                     this.doc[0].readyState &&
                         "complete" == this.doc[0].readyState &&
                         setTimeout(function() { K.call(b.doc[0], !1) }, 500);
-                    b.bind(this.doc, "load", K)
+                    b.bind(this.doc, "load", K);
                 }
             };
             this.showCursor = function(d, c) {
@@ -1268,7 +1268,7 @@
                     (!b.rail.align && b.rail.visibility
                         ? b.cursorh.css({ width: b.cursorwidth, left: b.scroll.x + b.rail.width })
                         : b.cursorh.css({ width: b.cursorwidth, left: b.scroll.x }), b.cursoractive = !0);
-                    b.zoom && b.zoom.stop().css({ opacity: b.opt.cursoropacitymax })
+                    b.zoom && b.zoom.stop().css({ opacity: b.opt.cursoropacitymax });
                 }
             };
             this.hideCursor = function(d) {
@@ -1278,13 +1278,13 @@
                             if (!b.rail.active || !b.showonmouseevent)
                                 b.autohidedom.stop().animate({ opacity: b.opt.cursoropacitymin }), b.zoom &&
                                     b.zoom.stop().animate({ opacity: b.opt.cursoropacitymin }), b.cursoractive = !1;
-                            b.cursortimeout = 0
+                            b.cursortimeout = 0;
                         },
-                        d || b.opt.hidecursordelay))
+                        d || b.opt.hidecursordelay));
             };
             this.noticeCursor = function(d, c, f) {
                 b.showCursor(c, f);
-                b.rail.active || b.hideCursor(d)
+                b.rail.active || b.hideCursor(d);
             };
             this.getContentSize = b.ispage
                 ? function() {
@@ -1292,7 +1292,7 @@
                         w: Math.max(document.body.scrollWidth, document.documentElement.scrollWidth),
                         h: Math.max(document.body.scrollHeight,
                             document.documentElement.scrollHeight)
-                    }
+                    };
                 }
                 : b.haswrapper
                 ? function() {
@@ -1303,7 +1303,7 @@
                         h: b.doc.outerHeight() +
                             parseInt(b.win.css("paddingTop")) +
                             parseInt(b.win.css("paddingBottom"))
-                    }
+                    };
                 }
                 : function() { return{ w: b.docscroll[0].scrollWidth, h: b.docscroll[0].scrollHeight } };
             this.onResize = function(d, c) {
@@ -1312,7 +1312,7 @@
                     if ("none" == b.win.css("display")) return b.visibility && b.hideRail().hideRailHr(), !1;
                     !b.hidden &&
                         !b.visibility &&
-                        b.showRail().showRailHr()
+                        b.showRail().showRailHr();
                 }
                 var f = b.page.maxh, g = b.page.maxw, e = b.view.w;
                 b.view = {
@@ -1326,7 +1326,7 @@
                     if (b.ispage) return b;
                     f = b.win.offset();
                     if (b.lastposition && (g = b.lastposition, g.top == f.top && g.left == f.left)) return b;
-                    b.lastposition = f
+                    b.lastposition = f;
                 }
                 0 ==
                     b.page.maxh
@@ -1366,13 +1366,13 @@
                         b.getScrollLeft() *
                         (1 / b.scrollratio.x)), b.cursoractive && b.noticeCursor());
                 b.scroll.y && 0 == b.getScrollTop() && b.doScrollTo(Math.floor(b.scroll.y * b.scrollratio.y));
-                return b
+                return b;
             };
             this.resize = b.onResize;
             this.lazyResize = function(d) {
                 d = isNaN(d) ? 30 : d;
                 b.delayed("resize", b.resize, d);
-                return b
+                return b;
             };
             this._bind = function(d, c, f, g) {
                 b.events.push({ e: d, n: c, f: f, b: g, q: !1 });
@@ -1380,11 +1380,11 @@
                     ? d.addEventListener(c, f, g || !1)
                     : d.attachEvent
                     ? d.attachEvent("on" + c, f)
-                    : d["on" + c] = f
+                    : d["on" + c] = f;
             };
             this.jqbind = function(d, c, f) {
                 b.events.push({ e: d, n: c, f: f, q: !0 });
-                e(d).bind(c, f)
+                e(d).bind(c, f);
             };
             this.bind = function(d, c, f, e) {
                 var k = "jquery" in d ? d[0] : d;
@@ -1408,9 +1408,9 @@
                                         var d = b.touches.length ? b.touches[0] : b;
                                         d.original =
                                             b;
-                                        f.call(this, d)
+                                        f.call(this, d);
                                     }
-                                } else b.changedTouches && (d = b.changedTouches[0], d.original = b, f.call(this, d))
+                                } else b.changedTouches && (d = b.changedTouches[0], d.original = b, f.call(this, d));
                             },
                             e || !1), b._bind(k, c, f, e || !1), g.cantouch &&
                         "mouseup" == c &&
@@ -1422,8 +1422,8 @@
                             "pageY" in d ||
                             (d.pageX = d.clientX + document.documentElement.scrollLeft, d.pageY =
                                 d.clientY + document.documentElement.scrollTop);
-                            return!1 === f.call(k, d) || !1 === e ? b.cancelEvent(d) : !0
-                        })
+                            return!1 === f.call(k, d) || !1 === e ? b.cancelEvent(d) : !0;
+                        });
             };
             this._unbind = function(b, c, f, g) {
                 b.removeEventListener
@@ -1432,12 +1432,12 @@
                         g)
                     : b.detachEvent
                     ? b.detachEvent("on" + c, f)
-                    : b["on" + c] = !1
+                    : b["on" + c] = !1;
             };
             this.unbindAll = function() {
                 for (var d = 0; d < b.events.length; d++) {
                     var c = b.events[d];
-                    c.q ? c.e.unbind(c.n, c.f) : b._unbind(c.e, c.n, c.f, c.b)
+                    c.q ? c.e.unbind(c.n, c.f) : b._unbind(c.e, c.n, c.f, c.b);
                 }
             };
             this.cancelEvent = function(b) {
@@ -1448,48 +1448,48 @@
                 b.preventManipulation && b.preventManipulation();
                 b.cancelBubble = !0;
                 b.cancel = !0;
-                return b.returnValue = !1
+                return b.returnValue = !1;
             };
             this.stopPropagation = function(b) {
                 b = b.original ? b.original : b ? b : window.event || !1;
                 if (!b) return!1;
                 if (b.stopPropagation) return b.stopPropagation();
                 b.cancelBubble && (b.cancelBubble = !0);
-                return!1
+                return!1;
             };
             this.showRail = function() {
                 if (0 != b.page.maxh && (b.ispage || "none" != b.win.css("display")))
                     b.visibility = !0, b.rail.visibility = !0, b.rail.css("display", "block");
-                return b
+                return b;
             };
             this.showRailHr = function() {
                 if (!b.railh) return b;
                 if (0 != b.page.maxw && (b.ispage || "none" != b.win.css("display")))
                     b.railh.visibility = !0, b.railh.css("display", "block");
-                return b
+                return b;
             };
             this.hideRail = function() {
                 b.visibility =
                     !1;
                 b.rail.visibility = !1;
                 b.rail.css("display", "none");
-                return b
+                return b;
             };
             this.hideRailHr = function() {
                 if (!b.railh) return b;
                 b.railh.visibility = !1;
                 b.railh.css("display", "none");
-                return b
+                return b;
             };
             this.show = function() {
                 b.hidden = !1;
                 b.locked = !1;
-                return b.showRail().showRailHr()
+                return b.showRail().showRailHr();
             };
             this.hide = function() {
                 b.hidden = !0;
                 b.locked = !0;
-                return b.hideRail().hideRailHr()
+                return b.hideRail().hideRailHr();
             };
             this.toggle = function() { return b.hidden ? b.show() : b.hide() };
             this.remove = function() {
@@ -1509,7 +1509,7 @@
                 b.zoom && b.zoom.remove();
                 for (var d = 0; d < b.saved.css.length; d++) {
                     var c = b.saved.css[d];
-                    c[0].css(c[1], "undefined" == typeof c[2] ? "" : c[2])
+                    c[0].css(c[1], "undefined" == typeof c[2] ? "" : c[2]);
                 }
                 b.saved = !1;
                 b.me.data("__nicescroll", "");
@@ -1521,31 +1521,31 @@
                         delete f[d];
                         for (var c = ++d; c < f.length; c++, d++) f[d] = f[c];
                         f.length--;
-                        f.length && delete f[f.length]
+                        f.length && delete f[f.length];
                     }
                 });
                 for (var k in b) b[k] = null, delete b[k];
-                b = null
+                b = null;
             };
             this.scrollstart = function(d) {
                 this.onscrollstart = d;
-                return b
+                return b;
             };
             this.scrollend = function(d) {
                 this.onscrollend = d;
-                return b
+                return b;
             };
             this.scrollcancel = function(d) {
                 this.onscrollcancel = d;
-                return b
+                return b;
             };
             this.zoomin = function(d) {
                 this.onzoomin = d;
-                return b
+                return b;
             };
             this.zoomout = function(d) {
                 this.onzoomout = d;
-                return b
+                return b;
             };
             this.isScrollable = function(b) {
                 b = b.target ? b.target : b;
@@ -1553,9 +1553,9 @@
                 for (; b && 1 == b.nodeType && !/BODY|HTML/.test(b.nodeName);) {
                     var c = e(b), c = c.css("overflowY") || c.css("overflowX") || c.css("overflow") || "";
                     if (/scroll|auto/.test(c)) return b.clientHeight != b.scrollHeight;
-                    b = b.parentNode ? b.parentNode : !1
+                    b = b.parentNode ? b.parentNode : !1;
                 }
-                return!1
+                return!1;
             };
             this.getViewport = function(b) {
                 for (b = b && b.parentNode ? b.parentNode : !1;
@@ -1567,9 +1567,9 @@
                     if (/scroll|auto/.test(f) &&
                         b.clientHeight != b.scrollHeight ||
                         0 < c.getNiceScroll().length) return c;
-                    b = b.parentNode ? b.parentNode : !1
+                    b = b.parentNode ? b.parentNode : !1;
                 }
-                return!1
+                return!1;
             };
             this.onmousewheel = function(d) {
                 if (b.locked) return b.debounced("checkunlock", b.resize, 250), !0;
@@ -1584,7 +1584,7 @@
                 b.checkarea = c;
                 if (b.nativescrollingarea) return!0;
                 if (d = t(d, !1, f)) b.checkarea = 0;
-                return d
+                return d;
             };
             this.onmousewheelhr = function(d) {
                 if (b.locked || !b.railh.scrollable) return!0;
@@ -1594,7 +1594,7 @@
                     b.checkarea + 600 < c &&
                     (b.nativescrollingarea = b.isScrollable(d), f = !0);
                 b.checkarea = c;
-                return b.nativescrollingarea ? !0 : b.locked ? b.cancelEvent(d) : t(d, !0, f)
+                return b.nativescrollingarea ? !0 : b.locked ? b.cancelEvent(d) : t(d, !0, f);
             };
             this.stop = function() {
                 b.cancelScroll();
@@ -1602,12 +1602,12 @@
                 b.cursorfreezed = !1;
                 b.scroll.y = Math.round(b.getScrollTop() * (1 / b.scrollratio.y));
                 b.noticeCursor();
-                return b
+                return b;
             };
             this.getTransitionSpeed = function(d) {
                 var c = Math.round(10 * b.opt.scrollspeed);
                 d = Math.min(c, Math.round(d / 20 * b.opt.scrollspeed));
-                return 20 < d ? d : 0
+                return 20 < d ? d : 0;
             };
             b.opt.smoothscroll
                 ? b.ishwscroll && g.hastransition && b.opt.usetransition
@@ -1617,13 +1617,13 @@
                     if (!b.lasttransitionstyle || b.lasttransitionstyle != e)
                         b.lasttransitionstyle =
                             e, b.doc.css(g.transitionstyle, e);
-                    return f
+                    return f;
                 }, this.doScrollLeft = function(c, g) {
                     var f = b.scrollrunning ? b.newscrolly : b.getScrollTop();
-                    b.doScrollPos(c, f, g)
+                    b.doScrollPos(c, f, g);
                 }, this.doScrollTop = function(c, g) {
                     var f = b.scrollrunning ? b.newscrollx : b.getScrollLeft();
-                    b.doScrollPos(f, c, g)
+                    b.doScrollPos(f, c, g);
                 }, this.doScrollPos = function(c, e, f) {
                     var k = b.getScrollTop(), l = b.getScrollLeft();
                     (0 > (b.newscrolly - k) * (e - k) || 0 > (b.newscrollx - l) * (c - l)) && b.cancelScroll();
@@ -1671,10 +1671,10 @@
                                     b.scrollendtrapped && (b.scrollrunning = !0);
                                     b.setScrollTop(b.newscrolly);
                                     b.setScrollLeft(b.newscrollx);
-                                    if (!b.scrollendtrapped) b.onScrollEnd()
-                                })
+                                    if (!b.scrollendtrapped) b.onScrollEnd();
+                                });
                         },
-                        50)
+                        50);
                 }, this.cancelScroll = function() {
                     if (!b.scrollendtrapped) return!0;
                     var c = b.getScrollTop(), e = b.getScrollLeft();
@@ -1691,7 +1691,7 @@
                     b.timerscroll = !1;
                     b.cursorfreezed = !1;
                     b.showCursor(c, e);
-                    return b
+                    return b;
                 }, this.onScrollEnd = function() {
                     b.scrollendtrapped && b._unbind(b.doc, g.transitionend, b.onScrollEnd);
                     b.scrollendtrapped = !1;
@@ -1711,15 +1711,15 @@
                         b.scrollrunning &&
                         b.onscrollend.call(b,
                             { type: "scrollend", current: { x: e, y: c }, end: { x: b.newscrollx, y: b.newscrolly } });
-                    b.scrollrunning = !1
+                    b.scrollrunning = !1;
                 })
                 : (this.doScrollLeft = function(c, g) {
                     var f = b.scrollrunning ? b.newscrolly : b.getScrollTop();
-                    b.doScrollPos(c, f, g)
+                    b.doScrollPos(c, f, g);
                 }, this.doScrollTop = function(c,
                     g) {
                     var f = b.scrollrunning ? b.newscrollx : b.getScrollLeft();
-                    b.doScrollPos(f, c, g)
+                    b.doScrollPos(f, c, g);
                 }, this.doScrollPos = function(c, g, f) {
                     function e() {
                         if (b.cancelAnimationFrame) return!0;
@@ -1730,7 +1730,7 @@
                             var d = b.bzscroll ? b.dst.py + b.bzscroll.getNow() * b.dst.ay : b.newscrolly, f = d - sy;
                             if (0 > f && d < b.newscrolly || 0 < f && d > b.newscrolly) d = b.newscrolly;
                             b.setScrollTop(d);
-                            d == b.newscrolly && (c = 1)
+                            d == b.newscrolly && (c = 1);
                         } else c = 1;
                         var g = sx = b.getScrollLeft();
                         if (b.dst.ax) {
@@ -1742,7 +1742,7 @@
                             f = g - sx;
                             if (0 > f && g < b.newscrollx || 0 < f && g > b.newscrollx) g = b.newscrollx;
                             b.setScrollLeft(g);
-                            g == b.newscrollx && (c += 1)
+                            g == b.newscrollx && (c += 1);
                         } else c += 1;
                         2 == c
                             ? (b.timer = 0, b.cursorfreezed = !1, b.bzscroll = !1, b.scrollrunning =
@@ -1757,7 +1757,7 @@
                                             current: { x: sx, y: sy },
                                             end: { x: b.newscrollx, y: b.newscrolly }
                                         }))
-                            : b.timer = v(e) || 1
+                            : b.timer = v(e) || 1;
                     }
 
                     g = "undefined" == typeof g || !1 === g ? b.getScrollTop(!0) : g;
@@ -1811,23 +1811,23 @@
                                 });
                         e();
                         (k == b.page.maxh && g >= k || l == b.page.maxw && c >= l) && b.checkContentSize();
-                        b.noticeCursor()
+                        b.noticeCursor();
                     }
                 }, this.cancelScroll = function() {
                     b.timer && w(b.timer);
                     b.timer = 0;
                     b.bzscroll = !1;
                     b.scrollrunning = !1;
-                    return b
+                    return b;
                 })
                 : (this.doScrollLeft = function(c, g) {
                     var f = b.getScrollTop();
-                    b.doScrollPos(c, f, g)
+                    b.doScrollPos(c, f, g);
                 }, this.doScrollTop = function(c, g) {
                     var f = b.getScrollLeft();
                     b.doScrollPos(f,
                         c,
-                        g)
+                        g);
                 }, this.doScrollPos = function(c, g, f) {
                     var e = c > b.page.maxw ? b.page.maxw : c;
                     0 > e && (e = 0);
@@ -1836,8 +1836,8 @@
                     b.synched("scroll",
                         function() {
                             b.setScrollTop(k);
-                            b.setScrollLeft(e)
-                        })
+                            b.setScrollLeft(e);
+                        });
                 }, this.cancelScroll = function() {});
             this.doScrollBy = function(c, g) {
                 var f = 0,
@@ -1846,14 +1846,14 @@
                         : (b.timer ? b.newscrolly : b.getScrollTop(!0)) - c;
                 if (b.bouncescroll) {
                     var e = Math.round(b.view.h / 2);
-                    f < -e ? f = -e : f > b.page.maxh + e && (f = b.page.maxh + e)
+                    f < -e ? f = -e : f > b.page.maxh + e && (f = b.page.maxh + e);
                 }
                 b.cursorfreezed = !1;
                 py = b.getScrollTop(!0);
                 if (0 > f &&
                     0 >= py) return b.noticeCursor();
                 if (f > b.page.maxh && py >= b.page.maxh) return b.checkContentSize(), b.noticeCursor();
-                b.doScrollTop(f)
+                b.doScrollTop(f);
             };
             this.doScrollLeftBy = function(c, g) {
                 var f = 0,
@@ -1862,22 +1862,22 @@
                         : (b.timer ? b.newscrollx : b.getScrollLeft(!0)) - c;
                 if (b.bouncescroll) {
                     var e = Math.round(b.view.w / 2);
-                    f < -e ? f = -e : f > b.page.maxw + e && (f = b.page.maxw + e)
+                    f < -e ? f = -e : f > b.page.maxw + e && (f = b.page.maxw + e);
                 }
                 b.cursorfreezed = !1;
                 px = b.getScrollLeft(!0);
                 if (0 > f && 0 >= px || f > b.page.maxw && px >= b.page.maxw) return b.noticeCursor();
-                b.doScrollLeft(f)
+                b.doScrollLeft(f);
             };
             this.doScrollTo =
                 function(c, g) {
                     g && Math.round(c * b.scrollratio.y);
                     b.cursorfreezed = !1;
-                    b.doScrollTop(c)
+                    b.doScrollTop(c);
                 };
             this.checkContentSize = function() {
                 var c = b.getContentSize();
-                (c.h != b.page.h || c.w != b.page.w) && b.resize(!1, c)
+                (c.h != b.page.h || c.w != b.page.w) && b.resize(!1, c);
             };
             b.onscroll = function(c) {
                 b.rail.drag ||
@@ -1886,8 +1886,8 @@
                         function() {
                             b.scroll.y = Math.round(b.getScrollTop() * (1 / b.scrollratio.y));
                             b.railh && (b.scroll.x = Math.round(b.getScrollLeft() * (1 / b.scrollratio.x)));
-                            b.noticeCursor()
-                        })
+                            b.noticeCursor();
+                        });
             };
             b.bind(b.docscroll, "scroll", b.onscroll);
             this.doZoomIn = function(c) {
@@ -1901,7 +1901,7 @@
                         l;
                     for (l in k) {
                         var h = k[l];
-                        b.zoomrestore.style[h] = "undefined" != typeof f[h] ? f[h] : ""
+                        b.zoomrestore.style[h] = "undefined" != typeof f[h] ? f[h] : "";
                     }
                     b.zoomrestore.style.width = b.win.css("width");
                     b.zoomrestore.style.height = b.win.css("height");
@@ -1923,7 +1923,7 @@
                     b.zoom.css("backgroundPosition", "0px -18px");
                     b.resizeZoom();
                     b.onzoomin && b.onzoomin.call(b);
-                    return b.cancelEvent(c)
+                    return b.cancelEvent(c);
                 }
             };
             this.doZoomOut = function(c) {
@@ -1932,7 +1932,7 @@
                         g.isios4 && e(window).scrollTop(b.zoomrestore.scrollTop), b.rail.css({ "z-index": b.zindex }),
                         b.zoom.css({ "z-index": b.zindex }), b.zoomrestore =
                             !1, b.zoom.css("backgroundPosition", "0px 0px"), b.onResize(), b.onzoomout &&
-                            b.onzoomout.call(b), b.cancelEvent(c)
+                            b.onzoomout.call(b), b.cancelEvent(c);
             };
             this.doZoom = function(c) { return b.zoomactive ? b.doZoomOut(c) : b.doZoomIn(c) };
             this.resizeZoom = function() {
@@ -1943,11 +1943,11 @@
                         height: e(window).height() - b.zoomrestore.padding.h + "px"
                     });
                     b.onResize();
-                    b.setScrollTop(Math.min(b.page.maxh, c))
+                    b.setScrollTop(Math.min(b.page.maxh, c));
                 }
             };
             this.init();
-            e.nicescroll.push(this)
+            e.nicescroll.push(this);
         },
         J = function(e) {
             var c = this;
@@ -1969,7 +1969,7 @@
                 c.lasty = l;
                 c.lastscrollx = -1;
                 c.lastscrolly =
-                    -1
+                    -1;
             };
             this.update = function(e, l) {
                 var h = c.time();
@@ -1986,14 +1986,14 @@
                 c.speedx = t;
                 c.speedy = h;
                 c.lastx = e;
-                c.lasty = l
+                c.lasty = l;
             };
             this.stop = function() {
                 c.nc.unsynched("domomentum2d");
                 c.timer && clearTimeout(c.timer);
                 c.timer = 0;
                 c.lastscrollx = -1;
-                c.lastscrolly = -1
+                c.lastscrolly = -1;
             };
             this.doSnapy = function(e, l) {
                 var h = !1;
@@ -2002,7 +2002,7 @@
                     ? (e = 0, h =
                         !0)
                     : e > c.nc.page.maxw && (e = c.nc.page.maxw, h = !0);
-                h && c.nc.doScrollPos(e, l, c.nc.opt.snapbackspeed)
+                h && c.nc.doScrollPos(e, l, c.nc.opt.snapbackspeed);
             };
             this.doMomentum = function(e) {
                 var l = c.time(), h = e ? l + e : c.lasttime;
@@ -2040,56 +2040,56 @@
                                         s, c.nc.setScrollLeft(s));
                                     c.speedy &&
                                         (c.nc.getScrollTop() != c.chky && c.stop(), c.chky = u, c.nc.setScrollTop(u));
-                                    c.timer || (c.nc.hideCursor(), c.doSnapy(s, u))
+                                    c.timer || (c.nc.hideCursor(), c.doSnapy(s, u));
                                 });
-                            1 > c.demulxy ? c.timer = setTimeout(d, g) : (c.stop(), c.nc.hideCursor(), c.doSnapy(s, u))
+                            1 > c.demulxy ? c.timer = setTimeout(d, g) : (c.stop(), c.nc.hideCursor(), c.doSnapy(s, u));
                         };
-                    d()
-                } else c.doSnapy(c.nc.getScrollLeft(), c.nc.getScrollTop())
-            }
+                    d();
+                } else c.doSnapy(c.nc.getScrollLeft(), c.nc.getScrollTop());
+            };
         },
         B = e.fn.scrollTop;
     e.cssHooks.pageYOffset = {
         get: function(h, c, k) {
-            return(c = e.data(h, "__nicescroll") || !1) && c.ishwscroll ? c.getScrollTop() : B.call(h)
+            return(c = e.data(h, "__nicescroll") || !1) && c.ishwscroll ? c.getScrollTop() : B.call(h);
         },
         set: function(h, c) {
             var k = e.data(h, "__nicescroll") || !1;
             k && k.ishwscroll ? k.setScrollTop(parseInt(c)) : B.call(h, c);
-            return this
+            return this;
         }
     };
     e.fn.scrollTop = function(h) {
         if ("undefined" == typeof h) {
             var c = this[0] ? e.data(this[0], "__nicescroll") || !1 : !1;
-            return c && c.ishwscroll ? c.getScrollTop() : B.call(this)
+            return c && c.ishwscroll ? c.getScrollTop() : B.call(this);
         }
         return this.each(function() {
             var c = e.data(this, "__nicescroll") || !1;
-            c && c.ishwscroll ? c.setScrollTop(parseInt(h)) : B.call(e(this), h)
-        })
+            c && c.ishwscroll ? c.setScrollTop(parseInt(h)) : B.call(e(this), h);
+        });
     };
     var C = e.fn.scrollLeft;
     e.cssHooks.pageXOffset = {
         get: function(h, c, k) {
-            return(c = e.data(h, "__nicescroll") || !1) && c.ishwscroll ? c.getScrollLeft() : C.call(h)
+            return(c = e.data(h, "__nicescroll") || !1) && c.ishwscroll ? c.getScrollLeft() : C.call(h);
         },
         set: function(h,
             c) {
             var k = e.data(h, "__nicescroll") || !1;
             k && k.ishwscroll ? k.setScrollLeft(parseInt(c)) : C.call(h, c);
-            return this
+            return this;
         }
     };
     e.fn.scrollLeft = function(h) {
         if ("undefined" == typeof h) {
             var c = this[0] ? e.data(this[0], "__nicescroll") || !1 : !1;
-            return c && c.ishwscroll ? c.getScrollLeft() : C.call(this)
+            return c && c.ishwscroll ? c.getScrollLeft() : C.call(this);
         }
         return this.each(function() {
             var c = e.data(this, "__nicescroll") || !1;
-            c && c.ishwscroll ? c.setScrollLeft(parseInt(h)) : C.call(e(this), h)
-        })
+            c && c.ishwscroll ? c.setScrollLeft(parseInt(h)) : C.call(e(this), h);
+        });
     };
     var D = function(h) {
         var c = this;
@@ -2101,27 +2101,27 @@
                 k = 0;
                 h < c.length;
                 h++) e.call(c[h], k++);
-            return c
+            return c;
         };
         this.push = function(e) {
             c[c.length] = e;
-            c.length++
+            c.length++;
         };
         this.eq = function(e) { return c[e] };
         if (h)
             for (a = 0; a < h.length; a++) {
                 var k = e.data(h[a], "__nicescroll") || !1;
-                k && (this[this.length] = k, this.length++)
+                k && (this[this.length] = k, this.length++);
             }
-        return this
+        return this;
     };
     (function(e, c, k) { for (var l = 0; l < c.length; l++) k(e, c[l]) })(D.prototype,
         "show hide toggle onResize resize remove stop doScrollPos".split(" "),
         function(e, c) {
             e[c] = function() {
                 var e = arguments;
-                return this.each(function() { this[c].apply(this, e) })
-            }
+                return this.each(function() { this[c].apply(this, e) });
+            };
         });
     e.fn.getNiceScroll =
         function(h) { return"undefined" == typeof h ? new D(this) : this[h] && e.data(this[h], "__nicescroll") || !1 };
@@ -2138,10 +2138,10 @@
             h ||
             (c.doc = l ? e(this) : c.doc, h = new Q(c,
                 e(this)), e(this).data("__nicescroll", h));
-            k.push(h)
+            k.push(h);
         });
-        return 1 == k.length ? k[0] : k
+        return 1 == k.length ? k[0] : k;
     };
     window.NiceScroll = { getjQuery: function() { return e } };
-    e.nicescroll || (e.nicescroll = new D, e.nicescroll.options = I)
+    e.nicescroll || (e.nicescroll = new D, e.nicescroll.options = I);
 })(jQuery);
