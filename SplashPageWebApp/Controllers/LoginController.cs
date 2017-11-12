@@ -1,11 +1,14 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
+using System.Web.Hosting;
 using System.Web.Mvc;
 using ServicesFIS;
 using SplashPageWebApp.Models;
 
 namespace SplashPageWebApp.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         private readonly testwifiEntities entities = new testwifiEntities();
@@ -15,6 +18,27 @@ namespace SplashPageWebApp.Controllers
         {
             var paramCollection = HttpContext.Request.Params;
             var keys = paramCollection.AllKeys;
+
+            var path = HttpContext.Server.MapPath("~/log.txt");
+            using (StreamWriter sr = System.IO.File.AppendText(path ?? "log.txt"))
+            {
+                sr.WriteLine("-----------------------------------------------------------------------------------------------------------------");
+                foreach (var key in keys)
+                {
+                    sr.Write(key + ": ");
+                    var values = paramCollection.GetValues(key);
+                    if (values != null)
+                    {
+                        foreach (var value in values)
+                        {
+                            sr.Write(value + " ");
+                        }
+                    }
+                    sr.WriteLine();
+                }
+                sr.WriteLine();
+            }
+
             if (keys.Contains("switch_url"))
             {
                 var switchUrlValues = paramCollection.GetValues("switch_url");
@@ -48,17 +72,7 @@ namespace SplashPageWebApp.Controllers
         {
             return View();
         }
-
-        public ActionResult AdminPage()
-        {
-            return View();
-        }
-
-        public ActionResult AdminLogin()
-        {
-            return View();
-        }
-
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult CheckEmail(string email, string guestName)
@@ -156,6 +170,14 @@ namespace SplashPageWebApp.Controllers
         //{
         //    return Redirect
         //}
+
+        public ActionResult Download()
+        {
+            var path = HttpContext.Server.MapPath("~/log.txt");
+            byte[] file = System.IO.File.ReadAllBytes(path);
+            string filename = "log.txt";
+            return File(file, System.Net.Mime.MediaTypeNames.Application.Octet, filename);
+        }
     }
 
     //public class LoginViewModel

@@ -56,6 +56,9 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
     <Reference Include="ServicesFIS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\TuanHDSE62146\source\repos\ServicesFIS\ServicesFIS\bin\Release\ServicesFIS.dll</HintPath>
@@ -155,9 +158,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Administrator.cs">
+      <DependentUpon>testwifi.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GeneratedCode.cs">
       <DependentUpon>testwifi.tt</DependentUpon>
@@ -178,6 +185,7 @@
       <DependentUpon>testwifi.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\UserAuthenticator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administrator\css\bootstrap.min.css" />
@@ -223,6 +231,97 @@
     <Content Include="Administrator\js\scripts.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\css\dataTables.bootstrap.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\css\dataTables.bootstrap.min.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\css\dataTables.foundation.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\css\dataTables.foundation.min.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\css\dataTables.jqueryui.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\css\dataTables.jqueryui.min.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\css\jquery.dataTables.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\css\jquery.dataTables.min.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\images\sort_asc.png" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\images\sort_asc_disabled.png" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\images\sort_both.png" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\images\sort_desc.png" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\images\sort_desc_disabled.png" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\js\dataTables.bootstrap.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\js\dataTables.bootstrap.min.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\js\dataTables.foundation.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\js\dataTables.foundation.min.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\js\dataTables.jqueryui.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\js\dataTables.jqueryui.min.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\js\jquery.dataTables.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.10\js\jquery.dataTables.min.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\css\dataTables.bootstrap.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\css\dataTables.bootstrap.min.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\css\dataTables.bootstrap4.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\css\dataTables.foundation.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\css\dataTables.foundation.min.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\css\dataTables.jqueryui.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\css\dataTables.jqueryui.min.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\css\dataTables.material.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\css\dataTables.material.min.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\css\dataTables.semanticui.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\css\dataTables.semanticui.min.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\css\dataTables.uikit.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\css\dataTables.uikit.min.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\css\jquery.dataTables.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\css\jquery.dataTables.min.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\images\favicon.ico" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\images\sort_asc.png" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\images\sort_asc_disabled.png" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\images\sort_both.png" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\images\sort_desc.png" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\images\sort_desc_disabled.png" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\js\dataTables.bootstrap.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\js\dataTables.bootstrap.min.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\js\dataTables.bootstrap4.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\js\dataTables.bootstrap4.min.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\js\dataTables.foundation.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\js\dataTables.foundation.min.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\js\dataTables.jqueryui.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\js\dataTables.jqueryui.min.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\js\dataTables.material.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\js\dataTables.material.min.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\js\dataTables.semanticui.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\js\dataTables.semanticui.min.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\js\dataTables.uikit.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\js\dataTables.uikit.min.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\js\jquery.dataTables.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\js\jquery.dataTables.min.js" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\js\jquery.js" />
+    <Content Include="Administrator\plugins\DataTables\datatables.css" />
+    <Content Include="Administrator\plugins\DataTables\dataTables.fixedColumns.js" />
+    <Content Include="Administrator\plugins\DataTables\dataTables.fixedColumns.min.js" />
+    <Content Include="Administrator\plugins\DataTables\datatables.js" />
+    <Content Include="Administrator\plugins\DataTables\datatables.min.css" />
+    <Content Include="Administrator\plugins\DataTables\datatables.min.js" />
+    <Content Include="Administrator\plugins\DataTables\fnSetFilteringDelay.js" />
+    <Content Include="Administrator\plugins\DataTables\jQuery-2.1.4\jquery-2.1.4.js" />
+    <Content Include="Administrator\plugins\DataTables\jQuery-2.1.4\jquery-2.1.4.min.js" />
+    <Content Include="Administrator\plugins\DataTables\Scroller-1.4.0\css\scroller.bootstrap.css" />
+    <Content Include="Administrator\plugins\DataTables\Scroller-1.4.0\css\scroller.bootstrap.min.css" />
+    <Content Include="Administrator\plugins\DataTables\Scroller-1.4.0\css\scroller.dataTables.css" />
+    <Content Include="Administrator\plugins\DataTables\Scroller-1.4.0\css\scroller.dataTables.min.css" />
+    <Content Include="Administrator\plugins\DataTables\Scroller-1.4.0\css\scroller.foundation.css" />
+    <Content Include="Administrator\plugins\DataTables\Scroller-1.4.0\css\scroller.foundation.min.css" />
+    <Content Include="Administrator\plugins\DataTables\Scroller-1.4.0\css\scroller.jqueryui.css" />
+    <Content Include="Administrator\plugins\DataTables\Scroller-1.4.0\css\scroller.jqueryui.min.css" />
+    <Content Include="Administrator\plugins\DataTables\Scroller-1.4.0\js\dataTables.scroller.js" />
+    <Content Include="Administrator\plugins\DataTables\Scroller-1.4.0\js\dataTables.scroller.min.js" />
+    <Content Include="Administrator\plugins\DataTables\Select-1.1.0\css\select.bootstrap.css" />
+    <Content Include="Administrator\plugins\DataTables\Select-1.1.0\css\select.bootstrap.min.css" />
+    <Content Include="Administrator\plugins\DataTables\Select-1.1.0\css\select.dataTables.css" />
+    <Content Include="Administrator\plugins\DataTables\Select-1.1.0\css\select.dataTables.min.css" />
+    <Content Include="Administrator\plugins\DataTables\Select-1.1.0\css\select.foundation.css" />
+    <Content Include="Administrator\plugins\DataTables\Select-1.1.0\css\select.foundation.min.css" />
+    <Content Include="Administrator\plugins\DataTables\Select-1.1.0\css\select.jqueryui.css" />
+    <Content Include="Administrator\plugins\DataTables\Select-1.1.0\css\select.jqueryui.min.css" />
+    <Content Include="Administrator\plugins\DataTables\Select-1.1.0\js\dataTables.select.js" />
+    <Content Include="Administrator\plugins\DataTables\Select-1.1.0\js\dataTables.select.min.js" />
     <Content Include="EmailTemplate\EmailTemplate.html" />
     <Content Include="favicon.ico" />
     <Content Include="FISProject\css\connectederror.css" />
@@ -272,6 +371,7 @@
     <Content Include="Administrator\fonts\FontAwesome.otf" />
     <Content Include="Administrator\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Administrator\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Administrator\plugins\DataTables\DataTables-1.10.12\images\Sorting icons.psd" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\fis-hcm - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -306,11 +406,12 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Login\ConnectedError.cshtml" />
-    <Content Include="Views\Login\AdminLogin.cshtml" />
-    <Content Include="Views\Login\AdminPage.cshtml" />
+    <Content Include="Views\Admin\AdminLogin.cshtml" />
+    <Content Include="Views\Admin\AdminPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\plugins\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

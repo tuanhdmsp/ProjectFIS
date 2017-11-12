@@ -1,0 +1,280 @@
+﻿@{
+    ViewBag.Title = "AdminPage";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<head>
+    <title>User Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link rel="stylesheet" href="/Administrator/css/bootstrap.min.css">
+    <link href="/Administrator/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/Administrator/css/style-responsive.css" rel="stylesheet"/>
+    <link href="//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/Administrator/css/font.css" type="text/css"/>
+    <link href="/Administrator/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.16/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.16/datatables.min.js"></script>
+    <script src="/Administrator/js/jquery2.0.3.min.js"></script>
+    @*<style>
+        .paginate_button {
+            width: 25px;
+            height: 25px;
+            padding: 1em;
+            background-color: #e2e2e2;
+            margin: 5px;
+        }
+        .paginate_button.current {
+            background-color: #0000cd !important;
+        }
+    </style>*@
+</head>
+<body>
+<section id="container">
+    <header class="header fixed-top clearfix">
+        <!--logo start-->
+        <div class="brand">
+            <a class="logo">
+                Administrator
+            </a>
+        </div>
+        <!--logo end-->
+        <div class="top-nav clearfix">
+            <!--search & user info start-->
+            <ul class="nav pull-right top-menu">
+                <!-- user login dropdown start-->
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <img alt="" src="../../Administrator/images/2.png">
+                        <span class="username">@Session["user"]</span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu extended logout">
+                        <li>
+                            <a href="@Url.Action("AdminLogout")"><i class="fa fa-sign-out"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- user login dropdown end -->
+            </ul>
+        </div>
+    </header>
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="table-agile-info">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        User Management
+                    </div>
+                    <div class="row w3-res-tb">
+                        <div class="col-sm-5 m-b-xs">
+                            <select class="input-sm form-control w-sm inline v-middle" id="action-select">
+                                <option value="0">Bulk action</option>
+                                <option value="1">Delete selected</option>
+                            </select>
+                            <button class="btn btn-sm btn-default" onclick="ActionButtonApply()">Apply</button>
+                        </div>
+                        <div class="col-sm-4">
+                        </div>
+                    </div>
+                    <table class="table table-striped b-t b-light" id="logTable">
+                        <thead>
+                        <tr>
+                            <th style="width: 20px;">
+                                <label class="i-checks m-b-none">
+                                    <input type="checkbox" onchange="checkUncheckAll(this)"><i></i>
+                                </label>
+                            </th>
+                            <th>Email</th>
+                            <th>Code</th>
+                            <th>Time</th>
+                            <th>Used</th>
+                            <th style="width: 30px;"></th>
+                        </tr>
+                        </thead>
+                        @*<tbody>
+                        <tr>
+                            <td>
+                                <label class="i-checks m-b-none">
+                                    <input type="checkbox" name="post[]"><i></i>
+                                </label>
+                            </td>
+                            <td>tuanhd.msp@outlook.com</td>
+                            <td>
+                                <span class="text-ellipsis"></span>
+                            </td>
+                            <td>
+                                <span class="text-ellipsis"></span>
+                            </td>
+                            <td>
+                                <span class="text-ellipsis"></span>
+                            </td>
+                            <td>
+                                <a href="" class="active" ui-toggle-class="">
+                                    <i class="fa fa-times text-danger "></i>
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>*@
+                    </table>
+                    
+                    @*<footer class="panel-footer">
+                        <div class="row">
+                            <div class="col-sm-7 text-right text-center-xs">
+                                <ul class="pagination pagination-sm m-t-none m-b-none">
+                                    <li>
+                                        <a href="">
+                                            <i class="fa fa-chevron-left"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa fa-chevron-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </footer>*@
+                </div>
+            </div>
+        </section>
+    </section>
+</section>
+<script src="/Administrator/js/bootstrap.js"></script>
+<script src="/Administrator/js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="/Administrator/js/scripts.js"></script>
+<script src="/Administrator/js/jquery.slimscroll.js"></script>
+<script src="/Administrator/js/jquery.nicescroll.js"></script>
+<script src="/Administrator/js/jquery.scrollTo.js"></script>
+<script src="~/Administrator/plugins/DataTables/datatables.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#logTable').DataTable({
+            //"bSortable": false,
+            "bProcessing": true,
+            "bServerside": true,
+            "sAjaxSource": "@Url.Action("GetLogData")",
+            "fnServerParams": function (aoData) {
+                aoData.push({ "name": "id", "value": "0" });
+            },
+            "sServerMethod": "POST",
+            "bAutoWidth": false,
+            "oLanguage": {
+                "sSearchPlaceholder": "Danh mục",
+                "sSearch": "Tìm kiếm:",
+                "sZeroRecords": "Không có dữ liệu phù hợp",
+                "sInfo": "Hiển thị từ _START_ đến _END_ trên tổng số _TOTAL_ dòng",
+                "sEmptyTable": "Không có dữ liệu",
+                "sInfoFiltered": " - lọc ra từ _MAX_ dòng",
+                "sLengthMenu": "Hiển thị _MENU_ dòng",
+                "sProcessing": "Đang xử lý...",
+                "sInfoEmpty": "Không có dữ liệu",
+                "oPaginate": {
+                    "sNext": "<i class='fa fa-chevron-right'></i>",
+                    "sPrevious": "<i class='fa fa-chevron-left'></i>"
+                }
+            },
+            "aoColumnDefs": [
+                {
+                    "aTargets": [0, 1, 2, 3, 4, 5],
+                    "bSortable": false
+                },
+                {
+                    "aTargets": [0],
+                    "mRender": function (data, type, row) {
+                        var checkbox = '<label class="i-checks m-b-none"><input type="checkbox" name="codeId" value="' + data + '"/></label>';
+                        return checkbox;
+                    }
+                },
+                {
+                    "aTargets": [2, 3, 4],
+                    "mRender": function (data, type, row) {
+                        var showText = data;
+                        if (data === true) {
+                            showText = "Used";
+                        } else if (data === false) {
+                            showText = "Not used";
+                        }
+                        var text = '<span class="text-ellipsis">' + showText + '</span>';
+                        return text;
+                    }
+                },
+                {
+                    "aTargets": [5],
+                    "mRender": function(data, type, row) {
+                        var button = '<button class="btn btn-danger" onclick="DeleteCode(' + row[0] + ')"><i class="fa fa-trash"></i></div>';
+                        return button;
+                    }
+                },
+            ]
+        });
+    });
+
+    function DeleteCode(codeId) {
+        $.ajax({
+            "method": "POST",
+            "dataType": "json",
+            "url": "@Url.Action("DeleteCode")",
+            "data": {
+                "id": codeId
+            },
+            "success": function(data){
+                if (data.success == true) {
+
+                } else {
+                    alert(data.message);
+                }
+            },
+            "error": function(error) {
+                alert("Something wrong happened!Please try again!");
+                console.log(error);
+            }
+        });
+        RefreshTable();
+    };
+
+    function ActionButtonApply() {
+        var type = $('#action-select').val();
+        
+        switch(type) {
+            case "0":
+                break;
+            case "1":
+                var selectedId = [];
+                $('#logTable tbody input:checkbox:checked').each(function() {
+                    selectedId.push($(this).val());
+                });
+                DeleteCode(selectedId);
+                break;
+        }
+    }
+
+    function checkUncheckAll(o) {
+        var checkboxes = $('#logTable input:checkbox');
+        $('#logTable input:checkbox').prop('checked', o.checked);
+    }
+
+    function RefreshTable() {
+        var oTable = $("#logTable").dataTable();
+        oTable._fnPageChange(0);
+        oTable._fnAjaxUpdate();
+    };
+
+</script>
+</body>
+</html>

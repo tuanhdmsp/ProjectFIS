@@ -26,5 +26,6 @@ namespace SplashPageWebApp.Models
         }
     
         public virtual DbSet<GeneratedCode> GeneratedCodes { get; set; }
+        public virtual DbSet<Administrator> Administrators { get; set; }
     }
 }

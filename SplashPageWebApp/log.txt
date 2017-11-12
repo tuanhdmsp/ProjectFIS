@@ -1,0 +1,1063 @@
+-----------------------------------------------------------------------------------------------------------------
+ALL_HTTP: HTTP_CONNECTION:Keep-Alive
+HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*
+HTTP_ACCEPT_ENCODING:gzip, deflate
+HTTP_ACCEPT_LANGUAGE:en-US
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+ALL_RAW: Connection: Keep-Alive
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: D:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: D:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING:  
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 51134 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: Keep-Alive 
+HTTP_ACCEPT: text/html, application/xhtml+xml, image/jxr, */* 
+HTTP_ACCEPT_ENCODING: gzip, deflate 
+HTTP_ACCEPT_LANGUAGE: en-US 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063 
+
+-----------------------------------------------------------------------------------------------------------------
+ALL_HTTP: HTTP_CONNECTION:Keep-Alive
+HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*
+HTTP_ACCEPT_ENCODING:gzip, deflate
+HTTP_ACCEPT_LANGUAGE:en-US
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+ALL_RAW: Connection: Keep-Alive
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: D:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: D:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING:  
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 51465 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: Keep-Alive 
+HTTP_ACCEPT: text/html, application/xhtml+xml, image/jxr, */* 
+HTTP_ACCEPT_ENCODING: gzip, deflate 
+HTTP_ACCEPT_LANGUAGE: en-US 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063 
+
+-----------------------------------------------------------------------------------------------------------------
+ALL_HTTP: HTTP_CONNECTION:Keep-Alive
+HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*
+HTTP_ACCEPT_ENCODING:gzip, deflate
+HTTP_ACCEPT_LANGUAGE:en-US
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+ALL_RAW: Connection: Keep-Alive
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: D:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: D:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING:  
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 51481 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: Keep-Alive 
+HTTP_ACCEPT: text/html, application/xhtml+xml, image/jxr, */* 
+HTTP_ACCEPT_ENCODING: gzip, deflate 
+HTTP_ACCEPT_LANGUAGE: en-US 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063 
+
+-----------------------------------------------------------------------------------------------------------------
+ALL_HTTP: HTTP_CONNECTION:Keep-Alive
+HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*
+HTTP_ACCEPT_ENCODING:gzip, deflate
+HTTP_ACCEPT_LANGUAGE:en-US
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+ALL_RAW: Connection: Keep-Alive
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: D:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: D:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING:  
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 55856 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: Keep-Alive 
+HTTP_ACCEPT: text/html, application/xhtml+xml, image/jxr, */* 
+HTTP_ACCEPT_ENCODING: gzip, deflate 
+HTTP_ACCEPT_LANGUAGE: en-US 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063 
+
+-----------------------------------------------------------------------------------------------------------------
+__RequestVerificationToken: V0N1H5tyjoM3D-jiDNZozZReaHS46nrQTHfHmSxHmcCVM4VDgBmy9X3tSQOObT4Ynp2kvB95oUqgNd1SqkpmTjNOAMrIYihnIs8VWccfXzI1 
+ASP.NET_SessionId: hb3swjjqw1maos042faelo1d 
+ALL_HTTP: HTTP_CONNECTION:Keep-Alive
+HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*
+HTTP_ACCEPT_ENCODING:gzip, deflate
+HTTP_ACCEPT_LANGUAGE:en-US
+HTTP_COOKIE:__RequestVerificationToken=V0N1H5tyjoM3D-jiDNZozZReaHS46nrQTHfHmSxHmcCVM4VDgBmy9X3tSQOObT4Ynp2kvB95oUqgNd1SqkpmTjNOAMrIYihnIs8VWccfXzI1; ASP.NET_SessionId=hb3swjjqw1maos042faelo1d
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+ALL_RAW: Connection: Keep-Alive
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Cookie: __RequestVerificationToken=V0N1H5tyjoM3D-jiDNZozZReaHS46nrQTHfHmSxHmcCVM4VDgBmy9X3tSQOObT4Ynp2kvB95oUqgNd1SqkpmTjNOAMrIYihnIs8VWccfXzI1; ASP.NET_SessionId=hb3swjjqw1maos042faelo1d
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: D:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: D:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING:  
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 57928 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: Keep-Alive 
+HTTP_ACCEPT: text/html, application/xhtml+xml, image/jxr, */* 
+HTTP_ACCEPT_ENCODING: gzip, deflate 
+HTTP_ACCEPT_LANGUAGE: en-US 
+HTTP_COOKIE: __RequestVerificationToken=V0N1H5tyjoM3D-jiDNZozZReaHS46nrQTHfHmSxHmcCVM4VDgBmy9X3tSQOObT4Ynp2kvB95oUqgNd1SqkpmTjNOAMrIYihnIs8VWccfXzI1; ASP.NET_SessionId=hb3swjjqw1maos042faelo1d 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063 
+
+-----------------------------------------------------------------------------------------------------------------
+__RequestVerificationToken: V0N1H5tyjoM3D-jiDNZozZReaHS46nrQTHfHmSxHmcCVM4VDgBmy9X3tSQOObT4Ynp2kvB95oUqgNd1SqkpmTjNOAMrIYihnIs8VWccfXzI1 
+ASP.NET_SessionId: hb3swjjqw1maos042faelo1d 
+ALL_HTTP: HTTP_CONNECTION:Keep-Alive
+HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*
+HTTP_ACCEPT_ENCODING:gzip, deflate
+HTTP_ACCEPT_LANGUAGE:en-US
+HTTP_COOKIE:__RequestVerificationToken=V0N1H5tyjoM3D-jiDNZozZReaHS46nrQTHfHmSxHmcCVM4VDgBmy9X3tSQOObT4Ynp2kvB95oUqgNd1SqkpmTjNOAMrIYihnIs8VWccfXzI1; ASP.NET_SessionId=hb3swjjqw1maos042faelo1d
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+ALL_RAW: Connection: Keep-Alive
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Cookie: __RequestVerificationToken=V0N1H5tyjoM3D-jiDNZozZReaHS46nrQTHfHmSxHmcCVM4VDgBmy9X3tSQOObT4Ynp2kvB95oUqgNd1SqkpmTjNOAMrIYihnIs8VWccfXzI1; ASP.NET_SessionId=hb3swjjqw1maos042faelo1d
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: D:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: D:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING:  
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 57962 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: Keep-Alive 
+HTTP_ACCEPT: text/html, application/xhtml+xml, image/jxr, */* 
+HTTP_ACCEPT_ENCODING: gzip, deflate 
+HTTP_ACCEPT_LANGUAGE: en-US 
+HTTP_COOKIE: __RequestVerificationToken=V0N1H5tyjoM3D-jiDNZozZReaHS46nrQTHfHmSxHmcCVM4VDgBmy9X3tSQOObT4Ynp2kvB95oUqgNd1SqkpmTjNOAMrIYihnIs8VWccfXzI1; ASP.NET_SessionId=hb3swjjqw1maos042faelo1d 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063 
+
+-----------------------------------------------------------------------------------------------------------------
+__RequestVerificationToken: V0N1H5tyjoM3D-jiDNZozZReaHS46nrQTHfHmSxHmcCVM4VDgBmy9X3tSQOObT4Ynp2kvB95oUqgNd1SqkpmTjNOAMrIYihnIs8VWccfXzI1 
+ASP.NET_SessionId: hb3swjjqw1maos042faelo1d 
+ALL_HTTP: HTTP_CONNECTION:Keep-Alive
+HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*
+HTTP_ACCEPT_ENCODING:gzip, deflate
+HTTP_ACCEPT_LANGUAGE:en-US
+HTTP_COOKIE:__RequestVerificationToken=V0N1H5tyjoM3D-jiDNZozZReaHS46nrQTHfHmSxHmcCVM4VDgBmy9X3tSQOObT4Ynp2kvB95oUqgNd1SqkpmTjNOAMrIYihnIs8VWccfXzI1; ASP.NET_SessionId=hb3swjjqw1maos042faelo1d
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+ALL_RAW: Connection: Keep-Alive
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Cookie: __RequestVerificationToken=V0N1H5tyjoM3D-jiDNZozZReaHS46nrQTHfHmSxHmcCVM4VDgBmy9X3tSQOObT4Ynp2kvB95oUqgNd1SqkpmTjNOAMrIYihnIs8VWccfXzI1; ASP.NET_SessionId=hb3swjjqw1maos042faelo1d
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: D:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: D:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING:  
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 58126 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: Keep-Alive 
+HTTP_ACCEPT: text/html, application/xhtml+xml, image/jxr, */* 
+HTTP_ACCEPT_ENCODING: gzip, deflate 
+HTTP_ACCEPT_LANGUAGE: en-US 
+HTTP_COOKIE: __RequestVerificationToken=V0N1H5tyjoM3D-jiDNZozZReaHS46nrQTHfHmSxHmcCVM4VDgBmy9X3tSQOObT4Ynp2kvB95oUqgNd1SqkpmTjNOAMrIYihnIs8VWccfXzI1; ASP.NET_SessionId=hb3swjjqw1maos042faelo1d 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063 
+
+-----------------------------------------------------------------------------------------------------------------
+ALL_HTTP: HTTP_CONNECTION:Keep-Alive
+HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*
+HTTP_ACCEPT_ENCODING:gzip, deflate
+HTTP_ACCEPT_LANGUAGE:en-US
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+ALL_RAW: Connection: Keep-Alive
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: D:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: D:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING:  
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 62116 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: Keep-Alive 
+HTTP_ACCEPT: text/html, application/xhtml+xml, image/jxr, */* 
+HTTP_ACCEPT_ENCODING: gzip, deflate 
+HTTP_ACCEPT_LANGUAGE: en-US 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063 
+
+-----------------------------------------------------------------------------------------------------------------
+__RequestVerificationToken: MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1 
+ASP.NET_SessionId: g5jm43argloo1cyebgjlc4b5 
+ALL_HTTP: HTTP_CONNECTION:Keep-Alive
+HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*
+HTTP_ACCEPT_ENCODING:gzip, deflate
+HTTP_ACCEPT_LANGUAGE:en-US
+HTTP_COOKIE:__RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+ALL_RAW: Connection: Keep-Alive
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Cookie: __RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: D:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: D:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING:  
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 62297 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: Keep-Alive 
+HTTP_ACCEPT: text/html, application/xhtml+xml, image/jxr, */* 
+HTTP_ACCEPT_ENCODING: gzip, deflate 
+HTTP_ACCEPT_LANGUAGE: en-US 
+HTTP_COOKIE: __RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063 
+
+-----------------------------------------------------------------------------------------------------------------
+__RequestVerificationToken: MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1 
+ASP.NET_SessionId: g5jm43argloo1cyebgjlc4b5 
+ALL_HTTP: HTTP_CONNECTION:Keep-Alive
+HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*
+HTTP_ACCEPT_ENCODING:gzip, deflate
+HTTP_ACCEPT_LANGUAGE:en-US
+HTTP_COOKIE:__RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+ALL_RAW: Connection: Keep-Alive
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Cookie: __RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: D:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: D:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING:  
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 62534 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: Keep-Alive 
+HTTP_ACCEPT: text/html, application/xhtml+xml, image/jxr, */* 
+HTTP_ACCEPT_ENCODING: gzip, deflate 
+HTTP_ACCEPT_LANGUAGE: en-US 
+HTTP_COOKIE: __RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063 
+
+-----------------------------------------------------------------------------------------------------------------
+__RequestVerificationToken: MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1 
+ASP.NET_SessionId: g5jm43argloo1cyebgjlc4b5 
+ALL_HTTP: HTTP_CONNECTION:Keep-Alive
+HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*
+HTTP_ACCEPT_ENCODING:gzip, deflate
+HTTP_ACCEPT_LANGUAGE:en-US
+HTTP_COOKIE:__RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+ALL_RAW: Connection: Keep-Alive
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Cookie: __RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: D:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: D:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING:  
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 62651 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: Keep-Alive 
+HTTP_ACCEPT: text/html, application/xhtml+xml, image/jxr, */* 
+HTTP_ACCEPT_ENCODING: gzip, deflate 
+HTTP_ACCEPT_LANGUAGE: en-US 
+HTTP_COOKIE: __RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063 
+
+-----------------------------------------------------------------------------------------------------------------
+__RequestVerificationToken: MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1 
+ASP.NET_SessionId: g5jm43argloo1cyebgjlc4b5 
+ALL_HTTP: HTTP_CONNECTION:Keep-Alive
+HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*
+HTTP_ACCEPT_ENCODING:gzip, deflate
+HTTP_ACCEPT_LANGUAGE:en-US
+HTTP_COOKIE:__RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+ALL_RAW: Connection: Keep-Alive
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Cookie: __RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: D:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: D:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING:  
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 62724 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: Keep-Alive 
+HTTP_ACCEPT: text/html, application/xhtml+xml, image/jxr, */* 
+HTTP_ACCEPT_ENCODING: gzip, deflate 
+HTTP_ACCEPT_LANGUAGE: en-US 
+HTTP_COOKIE: __RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063 
+
+-----------------------------------------------------------------------------------------------------------------
+__RequestVerificationToken: MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1 
+ASP.NET_SessionId: g5jm43argloo1cyebgjlc4b5 
+ALL_HTTP: HTTP_CONNECTION:Keep-Alive
+HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*
+HTTP_ACCEPT_ENCODING:gzip, deflate
+HTTP_ACCEPT_LANGUAGE:en-US
+HTTP_COOKIE:__RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+ALL_RAW: Connection: Keep-Alive
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Cookie: __RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: D:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: D:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING:  
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 65388 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: Keep-Alive 
+HTTP_ACCEPT: text/html, application/xhtml+xml, image/jxr, */* 
+HTTP_ACCEPT_ENCODING: gzip, deflate 
+HTTP_ACCEPT_LANGUAGE: en-US 
+HTTP_COOKIE: __RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063 
+
+-----------------------------------------------------------------------------------------------------------------
+__RequestVerificationToken: MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1 
+ASP.NET_SessionId: g5jm43argloo1cyebgjlc4b5 
+ALL_HTTP: HTTP_CONNECTION:Keep-Alive
+HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*
+HTTP_ACCEPT_ENCODING:gzip, deflate
+HTTP_ACCEPT_LANGUAGE:en-US
+HTTP_COOKIE:__RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+ALL_RAW: Connection: Keep-Alive
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Cookie: __RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: D:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: D:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING:  
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 65521 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: Keep-Alive 
+HTTP_ACCEPT: text/html, application/xhtml+xml, image/jxr, */* 
+HTTP_ACCEPT_ENCODING: gzip, deflate 
+HTTP_ACCEPT_LANGUAGE: en-US 
+HTTP_COOKIE: __RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063 
+
+-----------------------------------------------------------------------------------------------------------------
+__RequestVerificationToken: MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1 
+ASP.NET_SessionId: g5jm43argloo1cyebgjlc4b5 
+ALL_HTTP: HTTP_CONNECTION:Keep-Alive
+HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*
+HTTP_ACCEPT_ENCODING:gzip, deflate
+HTTP_ACCEPT_LANGUAGE:en-US
+HTTP_COOKIE:__RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+ALL_RAW: Connection: Keep-Alive
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Cookie: __RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: D:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: D:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING:  
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 51174 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: Keep-Alive 
+HTTP_ACCEPT: text/html, application/xhtml+xml, image/jxr, */* 
+HTTP_ACCEPT_ENCODING: gzip, deflate 
+HTTP_ACCEPT_LANGUAGE: en-US 
+HTTP_COOKIE: __RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063 
+
+-----------------------------------------------------------------------------------------------------------------
+__RequestVerificationToken: MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1 
+ASP.NET_SessionId: g5jm43argloo1cyebgjlc4b5 
+ALL_HTTP: HTTP_CONNECTION:Keep-Alive
+HTTP_ACCEPT:text/html, application/xhtml+xml, image/jxr, */*
+HTTP_ACCEPT_ENCODING:gzip, deflate
+HTTP_ACCEPT_LANGUAGE:en-US
+HTTP_COOKIE:__RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+ALL_RAW: Connection: Keep-Alive
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Cookie: __RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: D:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: D:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING:  
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 51937 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: Keep-Alive 
+HTTP_ACCEPT: text/html, application/xhtml+xml, image/jxr, */* 
+HTTP_ACCEPT_ENCODING: gzip, deflate 
+HTTP_ACCEPT_LANGUAGE: en-US 
+HTTP_COOKIE: __RequestVerificationToken=MdsVSBEh8oUZt85cXSiM_6ZQ1TWX3uSXVDRymK6qDEX_Wis3UavFR2qjRtp6jVmqmenK955TeCkW92dVCWTDzGWGrlOwQrEekKWOsxAPajk1; ASP.NET_SessionId=g5jm43argloo1cyebgjlc4b5 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36 Edge/15.15063 
+
