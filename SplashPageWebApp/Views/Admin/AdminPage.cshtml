@@ -15,21 +15,302 @@
     <link href="//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/Administrator/css/font.css" type="text/css"/>
     <link href="/Administrator/css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.16/datatables.min.css"/>
-    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.16/datatables.min.js"></script>
+    <link href="~/Administrator/plugins/DataTables/datatables.css" rel="stylesheet"/>
     <script src="/Administrator/js/jquery2.0.3.min.js"></script>
-    @*<style>
-        .paginate_button {
-            width: 25px;
-            height: 25px;
-            padding: 1em;
-            background-color: #e2e2e2;
-            margin: 5px;
+<style>
+    .dataTables_wrapper .dataTables_filter input {
+        border: 0.1px solid #e0e0e0;
+        padding: 10px;
+        height: 35px;
+    }
+
+    .dataTables_wrapper .dataTables_length {
+        padding: 0px;
+        margin-bottom: 19px;
+    }
+
+    .dataTables_wrapper .dataTables_length select {
+        border: 0.1px solid #e0e0e0;
+        padding: 0 5px;
+        height: 35px;
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: none;
+        padding: 1em 0.6em;
+        background-color: #e2e2e2;
+        margin: 5px;
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+        background: #d7d7d7 !important;
+        color: #000 !important;
+        border: none;
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+        background: #317ba5 !important;
+        color: #fff !important;
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+        background: #317ba5 !important;
+        color: #fff !important;
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
+        background: #EEEEEE;
+        cursor: not-allowed !important;
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover {
+        background: #EEEEEE !important;
+    }
+
+    .dataTables_info {
+        padding: 20px;
+    }
+
+    .dataTables_paginate.paging_simple_numbers {
+        padding: 10px;
+        padding-right: 0px;
+    }
+    .dataTables_wrapper .dataTables_filter {
+        /*padding-right: 25px;*/
+        margin-bottom: 19px; /*warning*/
+    }
+
+    table.dataTable.no-footer {
+        border-bottom-color: lightgray;
+    }
+
+    .btn {
+        display: inline-block;
+        text-shadow: 0 -1px 0 rgba(0,0,0,.25) !important;
+        background-image: none !important;
+        box-shadow: none !important;
+        cursor: pointer;
+        vertical-align: middle;
+        margin: 0;
+        position: relative;
+        border: 2px solid;
+        padding: 5
+                 px 8px;
+        margin-bottom: 3px !important;
+    }
+
+    .btn-primary {
+        background-color: #244363;
+        border-color: #244363;
+    }
+
+    .btn-primary:hover:hover {
+        background-color: #112b44;
+        border-color: #244363;
+    }
+
+    .btn-danger {
+        border-color: #F44336;
+    }
+
+    .btn-danger:hover:hover {
+        background: #d6281b;
+        border-color: #F44336;
+    }
+
+    .btn-warning {
+        background-color: #bf7033;
+        border-color: #bf7033;
+    }
+
+    .btn-warning:hover:hover {
+        border-color: #FF9800;
+        background-color: #bf7033;
+    }
+
+    .btn-success {
+        border-color: #4CAF50;
+    }
+
+    .btn-success:hover:hover {
+        background: #38933b;
+        border-color: #4CAF50;
+    }
+
+    .btn-info {
+        border-color: #4f99c6;
+        background: #4f99c6;
+    }
+
+    .btn-info:hover:hover {
+        border-color: #4f99c6;
+        background: #317ba5;
+    }
+
+    /*
+Author: Yan Hoàng
+Page: CostManage/IndexCostManage
+*/
+
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
+    .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+        color: #BDBDBD !important;
+    }
+    .card .dataTables_info {
+        padding: 0px;
+        padding-top: 2em;
+    }
+    .table-bordered > tbody > tr > td {
+        border: 0.1px dotted #ddd !important;
+    }
+
+    .table > tbody > tr > td:last-child {
+        padding-right: 9px;
+    }
+
+    .table > thead:first-child > tr:first-child > th {
+        text-align: center;
+    }
+
+    .table-bordered tbody > tr > td {
+        border: 0.1px solid #e0e0e0 !important;
+    }
+
+    .table-bordered thead > tr > th {
+        border: 0.1px solid #112b44 !important;
+    }
+
+    .table thead > tr th:last-child, .table tbody tr td:last-child {
+        padding-right: 10px;
+    }
+
+    .table thead tr th:first-child, .table tbody tr td:first-child {
+        padding-left: 10px;
+    }
+
+    .table tbody tr td:last-child {
+        text-align: center;
+    }
+
+    .table > tbody > tr > td {
+        border: 0.1px solid #e0e0e0 !important;
+    }
+
+    .table > thead:first-child > tr:first-child > th > label, .table > tbody > tr > td {
+        font-size: 14px;
+    }
+
+    .highcharts-tooltip span {
+        width: 200px;
+    }
+
+    .table > thead > tr > td {
+        border: 1px solid #e0e0e0 !important;
+    }
+    .table > thead > tr > th {
+        text-transform: none;
+    }
+
+    .myTable > thead > tr > th {
+        padding: 1px;
+    }
+
+    tbody .SmallChildHeader {
+        font-size: 100% !important;
+    }
+
+    @@media(max-width: 768px){
+        .dataTables_wrapper{
+            margin-top: 30px;
         }
-        .paginate_button.current {
-            background-color: #0000cd !important;
+
+    }
+    .tableDiv-responsive {
+        overflow-x: scroll;
+        width: 100%;
+    }
+    }
+
+    @@media(max-width: 425px){
+        #product-table-panel{
+            width:90%;
         }
-    </style>*@
+    }
+
+    .table > thead:first-child > tr:first-child > th {
+        border: 0.1px solid #e0e0e0;
+    }
+</style>
+<script>
+    $.fn.dataTableExt.oApi.fnReloadAjax = function (oSettings, sNewSource, fnCallback, bStandingRedraw) {
+        // DataTables 1.10 compatibility - if 1.10 then versionCheck exists.
+        // 1.10s API has ajax reloading built in, so we use those abilities
+        // directly.
+        if ($.fn.dataTable.versionCheck) {
+            var api = new $.fn.dataTable.Api(oSettings);
+
+            if (sNewSource) {
+                api.ajax.url(sNewSource).load(fnCallback, !bStandingRedraw);
+            }
+            else {
+                api.ajax.reload(fnCallback, !bStandingRedraw);
+            }
+            return;
+        }
+
+        if (sNewSource !== undefined && sNewSource !== null) {
+            oSettings.sAjaxSource = sNewSource;
+        }
+
+        // Server-side processing should just call fnDraw
+        if (oSettings.oFeatures.bServerSide) {
+            this.fnDraw();
+            return;
+        }
+
+        this.oApi._fnProcessingDisplay(oSettings, true);
+        var that = this;
+        var iStart = oSettings._iDisplayStart;
+        var aData = [];
+
+        this.oApi._fnServerParams(oSettings, aData);
+
+        oSettings.fnServerData.call(oSettings.oInstance, oSettings.sAjaxSource, aData, function (json) {
+            /* Clear the old information from the table */
+            that.oApi._fnClearTable(oSettings);
+
+            /* Got the data - add it to the table */
+            var aData = (oSettings.sAjaxDataProp !== "") ?
+                that.oApi._fnGetObjectDataFn(oSettings.sAjaxDataProp)(json) : json;
+
+            for (var i = 0; i < aData.length; i++) {
+                that.oApi._fnAddData(oSettings, aData[i]);
+            }
+
+            oSettings.aiDisplay = oSettings.aiDisplayMaster.slice();
+
+            that.fnDraw();
+
+            if (bStandingRedraw === true) {
+                oSettings._iDisplayStart = iStart;
+                that.oApi._fnCalculateEnd(oSettings);
+                that.fnDraw(false);
+            }
+
+            that.oApi._fnProcessingDisplay(oSettings, false);
+
+            /* Callback user function - for event handlers etc */
+            if (typeof fnCallback == 'function' && fnCallback !== null) {
+                fnCallback(oSettings);
+            }
+        }, oSettings);
+    };
+</script>
 </head>
 <body>
 <section id="container">
@@ -82,7 +363,7 @@
                     <table class="table table-striped b-t b-light" id="logTable">
                         <thead>
                         <tr>
-                            <th style="width: 20px;">
+                            <th style="width: 10px;">
                                 <label class="i-checks m-b-none">
                                     <input type="checkbox" onchange="checkUncheckAll(this)"><i></i>
                                 </label>
@@ -161,16 +442,18 @@
 <script src="/Administrator/js/jquery.slimscroll.js"></script>
 <script src="/Administrator/js/jquery.nicescroll.js"></script>
 <script src="/Administrator/js/jquery.scrollTo.js"></script>
-<script src="~/Administrator/plugins/DataTables/datatables.js"></script>
+<script src="~/Administrator/plugins/DataTables/dataTables.js"></script>
+<script src="~/Administrator/plugins/DataTables/dataTables.fixedColumns.js"></script>
 <script>
     $(document).ready(function() {
         $('#logTable').DataTable({
             //"bSortable": false,
-            "bProcessing": true,
-            "bServerside": true,
+            "Processing": true,
+            "Serverside": true,
             "sAjaxSource": "@Url.Action("GetLogData")",
             "fnServerParams": function (aoData) {
                 aoData.push({ "name": "id", "value": "0" });
+                aoData.push({ "name": "sSearch", "value": $('#logTable_filter input').val() });
             },
             "sServerMethod": "POST",
             "bAutoWidth": false,
@@ -223,6 +506,12 @@
                 },
             ]
         });
+        $('#logTable_filter input').off().on('keyup change', function () {
+            //e.preventDefault();
+            console.log("sth");
+            var table = $('#logTable').dataTable();
+            table._fnAjaxUpdate();
+        })
     });
 
     function DeleteCode(codeId) {
@@ -252,15 +541,15 @@
         var type = $('#action-select').val();
         
         switch(type) {
-            case "0":
-                break;
-            case "1":
-                var selectedId = [];
-                $('#logTable tbody input:checkbox:checked').each(function() {
-                    selectedId.push($(this).val());
-                });
-                DeleteCode(selectedId);
-                break;
+        case "0":
+            break;
+        case "1":
+            var selectedId = [];
+            $('#logTable tbody input:checkbox:checked').each(function() {
+                selectedId.push($(this).val());
+            });
+            DeleteCode(selectedId);
+            break;
         }
     }
 
@@ -268,13 +557,12 @@
         var checkboxes = $('#logTable input:checkbox');
         $('#logTable input:checkbox').prop('checked', o.checked);
     }
-
+    
     function RefreshTable() {
         var oTable = $("#logTable").dataTable();
         oTable._fnPageChange(0);
         oTable._fnAjaxUpdate();
     };
-
 </script>
 </body>
 </html>
