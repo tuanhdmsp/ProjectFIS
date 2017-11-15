@@ -78,6 +78,7 @@ namespace SplashPageWebApp.Controllers
         public ActionResult CheckEmail(string email, string guestName)
         {
             var success = false;
+            var generatedCode = "";
             var message = "";
             var id = -1;
             if (email.Contains("@gmail.com"))
@@ -99,6 +100,7 @@ namespace SplashPageWebApp.Controllers
                     SendEmailWithTemplate.SendTo("freewifi.fis@gmail.com", "FPT Wi-Fi Hotspot", email, newCode.code);
                     success = true;
                     id = newCode.id;
+                    generatedCode = newCode.code;
                     //id = HashingHandler.SHA256Hashing((newCode.datetime?.ToString("MMddyyyyHHmmss") ?? "0") + newCode.id);
                 }
                 catch (Exception ex)
@@ -115,7 +117,8 @@ namespace SplashPageWebApp.Controllers
             {
                 success,
                 message,
-                id
+                id,
+                generatedCode
             }, JsonRequestBehavior.AllowGet);
         }
 

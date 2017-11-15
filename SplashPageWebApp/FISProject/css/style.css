@@ -133,7 +133,7 @@ body {
 
 .sub-main-w3 input[type="email"], .sub-main-w3 input[type="text"] {
     background: rgba(255, 255, 255, 0.85);
-    border: none;
+    border: #000000;
     border-radius: 30px;
     color: #000;
     font-family: 'Open Sans', sans-serif;
@@ -174,9 +174,9 @@ span.icon1, span.icon2, span.icon3 {
     right: 6%;
 }
 
-span.icon1 { top: 23%; }
+span.icon1 { top: 50%; }
 
-span.icon2 { top: 34%; }
+span.icon2 { top: 50%; }
 
 .sub-main-w3 input[type="button"] {
     -moz-transition: 0.5s all;
@@ -369,9 +369,9 @@ span.icon2 { top: 34%; }
         width: 74%;
     }
 
-    span.icon1 { top: 18%; }
+    span.icon1 { top: 24%; }
 
-    span.icon2 { top: 32%; }
+    span.icon2 { top: 24%; }
 }
 
 @media (max-width: 375px) {

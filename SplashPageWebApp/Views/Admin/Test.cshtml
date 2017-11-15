@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Test";
+    Layout = null;
+}
+<html lang="en">
+<head>
+    <title>Daterangepicker Example</title>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="/Administrator/js/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Administrator/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/Administrator/js/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Administrator/css/daterangepicker.css" />
+    <style type="text/css">
+        .demo {
+            position: relative;
+        }
+
+            .demo i {
+                position: absolute;
+                bottom: 10px;
+                right: 24px;
+                top: auto;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+        <input type="text" class="daterangepicker" />
+
+
+    <script type="text/javascript">
+        $('.daterangepicker').daterangepicker();
+    </script>
+
+</body>
+</html>
