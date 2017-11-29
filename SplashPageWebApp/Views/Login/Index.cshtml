@@ -31,7 +31,7 @@
                 $('#email').attr("disabled", "disabled");
                 $('[name=checkEmail]').attr("disabled", "disabled");
                 $('#name').attr("disabled", "disabled");
-                $('#useremail').attr("disabled", "disabled");
+                $('#userEmail').attr("disabled", "disabled");
                 $.ajax({
                     "method": "POST",
                     "dataType": "json",
@@ -162,22 +162,22 @@
                 <input TYPE="hidden" NAME="err_flag" SIZE="16" MAXLENGTH="15" value="">
 
                 <div class="pom-agile">
-                    <h4 style="font-size: 15px; color: white; text-shadow: 3px 1px 3px #101010;">* Sponsor's &#64;gmail.com email address</h4>
+                    <p style="font-size: 15px; color: white; text-shadow: 3px 1px 3px #101010;"><span style="color: red">*</span> Sponsor's &#64;gmail.com email address</p>
                     <input name="email" id="email" class="pass" type="email" required="" onfocus="clearMessage()">
                 </div>
 
                 <div class="pom-agile">
-                    <h4 style="font-size: 15px; color: white; text-shadow: 3px 1px 3px #101010;">* Your full name (First and Last)</h4>
+                    <p style="font-size: 15px; color: white; text-shadow: 3px 1px 3px #101010;"><span style="color: red">*</span> Your full name (First and Last)</p>
                     <input name="name" id="name" class="pass" type="text" required="">
                 </div>
 
                 <div class="pom-agile">
-                    <h4 style="font-size: 15px; color: white; text-shadow: 3px 1px 3px #101010;">* Your email address</h4>
+                    <p style="font-size: 15px; color: white; text-shadow: 3px 1px 3px #101010;"><span style="color: red">*</span> Your email address</p>
                     <input name="code" id="useremail" class="pass" type="email" required="">
                 </div>
                 
                 <div class="pom-agile">
-                    <h4 style="font-size: 15px; color: white; text-shadow: 3px 1px 3px #101010;">Your generated code</h4>
+                    <p style="font-size: 15px; color: white; text-shadow: 3px 1px 3px #101010;"><span style="color: red">*</span> Your generated code</p>
                     <input name="code" id="code" class="pass" disabled="" type="text" required="" onfocus="clearMessage()">
                 </div>
 
