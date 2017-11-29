@@ -75,32 +75,37 @@ namespace SplashPageWebApp.Controllers
         
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CheckEmail(string email, string guestName)
+        public ActionResult CheckEmail(string sponsorEmail, string guestName, string userEmail)
         {
             var success = false;
             var generatedCode = "";
             var message = "";
+            var userId = -1;
             var id = -1;
-            if (email.Contains("@gmail.com"))
+            if (sponsorEmail.Contains("@gmail.com"))
             {
                 //send code to email
 
-                var newCode = entities.GeneratedCodes.Add(new GeneratedCode
+                var newCode = entities.Codes.Add(new Code
                 {
-                    code = GeneratePasswordWifi.Generate(6),
-                    email = email,
-                    fullname = !string.IsNullOrEmpty(guestName) ? guestName : email.Substring(0, email.IndexOf("@")),
-                    datetime = DateTime.Now,
+                    code1 = GeneratePasswordWifi.Generate(6),
+                    sponsorEmail = sponsorEmail,
+                    startTime = DateTime.Now,
                     expiredTime = DateTime.Now.AddHours(4),
                     isUsed = false
+                });
+                var newUser = entities.Users.Add(new User
+                {
+                    fullName = !string.IsNullOrEmpty(guestName) ? guestName : sponsorEmail.Substring(0, sponsorEmail.IndexOf("@")),
+                    userEmail = userEmail,
                 });
                 try
                 {
                     entities.SaveChangesAsync().Wait();
-                    SendEmailWithTemplate.SendTo("freewifi.fis@gmail.com", "FPT Wi-Fi Hotspot", email, newCode.code);
+                    SendEmailWithTemplate.SendTo("freewifi.fis@gmail.com", "FPT Wi-Fi Hotspot", sponsorEmail, newCode.code1);
                     success = true;
-                    id = newCode.id;
-                    generatedCode = newCode.code;
+                    generatedCode = newCode.code1;
+                    userId = newUser.id;
                     //id = HashingHandler.SHA256Hashing((newCode.datetime?.ToString("MMddyyyyHHmmss") ?? "0") + newCode.id);
                 }
                 catch (Exception ex)
@@ -117,19 +122,19 @@ namespace SplashPageWebApp.Controllers
             {
                 success,
                 message,
-                id,
-                generatedCode
+                generatedCode,
+                userId,
             }, JsonRequestBehavior.AllowGet);
         }
 
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public ActionResult CheckCode(string inpCode, string email, string codeId)
+        public ActionResult CheckCode(string inpCode, int userId)
         {
             var success = false;
             var message = "The code is unavailable";
 
-            var codes = entities.GeneratedCodes;
+            var codes = entities.Codes;
 
             //var filterCodes = codes.Where(c => c.email == email && (c.isUsed ?? false) && DateTime.Compare(c.expiredTime.Value, DateTime.Now) <= 0)
             //    .OrderByDescending(c => c.datetime).AsEnumerable();
@@ -153,9 +158,14 @@ namespace SplashPageWebApp.Controllers
             //}
 
             var code = codes.SingleOrDefault(c =>
-                c.code.Equals(inpCode) && !(c.isUsed ?? true) && DateTime.Compare(c.expiredTime, DateTime.Now) > 0);
+                c.code1.Equals(inpCode) && !(c.isUsed) && DateTime.Compare(c.expiredTime, DateTime.Now) > 0);
             if (code != null)
             {
+                var user = entities.Users.SingleOrDefault(u => u.id == userId);
+                if (user != null)
+                {
+                    user.usedCode = inpCode;
+                }
                 success = true;
                 code.isUsed = true;
                 entities.SaveChangesAsync();

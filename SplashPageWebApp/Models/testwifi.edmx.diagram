@@ -7,6 +7,8 @@
       <Diagram DiagramId="fc6d76ea53ae4f9e80c24d17ab0a31d2" Name="Diagram1">
         <EntityTypeShape EntityType="testwifiModel.GeneratedCode" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="testwifiModel.Administrator" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="testwifiModel.Code" Width="1.5" PointX="3.75" PointY="3.75" />
+        <EntityTypeShape EntityType="testwifiModel.User" Width="1.5" PointX="0.75" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

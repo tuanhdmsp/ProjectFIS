@@ -20,50 +20,50 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     <script>
-        var codeId = -1;
+        var userId = -1;
 
         function sendEmail() {
-            var inputValue = $('[name=email]')[0].value;
+            var inputValue = $('#email').val();
+            var userEmail = $('#useremail').val();
 
             var label = $('label[for=email]');
             if (inputValue) {
-                $('[name=email]').attr("disabled", "disabled");
+                $('#email').attr("disabled", "disabled");
                 $('[name=checkEmail]').attr("disabled", "disabled");
-                $('[name=name]').attr("disabled", "disabled");
+                $('#name').attr("disabled", "disabled");
+                $('#useremail').attr("disabled", "disabled");
                 $.ajax({
                     "method": "POST",
                     "dataType": "json",
                     "url": '@Url.Action("CheckEmail")',
                     "data": {
                         "__RequestVerificationToken": $('form input[name=__RequestVerificationToken]').val(),
-                        "email": inputValue,
-                        "guestName": $('[name=name]')[0].value,
+                        "sponsorEmail": inputValue,
+                        "guestName": $('#name').val(),
+                        "userEmail": userEmail,
                     },
                     "success": function(data) {
-
                         if (data.success == true) {
-                            //$('[name=code]').removeAttr('disabled');
+                            $('[name=code]').removeAttr('disabled');
                             $('[name=loginWifi]').removeAttr('disabled');
-                            $('[name=email]').attr("disabled", "disabled");
-                            $('[name=checkEmail]').attr("disabled", "disabled");
-                            codeId = data.id;
                             label.css("visibility", "hidden");
-                            $('#code').val(data.generatedCode);
+                            userId = data.userId;
                         } else {
-                            $('[name=email]').removeAttr("disabled");
+                            $('#email').removeAttr("disabled");
                             $('[name=checkEmail]').removeAttr("disabled");
-                            $('[name=name]').removeAttr("disabled");
+                            $('#name').removeAttr("disabled");
+                            $('#userEmail').removeAttr("disabled");
                             swal("Invalid!", "Sponsor's email should look like example@gmail.com");
                             //$('#message').css("visibility", "visible");
                             //$('#message').text(data.message);
                             label.css("visibility", "visible");
                         }
-
                     },
                     "error": function(error) {
-                        $('[name=email]').removeAttr("disabled");
+                        $('#email').removeAttr("disabled");
                         $('[name=checkEmail]').removeAttr("disabled");
-                        $('[name=name]').removeAttr("disabled");
+                        $('#name').removeAttr("disabled");
+                        $('#useremail').removeAttr("disabled");
                         alert("Something went wrong! Please try again!");
                         console.log(error);
                     }
@@ -78,20 +78,18 @@
         };
 
         function sendCode() {
-            if (codeId != -1) {
-                var inputValue = $('[name=code]')[0].value;
+            if (userId != -1) {
+                var inputValue = $('#code').val();
                 $.ajax({
                     url: '@Url.Action("CheckCode")',
                     method: "POST",
                     data: {
                         "__RequestVerificationToken": $('form input[name=__RequestVerificationToken]').val(),
                         "inpCode": inputValue,
-                        "email": $('[name=email]')[0].value,
-                        "codeId": codeId
+                        "userId": userId
                     },
                     type: "json",
                     success: function(data) {
-                        console.log("askdjhasdkj");
                         if (data.success == false) {
                             var label = $('label[for=code]');
                             label.css("visibility", "visible");
@@ -103,11 +101,10 @@
                         }
                     },
                     error: function(error) {
-
-                        $('[name=code]').attr('disabled');
                         $('[name=loginWifi]').attr('disabled');
-                        $('[name=email]').removeAttr("disabled", "disabled");
-                        $('[name=checkEmail]').removeAttr("disabled", "disabled");
+                        $('#email').removeAttr("disabled");
+                        $('[name=checkEmail]').removeAttr("disabled");
+                        $('#useremail').removeAttr("disabled");
                     }
                 });
             }
@@ -176,7 +173,7 @@
 
                 <div class="pom-agile">
                     <h4 style="font-size: 15px; color: white; text-shadow: 3px 1px 3px #101010;">* Your email address</h4>
-                    <input name="code" id="useremail" class="pass" type="text" required="">
+                    <input name="code" id="useremail" class="pass" type="email" required="">
                 </div>
                 
                 <div class="pom-agile">

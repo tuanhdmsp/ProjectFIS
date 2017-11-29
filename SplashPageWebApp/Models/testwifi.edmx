@@ -14,6 +14,17 @@
           <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="password" Type="text" Nullable="false" />
         </EntityType>
+        <EntityType Name="Codes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="code" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="sponsorEmail" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="isUsed" Type="bit" Nullable="false" />
+          <Property Name="startTime" Type="datetime" Nullable="false" />
+          <Property Name="expiredTime" Type="datetime" Nullable="false" />
+        </EntityType>
         <EntityType Name="GeneratedCode">
           <Key>
             <PropertyRef Name="id" />
@@ -26,9 +37,20 @@
           <Property Name="fullname" Type="nvarchar" MaxLength="50" />
           <Property Name="expiredTime" Type="datetime" Nullable="false" />
         </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fullName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="userEmail" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="usedCode" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityContainer Name="testwifiModelStoreContainer">
           <EntitySet Name="Administrators" EntityType="Self.Administrators" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Codes" EntityType="Self.Codes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GeneratedCode" EntityType="Self.GeneratedCode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -52,6 +74,8 @@
         <EntityContainer Name="testwifiEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="GeneratedCodes" EntityType="Self.GeneratedCode" />
           <EntitySet Name="Administrators" EntityType="testwifiModel.Administrator" />
+          <EntitySet Name="Codes" EntityType="testwifiModel.Code" />
+          <EntitySet Name="Users" EntityType="testwifiModel.User" />
         </EntityContainer>
         <EntityType Name="Administrator">
           <Key>
@@ -60,6 +84,26 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="password" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Code">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="code1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sponsorEmail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="isUsed" Type="Boolean" Nullable="false" />
+          <Property Name="startTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="expiredTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fullName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="userEmail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="usedCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -87,6 +131,28 @@
                 <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Codes">
+            <EntityTypeMapping TypeName="testwifiModel.Code">
+              <MappingFragment StoreEntitySet="Codes">
+                <ScalarProperty Name="expiredTime" ColumnName="expiredTime" />
+                <ScalarProperty Name="startTime" ColumnName="startTime" />
+                <ScalarProperty Name="isUsed" ColumnName="isUsed" />
+                <ScalarProperty Name="sponsorEmail" ColumnName="sponsorEmail" />
+                <ScalarProperty Name="code1" ColumnName="code" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="testwifiModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="usedCode" ColumnName="usedCode" />
+                <ScalarProperty Name="userEmail" ColumnName="userEmail" />
+                <ScalarProperty Name="fullName" ColumnName="fullName" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

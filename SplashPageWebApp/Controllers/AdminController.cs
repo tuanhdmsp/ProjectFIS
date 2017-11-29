@@ -71,13 +71,13 @@ namespace SplashPageWebApp.Controllers
             {
                 return RedirectToAction("AdminLogin");
             }
-            var list = entities.GeneratedCodes.AsEnumerable();
+            var list = entities.Codes.AsEnumerable();
 
             var totalResult = list.Count();
 
             if (!String.IsNullOrEmpty(param.sSearch))
             {
-                list = list.Skip(param.iDisplayStart).Take(param.iDisplayLength).Where(c => c.email.ToLower().Contains(param.sSearch.ToLower()));
+                list = list.Skip(param.iDisplayStart).Take(param.iDisplayLength).Where(c => c.sponsorEmail.ToLower().Contains(param.sSearch.ToLower()));
             }
 
             var totalDisplay = list.Count();
@@ -85,9 +85,9 @@ namespace SplashPageWebApp.Controllers
             var result = list.ToList().Select(a => new IConvertible[]
             {
                 a.id,
-                a.email,
-                a.code,
-                a.datetime.ToString("dd/MM/yyyy HH:mm:ss"),
+                a.sponsorEmail,
+                a.code1,
+                a.startTime.ToString("dd/MM/yyyy HH:mm:ss"),
                 a.isUsed,
                 null
             });
