@@ -20,5 +20,6 @@ namespace SplashPageWebApp.Models
         public bool isUsed { get; set; }
         public System.DateTime startTime { get; set; }
         public System.DateTime expiredTime { get; set; }
+        public bool isActive { get; set; }
     }
 }

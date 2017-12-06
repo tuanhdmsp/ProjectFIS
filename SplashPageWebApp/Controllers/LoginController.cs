@@ -92,7 +92,8 @@ namespace SplashPageWebApp.Controllers
                     sponsorEmail = sponsorEmail,
                     startTime = DateTime.Now,
                     expiredTime = DateTime.Now.AddHours(4),
-                    isUsed = false
+                    isUsed = false,
+                    isActive = false
                 });
                 var newUser = entities.Users.Add(new User
                 {
@@ -158,7 +159,7 @@ namespace SplashPageWebApp.Controllers
             //}
 
             var code = codes.SingleOrDefault(c =>
-                c.code1.Equals(inpCode) && !(c.isUsed) && DateTime.Compare(c.expiredTime, DateTime.Now) > 0);
+                c.code1.Equals(inpCode) && !(c.isUsed) && c.isActive && DateTime.Compare(c.expiredTime, DateTime.Now) > 0);
             if (code != null)
             {
                 var user = entities.Users.SingleOrDefault(u => u.id == userId);
@@ -190,6 +191,17 @@ namespace SplashPageWebApp.Controllers
             byte[] file = System.IO.File.ReadAllBytes(path);
             string filename = "log.txt";
             return File(file, System.Net.Mime.MediaTypeNames.Application.Octet, filename);
+        }
+
+        public ActionResult activateCode(string code)
+        {
+            var co = entities.Codes.SingleOrDefault(c => c.code1.Equals(code));
+            if (co != null)
+            {
+                co.isActive = true;
+                entities.SaveChangesAsync().Wait();
+            }
+            return new EmptyResult();
         }
     }
 

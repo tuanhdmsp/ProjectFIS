@@ -24,18 +24,7 @@
           <Property Name="isUsed" Type="bit" Nullable="false" />
           <Property Name="startTime" Type="datetime" Nullable="false" />
           <Property Name="expiredTime" Type="datetime" Nullable="false" />
-        </EntityType>
-        <EntityType Name="GeneratedCode">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="code" Type="varchar" MaxLength="50" />
-          <Property Name="email" Type="varchar" MaxLength="50" />
-          <Property Name="datetime" Type="datetime" Nullable="false" />
-          <Property Name="isUsed" Type="bit" />
-          <Property Name="fullname" Type="nvarchar" MaxLength="50" />
-          <Property Name="expiredTime" Type="datetime" Nullable="false" />
+          <Property Name="isActive" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -49,7 +38,6 @@
         <EntityContainer Name="testwifiModelStoreContainer">
           <EntitySet Name="Administrators" EntityType="Self.Administrators" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Codes" EntityType="Self.Codes" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="GeneratedCode" EntityType="Self.GeneratedCode" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -59,20 +47,7 @@
               xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation"
               xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation"
               xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="GeneratedCode">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="datetime" Type="DateTime" Precision="3" Nullable="false" />
-          <Property Name="isUsed" Type="Boolean" />
-          <Property Name="fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="expiredTime" Type="DateTime" Precision="3" Nullable="false" />
-        </EntityType>
         <EntityContainer Name="testwifiEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="GeneratedCodes" EntityType="Self.GeneratedCode" />
           <EntitySet Name="Administrators" EntityType="testwifiModel.Administrator" />
           <EntitySet Name="Codes" EntityType="testwifiModel.Code" />
           <EntitySet Name="Users" EntityType="testwifiModel.User" />
@@ -95,6 +70,7 @@
           <Property Name="isUsed" Type="Boolean" Nullable="false" />
           <Property Name="startTime" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="expiredTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="isActive" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -112,19 +88,6 @@
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="testwifiModelStoreContainer"
                                 CdmEntityContainer="testwifiEntities">
-          <EntitySetMapping Name="GeneratedCodes">
-            <EntityTypeMapping TypeName="testwifiModel.GeneratedCode">
-              <MappingFragment StoreEntitySet="GeneratedCode">
-                <ScalarProperty Name="expiredTime" ColumnName="expiredTime" />
-                <ScalarProperty Name="fullname" ColumnName="fullname" />
-                <ScalarProperty Name="isUsed" ColumnName="isUsed" />
-                <ScalarProperty Name="datetime" ColumnName="datetime" />
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="code" ColumnName="code" />
-                <ScalarProperty Name="email" ColumnName="email" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Administrators">
             <EntityTypeMapping TypeName="testwifiModel.Administrator">
               <MappingFragment StoreEntitySet="Administrators">
@@ -137,6 +100,7 @@
           <EntitySetMapping Name="Codes">
             <EntityTypeMapping TypeName="testwifiModel.Code">
               <MappingFragment StoreEntitySet="Codes">
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
                 <ScalarProperty Name="expiredTime" ColumnName="expiredTime" />
                 <ScalarProperty Name="startTime" ColumnName="startTime" />
                 <ScalarProperty Name="isUsed" ColumnName="isUsed" />
