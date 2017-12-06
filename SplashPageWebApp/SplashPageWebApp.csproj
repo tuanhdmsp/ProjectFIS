@@ -176,6 +176,10 @@
       <DependentUpon>testwifi.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Services\SendEmailWithTemplate.cs" />
+>>>>>>> cd1cba9aeaa1d4cf4578ea7b88b8506dfeedf8cc
     <Compile Include="Services\UserAuthenticator.cs" />
   </ItemGroup>
   <ItemGroup>
