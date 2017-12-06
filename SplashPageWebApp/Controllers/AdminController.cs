@@ -88,7 +88,7 @@ namespace SplashPageWebApp.Controllers
                 a.sponsorEmail,
                 a.code1,
                 a.startTime.ToString("dd/MM/yyyy HH:mm:ss"),
-                a.isUsed,
+                a.isUsed && !a.isActive,
                 null
             });
             return Json(new
@@ -111,10 +111,10 @@ namespace SplashPageWebApp.Controllers
             {
                 foreach (var i in id)
                 {
-                    var code = entities.GeneratedCodes.SingleOrDefault(c => c.id == i);
+                    var code = entities.Codes.SingleOrDefault(c => c.id == i);
                     if (code != null)
                     {
-                        entities.GeneratedCodes.Remove(code);
+                        entities.Codes.Remove(code);
                         entities.SaveChanges();
                         success = true;
                     }
