@@ -14024,3 +14024,277 @@ HTTP_HOST: localhost:61136
 HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/66.4.134 Chrome/60.4.3112.134 Safari/537.36 
 HTTP_UPGRADE_INSECURE_REQUESTS: 1 
 
+-----------------------------------------------------------------------------------------------------------------
+ALL_HTTP: HTTP_CONNECTION:keep-alive
+HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+HTTP_ACCEPT_ENCODING:gzip, deflate, br
+HTTP_ACCEPT_LANGUAGE:vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/66.4.134 Chrome/60.4.3112.134 Safari/537.36
+HTTP_UPGRADE_INSECURE_REQUESTS:1
+ 
+ALL_RAW: Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/66.4.134 Chrome/60.4.3112.134 Safari/537.36
+Upgrade-Insecure-Requests: 1
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: H:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: H:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING:  
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 56809 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: keep-alive 
+HTTP_ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8 
+HTTP_ACCEPT_ENCODING: gzip, deflate, br 
+HTTP_ACCEPT_LANGUAGE: vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/66.4.134 Chrome/60.4.3112.134 Safari/537.36 
+HTTP_UPGRADE_INSECURE_REQUESTS: 1 
+
+-----------------------------------------------------------------------------------------------------------------
+ALL_HTTP: HTTP_CONNECTION:keep-alive
+HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+HTTP_ACCEPT_ENCODING:gzip, deflate, br
+HTTP_ACCEPT_LANGUAGE:vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/66.4.134 Chrome/60.4.3112.134 Safari/537.36
+HTTP_UPGRADE_INSECURE_REQUESTS:1
+ 
+ALL_RAW: Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/66.4.134 Chrome/60.4.3112.134 Safari/537.36
+Upgrade-Insecure-Requests: 1
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: H:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: H:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING:  
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 56850 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: keep-alive 
+HTTP_ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8 
+HTTP_ACCEPT_ENCODING: gzip, deflate, br 
+HTTP_ACCEPT_LANGUAGE: vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/66.4.134 Chrome/60.4.3112.134 Safari/537.36 
+HTTP_UPGRADE_INSECURE_REQUESTS: 1 
+
+-----------------------------------------------------------------------------------------------------------------
+switch_url: https://1.1.1.1/login.html 
+ap_mac: 00:3a:98:c6:d8:00 
+client_mac: 48:5a:b6:be:20:fb 
+wlan: WebAuthen 
+redirect: www.msftconnecttest.com/redirect 
+ALL_HTTP: HTTP_CONNECTION:keep-alive
+HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+HTTP_ACCEPT_ENCODING:gzip, deflate, br
+HTTP_ACCEPT_LANGUAGE:vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/66.4.134 Chrome/60.4.3112.134 Safari/537.36
+HTTP_UPGRADE_INSECURE_REQUESTS:1
+ 
+ALL_RAW: Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/66.4.134 Chrome/60.4.3112.134 Safari/537.36
+Upgrade-Insecure-Requests: 1
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: H:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: H:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING: switch_url=https://1.1.1.1/login.html&ap_mac=00:3a:98:c6:d8:00&client_mac=48:5a:b6:be:20:fb&wlan=WebAuthen&redirect=www.msftconnecttest.com/redirect 
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 56850 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: keep-alive 
+HTTP_ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8 
+HTTP_ACCEPT_ENCODING: gzip, deflate, br 
+HTTP_ACCEPT_LANGUAGE: vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/66.4.134 Chrome/60.4.3112.134 Safari/537.36 
+HTTP_UPGRADE_INSECURE_REQUESTS: 1 
+
+-----------------------------------------------------------------------------------------------------------------
+switch_url: https://1.1.1.1/login.html 
+ap_mac: 00:3a:98:c6:d8:00 
+client_mac: 48:5a:b6:be:20:fb 
+wlan: WebAuthen 
+redirect: www.msftconnecttest.com/redirect 
+ALL_HTTP: HTTP_CONNECTION:keep-alive
+HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+HTTP_ACCEPT_ENCODING:gzip, deflate, br
+HTTP_ACCEPT_LANGUAGE:vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2
+HTTP_HOST:localhost:61136
+HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/66.4.134 Chrome/60.4.3112.134 Safari/537.36
+HTTP_UPGRADE_INSECURE_REQUESTS:1
+ 
+ALL_RAW: Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2
+Host: localhost:61136
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/66.4.134 Chrome/60.4.3112.134 Safari/537.36
+Upgrade-Insecure-Requests: 1
+ 
+APPL_MD_PATH: /LM/W3SVC/2/ROOT 
+APPL_PHYSICAL_PATH: H:\ProjectFIS\SplashPageWebApp\ 
+AUTH_TYPE:  
+AUTH_USER:  
+AUTH_PASSWORD:  
+LOGON_USER:  
+REMOTE_USER:  
+CERT_COOKIE:  
+CERT_FLAGS:  
+CERT_ISSUER:  
+CERT_KEYSIZE:  
+CERT_SECRETKEYSIZE:  
+CERT_SERIALNUMBER:  
+CERT_SERVER_ISSUER:  
+CERT_SERVER_SUBJECT:  
+CERT_SUBJECT:  
+CONTENT_LENGTH: 0 
+CONTENT_TYPE:  
+GATEWAY_INTERFACE: CGI/1.1 
+HTTPS: off 
+HTTPS_KEYSIZE:  
+HTTPS_SECRETKEYSIZE:  
+HTTPS_SERVER_ISSUER:  
+HTTPS_SERVER_SUBJECT:  
+INSTANCE_ID: 2 
+INSTANCE_META_PATH: /LM/W3SVC/2 
+LOCAL_ADDR: ::1 
+PATH_INFO: / 
+PATH_TRANSLATED: H:\ProjectFIS\SplashPageWebApp 
+QUERY_STRING: switch_url=https://1.1.1.1/login.html&ap_mac=00:3a:98:c6:d8:00&client_mac=48:5a:b6:be:20:fb&wlan=WebAuthen&redirect=www.msftconnecttest.com/redirect 
+REMOTE_ADDR: ::1 
+REMOTE_HOST: ::1 
+REMOTE_PORT: 56851 
+REQUEST_METHOD: GET 
+SCRIPT_NAME: / 
+SERVER_NAME: localhost 
+SERVER_PORT: 61136 
+SERVER_PORT_SECURE: 0 
+SERVER_PROTOCOL: HTTP/1.1 
+SERVER_SOFTWARE: Microsoft-IIS/10.0 
+URL: / 
+HTTP_CONNECTION: keep-alive 
+HTTP_ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8 
+HTTP_ACCEPT_ENCODING: gzip, deflate, br 
+HTTP_ACCEPT_LANGUAGE: vi-VN,vi;q=0.8,fr-FR;q=0.6,fr;q=0.4,en-US;q=0.2,en;q=0.2 
+HTTP_HOST: localhost:61136 
+HTTP_USER_AGENT: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) coc_coc_browser/66.4.134 Chrome/60.4.3112.134 Safari/537.36 
+HTTP_UPGRADE_INSECURE_REQUESTS: 1 
+
