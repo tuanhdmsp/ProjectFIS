@@ -157,6 +157,9 @@
     <Compile Include="Models\Code.cs">
       <DependentUpon>testwifi.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\GeneratedCode.cs">
+      <DependentUpon>testwifi.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\testwifi.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -176,10 +179,8 @@
       <DependentUpon>testwifi.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
-=======
+    <Compile Include="Services\GeneratedCode.cs" />
     <Compile Include="Services\SendEmailWithTemplate.cs" />
->>>>>>> cd1cba9aeaa1d4cf4578ea7b88b8506dfeedf8cc
     <Compile Include="Services\UserAuthenticator.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -319,6 +320,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\button.css" />
     <Content Include="EmailTemplate\EmailTemplate.html" />
     <Content Include="favicon.ico" />
     <Content Include="FISProject\css\connectederror.css" />
