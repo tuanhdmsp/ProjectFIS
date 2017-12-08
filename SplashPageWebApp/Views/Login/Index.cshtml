@@ -48,6 +48,7 @@
                             $('[name=loginWifi]').removeAttr('disabled');
                             label.css("visibility", "hidden");
                             userId = data.userId;
+                            $('#code').val(data.generatedCode);
                         } else {
                             $('#email').removeAttr("disabled");
                             $('[name=checkEmail]').removeAttr("disabled");
@@ -173,7 +174,7 @@
 
                 <div class="pom-agile">
                     <p style="font-size: 15px; color: white; text-shadow: 3px 1px 3px #101010;"><span style="color: red">*</span> Your email address</p>
-                    <input name="code" id="useremail" class="pass" type="email" required="">
+                    <input name="useremail" id="userEmail" class="pass" type="email" required="">
                 </div>
                 
                 <div class="pom-agile">
