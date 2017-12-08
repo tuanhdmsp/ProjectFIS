@@ -181,7 +181,7 @@ namespace SplashPageWebApp.Controllers
                 code.isActive = true;
                 entities.SaveChangesAsync().Wait();
             }
-            return new EmptyResult();
+            return View();
         }
 
     }
