@@ -80,15 +80,18 @@ namespace SplashPageWebApp.Controllers
                 });
                 var newUser = entities.Users.Add(new User
                 {
-                    fullName = !string.IsNullOrEmpty(guestName) ? guestName : sponsorEmail.Substring(0, sponsorEmail.IndexOf("@")),
-                    userEmail = userEmail,
+                    fullName = !string.IsNullOrEmpty(guestName) ? guestName : sponsorEmail.Substring(0, sponsorEmail.IndexOf("@", StringComparison.Ordinal)),
+                    userEmail = userEmail ?? String.Empty,
                 });
                 try
                 {
                     entities.SaveChangesAsync().Wait();
 
-                    var url = Request.Url.Scheme + "://" + Request.Url.Authority + Url.Action("ActivateCode") + "/?c=" + newCode.code1;
-                    SendEmailWithTemplate.SendTo(Settings.GetValueOf("send-email-address"), Settings.GetValueOf("send-email-sender"), sponsorEmail, newCode.code1,url);
+                    if (Request.Url != null)
+                    {
+                        var url = Request.Url.Scheme + "://" + Request.Url.Authority + Url.Action("ActivateCode") + "/?c=" + newCode.code1;
+                        SendEmailWithTemplate.SendTo(Settings.GetValueOf("send-email-address"), Settings.GetValueOf("send-email-sender"), sponsorEmail, newCode.code1, url);
+                    }
                     success = true;
                     generatedCode = newCode.code1;
                     userId = newUser.id;

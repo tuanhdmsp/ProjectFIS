@@ -24,7 +24,7 @@
 
         function sendEmail() {
             var inputValue = $('#email').val();
-            var userEmail = $('#useremail').val();
+            var userEmail = $('#userEmail').val();
 
             var label = $('label[for=email]');
             if (inputValue) {
@@ -44,7 +44,7 @@
                     },
                     "success": function(data) {
                         if (data.success == true) {
-                            $('[name=code]').removeAttr('disabled');
+                            //$('[name=code]').removeAttr('disabled');
                             $('[name=loginWifi]').removeAttr('disabled');
                             label.css("visibility", "hidden");
                             userId = data.userId;
