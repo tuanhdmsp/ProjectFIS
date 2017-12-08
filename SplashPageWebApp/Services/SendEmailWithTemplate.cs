@@ -12,13 +12,13 @@ namespace SplashPageWebApp.Services
 {
     public class SendEmailWithTemplate
     {
-        public static void SendTo(string fromEmail, string sender, string toEmail, string code)
+        public static void SendTo(string fromEmail, string sender, string toEmail, string code, string url)
         {
-            var body = CreateEmailBody(code);
+            var body = CreateEmailBody(code, url);
             SendEmailTo(fromEmail, sender, toEmail, body);
         }
 
-        public static string CreateEmailBody(string code)
+        private static string CreateEmailBody(string code, string url)
         {
             string body;
             using (var reader = new StreamReader(HostingEnvironment.MapPath("/EmailTemplate/EmailTemplate.html") ??
@@ -26,11 +26,12 @@ namespace SplashPageWebApp.Services
             {
                 body = reader.ReadToEnd();
             }
-            body = body.Replace("{Code}", code.Normalize());
+            body = body.Replace("{Code}", code.Normalize()).Replace("{link}", url);
+            
             return body;
         }
 
-        public static void SendEmailTo(string fromEmail, string sender, string toEmail, string bodyTemplate)
+        private static void SendEmailTo(string fromEmail, string sender, string toEmail, string bodyTemplate)
         {
             var fromAddress = new MailAddress(fromEmail, sender);
             var toAddress = new MailAddress(toEmail);

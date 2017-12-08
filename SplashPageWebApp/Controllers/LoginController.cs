@@ -3,8 +3,10 @@ using System.IO;
 using System.Linq;
 using System.Web.Hosting;
 using System.Web.Mvc;
-using ServicesFIS;
+using SplashPageWebApp.Configs;
 using SplashPageWebApp.Models;
+using SplashPageWebApp.Services;
+using SendEmailWithTemplate = SplashPageWebApp.Services.SendEmailWithTemplate;
 
 namespace SplashPageWebApp.Controllers
 {
@@ -18,26 +20,7 @@ namespace SplashPageWebApp.Controllers
         {
             var paramCollection = HttpContext.Request.Params;
             var keys = paramCollection.AllKeys;
-
-            var path = HttpContext.Server.MapPath("~/log.txt");
-            using (StreamWriter sr = System.IO.File.AppendText(path ?? "log.txt"))
-            {
-                sr.WriteLine("-----------------------------------------------------------------------------------------------------------------");
-                foreach (var key in keys)
-                {
-                    sr.Write(key + ": ");
-                    var values = paramCollection.GetValues(key);
-                    if (values != null)
-                    {
-                        foreach (var value in values)
-                        {
-                            sr.Write(value + " ");
-                        }
-                    }
-                    sr.WriteLine();
-                }
-                sr.WriteLine();
-            }
+            
 
             if (keys.Contains("switch_url"))
             {
@@ -82,10 +65,10 @@ namespace SplashPageWebApp.Controllers
             var message = "";
             var userId = -1;
             var id = -1;
-            if (sponsorEmail.Contains("@gmail.com"))
+            var emailStr = "@" + Settings.GetValueOf("domain");
+            if (sponsorEmail.Contains(emailStr))
             {
                 //send code to email
-
                 var newCode = entities.Codes.Add(new Code
                 {
                     code1 = GeneratePasswordWifi.Generate(6),
@@ -103,7 +86,9 @@ namespace SplashPageWebApp.Controllers
                 try
                 {
                     entities.SaveChangesAsync().Wait();
-                    SendEmailWithTemplate.SendTo("freewifi.fis@gmail.com", "FPT Wi-Fi Hotspot", sponsorEmail, newCode.code1);
+
+                    var url = Request.Url.Scheme + "://" + Request.Url.Authority + Url.Action("ActivateCode") + "/?c=" + newCode.code1;
+                    SendEmailWithTemplate.SendTo(Settings.GetValueOf("send-email-address"), Settings.GetValueOf("send-email-sender"), sponsorEmail, newCode.code1,url);
                     success = true;
                     generatedCode = newCode.code1;
                     userId = newUser.id;
@@ -185,24 +170,17 @@ namespace SplashPageWebApp.Controllers
         //    return Redirect
         //}
 
-        public ActionResult Download()
+        public ActionResult ActivateCode(string c)
         {
-            var path = HttpContext.Server.MapPath("~/log.txt");
-            byte[] file = System.IO.File.ReadAllBytes(path);
-            string filename = "log.txt";
-            return File(file, System.Net.Mime.MediaTypeNames.Application.Octet, filename);
-        }
-
-        public ActionResult activateCode(string code)
-        {
-            var co = entities.Codes.SingleOrDefault(c => c.code1.Equals(code));
-            if (co != null)
+            var code = entities.Codes.SingleOrDefault(co => co.code1.Equals(c) && !co.isActive);
+            if (code != null)
             {
-                co.isActive = true;
+                code.isActive = true;
                 entities.SaveChangesAsync().Wait();
             }
             return new EmptyResult();
         }
+
     }
 
     //public class LoginViewModel
