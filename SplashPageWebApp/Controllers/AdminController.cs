@@ -88,7 +88,7 @@ namespace SplashPageWebApp.Controllers
                 a.sponsorEmail,
                 a.code1,
                 a.startTime.ToString("dd/MM/yyyy HH:mm:ss"),
-                a.isUsed && !a.isActive,
+                a.isUsed,
                 null
             });
             return Json(new

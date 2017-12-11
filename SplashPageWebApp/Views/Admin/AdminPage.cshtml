@@ -488,9 +488,9 @@ Page: CostManage/IndexCostManage
                     "aTargets": [2, 3, 4],
                     "mRender": function (data, type, row) {
                         var showText = data;
-                        if (data === true) {
+                        if (data == true) {
                             showText = "Used";
-                        } else if (data === false) {
+                        } else if (data == false) {
                             showText = "Not used";
                         }
                         var text = '<span class="text-ellipsis">' + showText + '</span>';
