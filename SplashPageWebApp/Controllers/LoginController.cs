@@ -16,6 +16,11 @@ namespace SplashPageWebApp.Controllers
         private readonly testwifiEntities entities = new testwifiEntities();
 
         // GET: Login
+        public ActionResult Successfull()
+        {
+            return View();
+        }
+
         public ActionResult Index()
         {
             var paramCollection = HttpContext.Request.Params;
