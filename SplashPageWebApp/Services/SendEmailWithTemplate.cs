@@ -7,6 +7,7 @@ using System.Net.Mail;
 using System.Text;
 using System.Web;
 using System.Web.Hosting;
+using SplashPageWebApp.Configs;
 
 namespace SplashPageWebApp.Services
 {
@@ -35,8 +36,8 @@ namespace SplashPageWebApp.Services
         {
             var fromAddress = new MailAddress(fromEmail, sender);
             var toAddress = new MailAddress(toEmail);
-            const string appPassword = "zehcrryaxdsvvcpj";
-            const string subject = "Free Code To Access Wi-Fi";
+            string appPassword = Settings.GetValueOf("send-email-password");
+            string subject = Settings.GetValueOf("send-email-subject");
             var body = bodyTemplate;
 
             var smtp = new SmtpClient
