@@ -180,7 +180,7 @@ namespace SplashPageWebApp.Controllers
 
         public ActionResult ActivateCode(string c)
         {
-            var code = entities.Codes.SingleOrDefault(co => co.code1.Equals(c) && !co.isActive);
+            var code = entities.Codes.SingleOrDefault(co => co.code1.Equals(c) && !co.isActive && DateTime.Compare(co.startTime.AddMinutes(5), DateTime.Now) > 0);
             if (code != null)
             {
                 code.isActive = true;
