@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using System.IO;
 using System.Linq;
 using System.Web.Hosting;
@@ -70,8 +71,8 @@ namespace SplashPageWebApp.Controllers
             var message = "";
             var userId = -1;
             var id = -1;
-            var emailStr = "@" + Settings.GetValueOf("domain");
-            if (sponsorEmail.Contains(emailStr))
+            var domainName = "@" + Settings.GetValueOf("domain");
+            if (sponsorEmail.Contains(domainName))
             {
                 //send code to email
                 var newCode = entities.Codes.Add(new Code
@@ -118,6 +119,7 @@ namespace SplashPageWebApp.Controllers
                 message,
                 generatedCode,
                 userId,
+                domainName
             }, JsonRequestBehavior.AllowGet);
         }
 
@@ -180,13 +182,15 @@ namespace SplashPageWebApp.Controllers
 
         public ActionResult ActivateCode(string c)
         {
-            var code = entities.Codes.SingleOrDefault(co => co.code1.Equals(c) && !co.isActive && DateTime.Compare(co.startTime.AddMinutes(5), DateTime.Now) > 0);
+            var code = entities.Codes.SingleOrDefault(co => co.code1.Equals(c) 
+            && !co.isActive && DateTime.Compare(DbFunctions.AddMinutes((co.startTime), 5)??DateTime.Now, DateTime.Now) > 0);
             if (code != null)
             {
                 code.isActive = true;
                 entities.SaveChangesAsync().Wait();
+                return View();
             }
-            return View();
+            return View("ExpiredEmail");
         }
 
     }

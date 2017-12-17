@@ -421,6 +421,7 @@
     <Content Include="Scripts\jquery-3.2.1.min.map" />
     <Content Include="Views\Login\ActivateCode.cshtml" />
     <Content Include="Views\Login\Successfull.cshtml" />
+    <Content Include="Views\Login\ExpiredEmail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
